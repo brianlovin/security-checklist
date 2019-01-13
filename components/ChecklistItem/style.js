@@ -72,16 +72,17 @@ export const Checkbox = styled.span`
   height: 32px;
   border-radius: 4px;
   border: 1px solid
-    ${props => (props.isChecked ? theme.brand.default : theme.border.default)};
+    ${props => (props.isChecked ? theme.success.default : theme.border.default)};
   background: ${props =>
-    props.isChecked ? theme.brand.default : theme.bg.wash};
+    props.isChecked ? theme.success.default : theme.bg.wash};
   cursor: pointer;
   position: relative;
 
   &:hover {
     ${Shadows.default};
     border: 1px solid
-      ${props => (props.isChecked ? theme.brand.default : theme.border.active)};
+      ${props =>
+        props.isChecked ? theme.success.default : theme.border.active};
   }
 
   &:after {

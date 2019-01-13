@@ -57,6 +57,7 @@ class ChecklistItem extends React.Component<Props, State> {
 
             <ResourceContent isChecked={isChecked}>
               <Heading resource={resource} />
+
               {resource.apps && (
                 <React.Fragment>
                   <Divider />
