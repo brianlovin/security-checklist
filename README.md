@@ -9,7 +9,7 @@ This project should be considered a living document of resources and application
 
 If you have resources to add to existing sections, please open a pull request.
 
-- Aim for reputable sources for guides and new coverage.
+- Aim for reputable sources for guides and news coverage.
 - If adding an app, please include links to as many platforms as possible. See `config/*.js` for examples of how data is formatted.
 - Try to use approachable human-readable language. Remember that even non-technical folks need to stay safe online.
 
