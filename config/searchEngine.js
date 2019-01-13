@@ -1,7 +1,7 @@
 export default {
   id: 'searchEngine',
   title: 'Use a privacy-first search engine',
-  description: `You should use a search engine that protects you from tracking, fingerprinting, and unwanted advertisements. DuckDuckGo is a privacy-first search engine that does not store your search history, has strict location and personalization permissions, and publishes regular content teaching people how to be more safe on the web.
+  description: `You should use a search engine that protects you from tracking, fingerprinting, and unwanted advertisements. DuckDuckGo is a privacy-first search engine that does not store your search history, has strict location and personalization permissions, and publishes regular content teaching people how to be safer on the web.
     `,
   apps: [
     {

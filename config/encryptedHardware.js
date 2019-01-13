@@ -1,8 +1,8 @@
 export default {
   id: 'encryptedHardware',
   title: 'Encrypt your devices',
-  description: `If your phone or computer is ever stolen, a thief may try to read or export your personal data. If your device is unencrypted, hackers will have access to anything stored on that device, including photos, emails, documents, and contacts..
-  
+  description: `If your phone or computer is ever stolen, a thief may try to read or export your personal data. If your device is unencrypted, hackers will have access to anything stored on that device, including photos, emails, documents, and contacts.
+
   \n\nYou should enable encryption on every phone and computer you use. Encrypting your devices makes it nearly impossible for a thief to read your data without having your encryption password.`,
   resources: [
     {
