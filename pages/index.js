@@ -20,10 +20,10 @@ class Index extends React.Component<{}> {
     return (
       <Page>
         <SectionHeading>
-          <Heading>Improve your digital privacy and security</Heading>
+          <Heading>Be safe on the internet.</Heading>
           <Subheading>
-            The following resources are designed to keep you safe while using
-            digital devices and the internet.
+            An open source collection of resources designed to improve your
+            online privacy and security.
           </Subheading>
         </SectionHeading>
 
