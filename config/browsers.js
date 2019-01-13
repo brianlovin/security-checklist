@@ -31,6 +31,15 @@ export default {
       },
     },
     {
+      name: 'Safari',
+      image: '/static/img/safari.jpg',
+      url: 'https://www.apple.com/safari/',
+      sources: {
+        windows: 'https://www.apple.com/safari/',
+        macos: 'https://www.apple.com/safari/',
+      },
+    },
+    {
       name: 'Tor',
       image: '/static/img/tor.png',
       url: 'https://www.torproject.org/',
