@@ -3,7 +3,7 @@ export default {
   title: 'Use a VPN',
   description: `A VPN, or virtual private network, is a useful tool to secure an internet connection. It guarantees that data you are sending and receiving is encrypted, preventing people from snooping on your traffic.
 
-  \n\nYou should use a VPN provider that you trust to not harvest and re-sell your data. The best VPNs often charge a monthly subscription - this is a good thing, because it means their business model is not reliant upon reselling your data to advertisers.
+  \n\nYou should use a VPN provider that you trust to not harvest and re-sell your data. The best VPNs often charge a monthly subscription - this is a good thing because it means their business model is not reliant upon reselling your data to advertisers.
     `,
   apps: [
     {
