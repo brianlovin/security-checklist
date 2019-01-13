@@ -21,7 +21,9 @@ If you would like to create a new category of security and privacy resources, pl
 3. `$ npm install`
 4. `$ npm run dev`
 5. View the running app in your browser at `http://localhost:3000`
-6. Optional: deploy this yourself with ZEIT + Now by configuring `now.json` and running `$ now`
+
+### Deploying
+You can deploy this project yourself with ZEIT + Now by configuring `now.json` and running `$ now`. You should change the Google Analytics tag in `lib/gtag.js` and the Sentry DSN url in `pages/_app.js`.
 
 ### Feedback
 Please open issues at any time for general feedback, or you can reach me directly at hi@brianlovin.com.
