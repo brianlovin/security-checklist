@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import Page, { SectionHeading, Heading, Subheading } from '../components/Page';
+import Page, { SectionHeading } from '../components/Page';
 import type { GetInitialProps } from '../types';
 
 class Index extends React.Component<{}> {
