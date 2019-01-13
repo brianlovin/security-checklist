@@ -29,6 +29,7 @@ export const Description = styled(Markdown)`
   font-weight: 400;
   color: ${theme.text.secondary};
   margin-top: 8px;
+  padding-right: 16px;
 
   p:first-of-type {
     margin-top: 0;

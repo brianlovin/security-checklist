@@ -49,7 +49,7 @@ export const SectionHeading = styled.div`
 
 export const Heading = styled.h3`
   font-size: 40px;
-  font-weight: 800;
+  font-weight: 700;
   color: ${theme.text.default};
   line-height: 1.2;
 
