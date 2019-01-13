@@ -247,7 +247,6 @@ export const AppSourcesLabel = styled.span`
 
 export const ResourceRowContainer = styled.a`
   display: flex;
-  align-items: center;
   margin-top: 4px;
   width: 100%;
   border-radius: 6px;
