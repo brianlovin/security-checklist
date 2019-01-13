@@ -62,7 +62,7 @@ export const Subheading = styled.h4`
   font-size: 22px;
   font-weight: 400;
   color: ${theme.text.tertiary};
-  margin-top: 8px;
+  margin-top: 16px;
 
   a {
     color: ${theme.text.default};

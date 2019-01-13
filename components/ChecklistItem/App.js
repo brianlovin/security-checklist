@@ -21,11 +21,10 @@ export const AppRow = ({ app }: Props) => {
 
   const renderSourceIcon = (key: string) => {
     const sourceUrl = app.sources[key];
-    const appUrl = app.url;
 
     if (key === 'windows') {
       return (
-        <AppSourcesListItem key={key}>
+        <AppSourcesListItem hideOnMobile key={key}>
           <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
             <Icon size={32} glyph="windows" />
             <AppSourcesLabel>Windows</AppSourcesLabel>
@@ -47,7 +46,7 @@ export const AppRow = ({ app }: Props) => {
 
     if (key === 'macos') {
       return (
-        <AppSourcesListItem key={key}>
+        <AppSourcesListItem hideOnMobile key={key}>
           <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
             <Icon size={32} glyph="app-store" />
             <AppSourcesLabel>macOS</AppSourcesLabel>

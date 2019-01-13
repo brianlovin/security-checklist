@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { AppsContainer } from './style';
+import { AppsContainer, SectionHeading } from './style';
 import type { ChecklistResource } from '../../types';
 import { AppRow } from './App';
 
@@ -12,6 +12,7 @@ export const Apps = ({ resource }: Props) => {
   if (!resource.apps) return null;
   return (
     <AppsContainer>
+      <SectionHeading>Apps</SectionHeading>
       {resource.apps.map(app => (
         <AppRow key={app.name} app={app} />
       ))}

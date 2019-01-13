@@ -13,6 +13,7 @@ import {
   Checkbox,
   CardContent,
   ResourceContent,
+  Divider,
 } from './style';
 
 type Props = {
@@ -56,7 +57,9 @@ class ChecklistItem extends React.Component<Props, State> {
 
             <ResourceContent isChecked={isChecked}>
               <Heading resource={resource} isChecked={isChecked} />
+              <Divider />
               <Apps resource={resource} />
+              <Divider />
               <Resources resource={resource} />
             </ResourceContent>
           </CardContent>
