@@ -1,8 +1,10 @@
 export default {
   id: 'passwordManager',
   title: 'Password Manager',
-  description:
-    'A password manager helps you set unique passwords for each service you use. Having a unique password ensures that if one service you use is hacked, the leaked password won’t allow access to all of your accounts.',
+  description: `A password manager helps you set unique passwords for each service you use. Having a unique password ensures that if one service you use is hacked, the leaked password won’t allow access to all of your accounts.
+    
+    \n\nAt the very minimum you should have a unique password for high-value accounts like a Google account, email applications, an Apple ID, and financial accounts.
+    `,
   apps: [
     {
       name: '1Password',

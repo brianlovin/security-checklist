@@ -5,12 +5,11 @@ import type { ChecklistResource } from '../../types';
 
 type Props = {
   resource: ChecklistResource,
-  isChecked: boolean,
 };
 
-export const Heading = ({ resource, isChecked }: Props) => (
+export const Heading = ({ resource }: Props) => (
   <React.Fragment>
     <Title>{resource.title}</Title>
-    <Description>{resource.description}</Description>
+    <Description source={resource.description} />
   </React.Fragment>
 );

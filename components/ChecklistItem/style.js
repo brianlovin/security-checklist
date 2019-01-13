@@ -1,5 +1,6 @@
 // @flow
 import styled, { css } from 'styled-components';
+import Markdown from 'react-markdown';
 import { theme } from '../theme';
 import { Shadows, tint } from '../globals';
 
@@ -23,11 +24,19 @@ export const Title = styled.h3`
   color: ${theme.text.default};
 `;
 
-export const Description = styled.h4`
+export const Description = styled(Markdown)`
   font-size: 16px;
   font-weight: 400;
   color: ${theme.text.secondary};
   margin-top: 8px;
+
+  p:first-of-type {
+    margin-top: 0;
+  }
+
+  p {
+    margin-top: 12px;
+  }
 `;
 
 export const SectionHeading = styled.h5`
@@ -181,8 +190,7 @@ export const AppSourcesListItem = styled.li`
   align-items: center;
   justify-content: center;
   color: ${theme.text.tertiary};
-  margin-left: 4px;
-  padding: 4px 8px;
+  padding: 4px 10px;
   border-radius: 4px;
   min-width: 56px;
   transition: all 0.1s ease-in-out;
