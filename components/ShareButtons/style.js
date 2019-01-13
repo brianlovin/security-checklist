@@ -5,6 +5,8 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
+  margin-top: 32px;
+  margin-bottom: 8px;
 
   button {
     width: 100%;

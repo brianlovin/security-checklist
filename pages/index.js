@@ -3,6 +3,7 @@ import * as React from 'react';
 import Page, { SectionHeading, Heading, Subheading } from '../components/Page';
 import type { GetInitialProps } from '../types';
 import Checklist from '../components/Checklist';
+import ShareButtons from '../components/ShareButtons';
 
 class Index extends React.Component<{}> {
   static async getInitialProps({ res }: GetInitialProps) {
@@ -19,12 +20,14 @@ class Index extends React.Component<{}> {
     return (
       <Page>
         <SectionHeading>
-          <Heading>Improve your online privacy and security</Heading>
+          <Heading>Improve your digital privacy and security</Heading>
           <Subheading>
-            The follow resources are designed to improve everyday people’s
-            security and privacy while using the internet.
+            The following resources are designed to keep you safe while using
+            digital devices and the internet.
           </Subheading>
         </SectionHeading>
+
+        <ShareButtons />
 
         <Checklist />
       </Page>
