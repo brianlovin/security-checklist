@@ -1,0 +1,12 @@
+{
+  "alias": ["securitycheckli.st"],
+  "files": [
+    "components",
+    "config",
+    "lib",
+    "pages",
+    "static",
+    "types",
+    ".babelrc"
+  ]
+}
