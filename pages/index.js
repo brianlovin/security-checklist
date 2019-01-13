@@ -22,8 +22,9 @@ class Index extends React.Component<{}> {
         <SectionHeading>
           <Heading>Be safe on the internet.</Heading>
           <Subheading>
-            An open source collection of resources designed to improve your
-            online privacy and security.
+            An open source checklist of resources designed to improve your
+            online privacy and security. Check things off to keep track as you
+            go.
           </Subheading>
         </SectionHeading>
 
