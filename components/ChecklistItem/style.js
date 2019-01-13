@@ -27,6 +27,7 @@ export const Description = styled.h4`
   font-size: 16px;
   font-weight: 400;
   color: ${theme.text.secondary};
+  margin-top: 8px;
 `;
 
 export const SectionHeading = styled.h5`
@@ -127,10 +128,14 @@ export const AppRowContainer = styled.a`
     margin-top: 0px;
     margin-left: -24px;
     width: calc(100% + 40px);
-    padding: 24px;
+    padding: 12px 24px;
 
     &:last-of-type {
       border-bottom: 1px solid ${theme.bg.wash};
+    }
+
+    &:hover {
+      background: ${theme.bg.default}!important;
     }
   }
 
@@ -162,6 +167,7 @@ export const AppSourcesList = styled.ul`
   list-style-type: none;
   display: flex;
   align-items: center;
+  margin-right: 8px;
 
   @media (max-width: 768px) {
     margin-right: 0;
@@ -208,6 +214,10 @@ export const AppSourcesListItem = styled.li`
       left: 7px;
     }
 
+    &:hover {
+      background: ${theme.bg.default}!important;
+    }
+
     ${props =>
       props.hideOnMobile &&
       css`
@@ -232,10 +242,11 @@ export const ResourceRowContainer = styled.a`
   margin-top: 4px;
   width: 100%;
   border-radius: 6px;
-  padding: 8px 12px;
+  padding: 8px 20px 8px 12px;
   margin-left: -12px;
   color: ${theme.text.tertiary};
   width: calc(100% + 8px);
+  line-height: 1.3;
 
   @media (max-width: 768px) {
     width: calc(100% + 40px);
@@ -244,8 +255,12 @@ export const ResourceRowContainer = styled.a`
     margin-left: -24px;
     padding-left: 24px;
 
+    &:hover {
+      background: ${theme.bg.default}!important;
+    }
+
     .icon {
-      margin-top: 4px;
+      margin-top: 2px;
     }
   }
 

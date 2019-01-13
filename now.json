@@ -1,5 +1,8 @@
 {
   "alias": ["securitycheckli.st"],
+  "github": {
+    "silence": true
+  },
   "files": [
     "components",
     "config",

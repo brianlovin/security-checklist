@@ -18,6 +18,10 @@ export const Container = styled.div`
     props.showHeaderShadow ? '0 4px 8px rgba(0,0,0,0.04)' : 'none'};
   transition: all 0.2s ease-in-out;
 
+  a {
+    margin-left: 8px;
+  }
+
   @media (max-width: 968px) {
     padding: 8px 16px;
     grid-template-columns: 1fr 1fr;
@@ -37,7 +41,4 @@ export const ButtonRowContainer = styled.div`
   justify-content: flex-end;
   grid-area: actions;
   align-items: center;
-
-  @media (max-width: 968px) {
-  }
 `;
