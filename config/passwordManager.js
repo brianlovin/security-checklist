@@ -10,10 +10,9 @@ export default {
       url: 'https://1password.com/',
       sources: {
         windows: 'https://1password.com/downloads/windows/',
+        macos: 'https://1password.com/downloads/mac/',
         ios: 'https://1password.com/downloads/ios/',
         android: 'https://1password.com/downloads/android/',
-        macos: 'https://1password.com/downloads/mac/',
-        website: 'https://1password.com/',
       },
     },
     {
@@ -23,12 +22,11 @@ export default {
       sources: {
         windows:
           'https://download.cloud.lastpass.com/windows_installer/lastpass.exe',
+        macos:
+          'https://itunes.apple.com/us/app/lastpass/id926036361?ls=1&mt=12',
         ios:
           'https://itunes.apple.com/us/app/lastpass-password-manager/id324613447',
         android: 'https://lastpass.com/android_market.php',
-        macos:
-          'https://itunes.apple.com/us/app/lastpass/id926036361?ls=1&mt=12',
-        website: 'https://www.lastpass.com/',
       },
     },
   ],

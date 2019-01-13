@@ -21,8 +21,6 @@ export default function About() {
       <SectionHeading>
         <Heading>About</Heading>
 
-        <div style={{ padding: '8px' }} />
-
         <Subheading>
           This website provides a beginner’s checklist for staying safe on the
           internet. This website is the result of a conversation started during
