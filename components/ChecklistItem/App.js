@@ -17,7 +17,7 @@ type Props = {
 };
 
 export const AppRow = ({ app }: Props) => {
-  const sourcesKeys = Object.keys(app.sources);
+  const sourcesKeys = app.sources && Object.keys(app.sources);
 
   const renderSourceIcon = (key: string) => {
     const sourceUrl = app.sources[key];
@@ -72,10 +72,12 @@ export const AppRow = ({ app }: Props) => {
   return (
     <AppRowContainer href={app.url} target="_blank" rel="noopener noreferrer">
       <AppMeta>
-        <AppIcon src={app.image} />
+        {app.image && <AppIcon src={app.image} />}
         <AppName>{app.name}</AppName>
       </AppMeta>
-      <AppSourcesList>{sourcesKeys.map(renderSourceIcon)}</AppSourcesList>
+      {sourcesKeys && (
+        <AppSourcesList>{sourcesKeys.map(renderSourceIcon)}</AppSourcesList>
+      )}
     </AppRowContainer>
   );
 };

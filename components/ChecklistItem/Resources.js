@@ -12,7 +12,7 @@ export const Resources = ({ resource }: Props) => {
   if (!resource.resources) return null;
   return (
     <React.Fragment>
-      <SectionHeading>More Resources</SectionHeading>
+      <SectionHeading>Resources</SectionHeading>
       {resource.resources.map(r => (
         <ResourceRow key={r.name} resource={r} />
       ))}
