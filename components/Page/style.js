@@ -48,8 +48,9 @@ export const SectionHeading = styled.div`
 `;
 
 export const Heading = styled.h3`
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
+  line-height: 1.2;
   color: ${theme.text.default};
 
   @media (max-width: 968px) {
@@ -58,9 +59,10 @@ export const Heading = styled.h3`
 `;
 
 export const Subheading = styled.h4`
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   color: ${theme.text.tertiary};
+  margin-top: 8px;
 
   a {
     color: ${theme.text.default};

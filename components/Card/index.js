@@ -8,6 +8,10 @@ type Props = {
 };
 
 export default function Card(props: Props) {
-  const { style, children } = props;
-  return <StyledCard style={style}>{children}</StyledCard>;
+  const { style, children, ...rest } = props;
+  return (
+    <StyledCard {...rest} style={style}>
+      {children}
+    </StyledCard>
+  );
 }

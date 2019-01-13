@@ -1,7 +1,8 @@
 // @flow
 import * as React from 'react';
-import Page, { SectionHeading } from '../components/Page';
+import Page, { SectionHeading, Heading, Subheading } from '../components/Page';
 import type { GetInitialProps } from '../types';
+import Checklist from '../components/Checklist';
 
 class Index extends React.Component<{}> {
   static async getInitialProps({ res }: GetInitialProps) {
@@ -17,7 +18,15 @@ class Index extends React.Component<{}> {
   render() {
     return (
       <Page>
-        <SectionHeading />
+        <SectionHeading>
+          <Heading>Improve your online privacy and security</Heading>
+          <Subheading>
+            The follow resources are designed to improve everyday people’s
+            security and privacy while using the internet.
+          </Subheading>
+        </SectionHeading>
+
+        <Checklist />
       </Page>
     );
   }

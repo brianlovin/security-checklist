@@ -7,12 +7,4 @@ export const StyledCard = styled.div`
   background: ${props => props.theme.bg.default};
   border-radius: 6px;
   ${Shadows.default};
-
-  &:hover {
-    ${Shadows.hover};
-  }
-
-  &:active {
-    ${Shadows.active};
-  }
 `;

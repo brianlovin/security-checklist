@@ -11,3 +11,31 @@ export type GetInitialProps = {
     getInitialProps?: (ctx: any) => void,
   },
 };
+
+export type Resource = {
+  name: string,
+  url: string,
+};
+
+export type AppSource = {
+  windows?: string,
+  ios?: string,
+  macos?: string,
+  anrdroid?: string,
+  website?: string,
+};
+
+export type App = {
+  name: string,
+  image: string,
+  sources: AppSource,
+  url: string,
+};
+
+export type ChecklistResource = {
+  id: string,
+  title: string,
+  description: string,
+  apps?: ?Array<App>,
+  resources?: ?Array<Resource>,
+};
