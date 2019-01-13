@@ -1,6 +1,6 @@
 export default {
-  id: 'simPin',
-  title: 'Set up a carrier SIM PIN',
+  id: 'carrierPin',
+  title: 'Set up a mobile carrier PIN',
   description: `SIM hijacking is a method where a hacker can socially engineer or bribe a mobile carrier to transfer your phone number to a SIM card the hacker owns.
   
   \n\nIf you use text messages as a two-factor authentication method, this gives hackers the ability to bypass 2FA and in most cases reset your passwords completely.
