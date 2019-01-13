@@ -29,6 +29,7 @@ export type App = {
   name: string,
   image: string,
   sources: AppSource,
+  url: string,
 };
 
 export type ChecklistResource = {

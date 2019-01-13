@@ -8,11 +8,14 @@ type Props = {
   resource: ChecklistResource,
 };
 
-export const Resources = ({ resource }: Props) => (
-  <React.Fragment>
-    <SectionHeading>More Resources</SectionHeading>
-    {resource.resources.map(r => (
-      <ResourceRow key={resource.name} resource={r} />
-    ))}
-  </React.Fragment>
-);
+export const Resources = ({ resource }: Props) => {
+  if (!resource.resources) return null;
+  return (
+    <React.Fragment>
+      <SectionHeading>More Resources</SectionHeading>
+      {resource.resources.map(r => (
+        <ResourceRow key={r.name} resource={r} />
+      ))}
+    </React.Fragment>
+  );
+};

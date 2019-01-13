@@ -8,10 +8,13 @@ type Props = {
   resource: ChecklistResource,
 };
 
-export const Apps = ({ resource }: Props) => (
-  <AppsContainer>
-    {resource.apps.map(app => (
-      <AppRow key={app.name} app={app} />
-    ))}
-  </AppsContainer>
-);
+export const Apps = ({ resource }: Props) => {
+  if (!resource.apps) return null;
+  return (
+    <AppsContainer>
+      {resource.apps.map(app => (
+        <AppRow key={app.name} app={app} />
+      ))}
+    </AppsContainer>
+  );
+};
