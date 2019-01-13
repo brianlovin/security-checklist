@@ -103,6 +103,7 @@ export const Checkbox = styled.span`
 export const ResourceContent = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: ${props => (props.isCollapsed ? 'center' : 'flex-start')};
   padding-left: 16px;
   width: 100%;
 

@@ -5,11 +5,12 @@ import type { ChecklistResource } from '../../types';
 
 type Props = {
   resource: ChecklistResource,
+  isCollapsed: boolean,
 };
 
-export const Heading = ({ resource }: Props) => (
+export const Heading = ({ resource, isCollapsed }: Props) => (
   <React.Fragment>
     <Title>{resource.title}</Title>
-    <Description source={resource.description} />
+    {!isCollapsed && <Description source={resource.description} />}
   </React.Fragment>
 );

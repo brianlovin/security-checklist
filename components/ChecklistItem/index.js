@@ -23,26 +23,31 @@ type Props = {
 type State = {
   isChecked: boolean,
   isLoading: boolean,
+  isCollapsed: boolean,
 };
 
 class ChecklistItem extends React.Component<Props, State> {
-  state = { isChecked: false, isLoading: true };
+  state = { isChecked: false, isLoading: true, isCollapsed: true };
 
   componentDidMount() {
     const { resource } = this.props;
     const isChecked = getCheckedStatusById(resource.id);
-    return this.setState({ isChecked, isLoading: false });
+    return this.setState({
+      isChecked,
+      isLoading: false,
+      isCollapsed: isChecked,
+    });
   }
 
   handleSetChecked = () => {
-    const { isChecked } = this.state;
+    const { isChecked, isCollapsed } = this.state;
     const { resource } = this.props;
     setCheckedStatusById(resource.id, !isChecked);
-    return this.setState({ isChecked: !isChecked });
+    return this.setState({ isChecked: !isChecked, isCollapsed: !isCollapsed });
   };
 
   render() {
-    const { isChecked, isLoading } = this.state;
+    const { isChecked, isLoading, isCollapsed } = this.state;
     const { resource } = this.props;
 
     if (isLoading) return <LoadingChecklistItem />;
@@ -55,17 +60,17 @@ class ChecklistItem extends React.Component<Props, State> {
               <Checkbox isChecked={isChecked} />
             </CheckboxContainer>
 
-            <ResourceContent isChecked={isChecked}>
-              <Heading resource={resource} />
+            <ResourceContent isChecked={isChecked} isCollapsed={isCollapsed}>
+              <Heading resource={resource} isCollapsed={isCollapsed} />
 
-              {resource.apps && (
+              {!isCollapsed && resource.apps && (
                 <React.Fragment>
                   <Divider />
                   <Apps resource={resource} />
                 </React.Fragment>
               )}
 
-              {resource.resources && (
+              {!isCollapsed && resource.resources && (
                 <React.Fragment>
                   <Divider />
                   <Resources resource={resource} />
