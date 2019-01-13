@@ -48,10 +48,10 @@ export const SectionHeading = styled.div`
 `;
 
 export const Heading = styled.h3`
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 1.2;
   color: ${theme.text.default};
+  line-height: 1.2;
 
   @media (max-width: 968px) {
     max-width: 100%;
@@ -62,7 +62,8 @@ export const Subheading = styled.h4`
   font-size: 22px;
   font-weight: 400;
   color: ${theme.text.tertiary};
-  margin-top: 16px;
+  margin-top: 12px;
+  line-height: 1.4;
 
   a {
     color: ${theme.text.default};

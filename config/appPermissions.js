@@ -1,7 +1,7 @@
 export default {
   id: 'appPermissions',
   title: 'Review app permissions on your devices',
-  description: `You should review all applications that have access to your photos, camera, location, and microphone. Ensure that any app with permission is made by someone you trust.
+  description: `You should review all applications that have access to your photos, camera, location, and microphone. Ensure that you trust apps with sensitive permissions.
   `,
   resources: [
     {
@@ -28,6 +28,18 @@ export default {
       name: 'How to manage app permissions on Windows',
       url:
         'https://www.intowindows.com/how-to-change-app-permissions-in-windows-10/',
+    },
+    {
+      name: 'Apps and services with access to your Google account',
+      url: 'https://myaccount.google.com/permissions',
+    },
+    {
+      name: 'Apps and services with access to your Facebook account',
+      url: 'https://www.facebook.com/settings?tab=applications',
+    },
+    {
+      name: 'Apps and services with access to your Twitter account',
+      url: 'https://twitter.com/settings/applications',
     },
   ],
 };

@@ -19,11 +19,11 @@ export default {
       url: 'https://www.facebook.com/settings?tab=location',
     },
     {
-      name: 'Facebook face recognition',
+      name: 'Facebook face recognition settings',
       url: 'https://www.facebook.com/settings?tab=facerec',
     },
     {
-      name: 'Your Facebook data',
+      name: 'Your Facebook information',
       url: 'https://www.facebook.com/settings?tab=your_facebook_information',
     },
     {

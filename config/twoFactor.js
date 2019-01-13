@@ -1,13 +1,13 @@
 export default {
   id: 'twoFactor',
-  title: 'Two-Factor Authentication (2FA)',
-  description: `Two-factor authentication is an extra layer of security on top of passwords. It ensures that someone logging into an account is who they say they are by requiring an extra piece of information besides the account password.
+  title: 'Use two-factor authentication',
+  description: `Two-factor authentication (2FA) adds an extra layer of security on top of passwords. It ensures that someone logging into an account is who they say they are by requiring an extra piece of information besides the account password.
     
     \n\nThis extra information is usually either something you know, something you have, or something you are - for example, a biometric signal like FaceID.
     
     \n\n**You should not use your phone number as a two-factor method.**
     
-    \n\n2FA should be installed on accounts that can lock you out of other accounts: e.g. a Google account, email applications, an Apple ID, and financial accounts.
+    \n\nAt minimum 2FA should be installed on accounts that can lock you out of other accounts: e.g. a Google account, email applications, an Apple ID, and financial accounts. For stronger security, ensure that 2FA is enabled on every service you use that supports it.
     `,
   apps: [
     {

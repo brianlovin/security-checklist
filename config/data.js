@@ -1,7 +1,7 @@
 import passwordManager from './passwordManager';
 import strongDevicePasscode from './strongDevicePasscode';
 import twoFactor from './twoFactor';
-import simPin from './simPin';
+import carrierPin from './carrierPin';
 import creditFreeze from './creditFreeze';
 import encryptedHardware from './encryptedHardware';
 import dns from './dns';
@@ -12,12 +12,13 @@ import email from './email';
 import appPermissions from './appPermissions';
 import socialMedia from './socialMedia';
 import phishing from './phishing';
+import webcam from './webcam';
 
 export default {
   passwordManager,
   strongDevicePasscode,
   twoFactor,
-  simPin,
+  carrierPin,
   creditFreeze,
   encryptedHardware,
   dns,
@@ -26,6 +27,7 @@ export default {
   searchEngine,
   email,
   appPermissions,
+  webcam,
   socialMedia,
   phishing,
 };

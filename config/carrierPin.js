@@ -1,11 +1,11 @@
 export default {
-  id: 'simPin',
-  title: 'Set up a carrier SIM PIN',
-  description: `SIM hijacking is a method where a hacker can socially engineer or bribe a mobile carrier to transfer your phone number to a SIM card the hacker owns.
+  id: 'carrierPin',
+  title: 'Set up a mobile carrier PIN',
+  description: `SIM hijacking is a process where a hacker socially engineer or bribe a mobile carrier to transfer your phone number to a SIM card they own.
   
-  \n\nIf you use text messages as a two-factor authentication method, this gives hackers the ability to bypass 2FA and in most cases reset your passwords completely.
+  \n\nIf you use text messages as a two-factor authentication method, this gives hackers the ability to bypass 2FA and in most cases the ability to reset your passwords completely.
   
-  \n\nYou should enable a carrier security PIN that is required before any SIM transfers can be processed.`,
+  \n\nYou should enable a carrier security PIN. This PIN will be used before a carrier can make changes to your SIM cards or mobile account settings.`,
   resources: [
     {
       name: 'SIM swap attacks and what you need to know',

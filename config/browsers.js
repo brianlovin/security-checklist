@@ -2,6 +2,8 @@ export default {
   id: 'browsers',
   title: 'Use a privacy-first web browser',
   description: `You should use a web browser that protects you from tracking, fingerprinting, and unwanted advertisements.
+
+  Modern browsers have made it simple to transfer your bookmarks and preferences in order to reduce switching pains.
     `,
   apps: [
     {
@@ -59,6 +61,16 @@ export default {
       name: 'Firefox multi-account containers',
       url:
         'https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/',
+    },
+    {
+      name: 'How to protect yourself from browser fingerprinting',
+      url:
+        'https://www.comparitech.com/blog/vpn-privacy/what-is-browser-fingerprinting-how-to-protect-yourself/',
+    },
+    {
+      name: 'Browser fingerprinting, and why they are so hard to erase',
+      url:
+        'https://www.networkworld.com/article/2884026/security0/browser-fingerprints-and-why-they-are-so-hard-to-erase.html',
     },
   ],
 };

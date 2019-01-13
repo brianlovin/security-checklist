@@ -22,7 +22,9 @@ export default function ShareButtons() {
         <TwitterButton>Tweet</TwitterButton>
       </a>
 
-      <CopyLinkButton text="https://securitycheckli.st">Copy</CopyLinkButton>
+      <CopyLinkButton text="https://securitycheckli.st">
+        Share Link
+      </CopyLinkButton>
     </Container>
   );
 }
