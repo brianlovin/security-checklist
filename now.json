@@ -1,11 +1,16 @@
 {
-  "version": 2,
   "alias": ["securitycheckli.st"],
   "github": {
     "silent": true
   },
-  "name": "security-checklist",
-  "builds": [
-      { "src": "next.config.js", "use": "@now/next" }
+  "files": [
+    "components",
+    "config",
+    "lib",
+    "pages",
+    "static",
+    "types",
+    ".babelrc",
+    "server.js"
   ]
 }
