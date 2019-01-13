@@ -1,11 +1,22 @@
 export default {
   id: 'vpn',
   title: 'Use a VPN',
-  description: `A VPN, or virtual private network, is a useful tool to secure an internet connection. It guarantees that that data you are sending and receiving is encrypted, preventing people from snooping on your traffic.
+  description: `A VPN, or virtual private network, is a useful tool to secure an internet connection. It guarantees that data you are sending and receiving is encrypted, preventing people from snooping on your traffic.
 
-  \n\nYou should use a VPN provider that you trust to not harvest and re-sell your data. The best VPNs often charge a monthly subscription - this is a good thing, because it means their business model is not reliant upon aggregating and reselling data.
+  \n\nYou should use a VPN provider that you trust to not harvest and re-sell your data. The best VPNs often charge a monthly subscription - this is a good thing, because it means their business model is not reliant upon reselling your data to advertisers.
     `,
   apps: [
+    {
+      name: 'IVPN',
+      image: '/static/img/ivpn.jpg',
+      url: 'https://www.ivpn.net/',
+      sources: {
+        windows: 'https://www.ivpn.net/apps-windows',
+        macos: 'https://www.ivpn.net/apps-macos',
+        ios: 'https://www.ivpn.net/apps-ios',
+        android: 'https://www.ivpn.net/apps-android',
+      },
+    },
     {
       name: 'Encrypt.me',
       image: '/static/img/encrypt-me.jpg',
@@ -16,17 +27,6 @@ export default {
         ios: 'https://itunes.apple.com/us/app/encrypt-me/id473835722?ls=1&mt=8',
         android:
           'https://play.google.com/store/apps/details?id=com.stackpath.cloak',
-      },
-    },
-    {
-      name: 'IVPN',
-      image: '/static/img/ivpn.jpg',
-      url: 'https://www.ivpn.net/',
-      sources: {
-        windows: 'https://www.ivpn.net/apps-windows',
-        macos: 'https://www.ivpn.net/apps-macos',
-        ios: 'https://www.ivpn.net/apps-ios',
-        android: 'https://www.ivpn.net/apps-android',
       },
     },
     {

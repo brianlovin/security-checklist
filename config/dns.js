@@ -1,9 +1,9 @@
 export default {
   id: 'dns',
   title: 'Use 1.1.1.1 for DNS resolution',
-  description: `DNS (Domain Name Servers) are the internet's equivalent of a phone book. They translate a name like 'google.com' into an IP address. By default DNS is slow and insecure.
+  description: `DNS (Domain Name Servers) are the internet's equivalent of a phone book. They translate a name like 'google.com' into an IP address. By default DNS is slow and insecure. Many internet service providers track and log data that flows through DNS, in some cases reselling this data to advertisers.
 
-  \n\nCloudflare has released a privacy and performace-focused DNS tool that protects your internet traffif from prying eyes. It's faster than an average DNS service as well, making it faster to use the internet.
+  \n\nCloudflare has released a privacy and performace-focused DNS tool that protects your internet traffic from internet service providers and people snooping on public Wi-Fi networks. 1.1.1.1 is faster than the average DNS service as well, making it faster to use the internet.
     `,
   apps: [
     {

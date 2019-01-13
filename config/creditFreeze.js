@@ -1,11 +1,11 @@
 export default {
   id: 'creditFreeze',
   title: 'Freeze Your Credit',
-  description: `If you live in the United States, you should safely assume that hackers have access to your credit report, social security number, address history, and personal contact information. It is important that hackers with this knowledge are not able to impersonate you in order to open new lines of credit or make large purchases.
+  description: `If you live in the United States, you should safely assume that hackers have access to your credit report, social security number, address history, and personal contact information. It is important that hackers with this knowledge are not able to open new lines of credit or make large purchases in your name.
   
-  \n\nYou should enable a freeze on all credit report checks at the three major credit bureaus. Any time you want to open your own line of credit or make a credit-backed purchase (for example, the iPhone Upgrade Program), you can add a time-blocked "credit thaw" that will allow legitimate credit checks to be processed.
+  \n\nYou should enable a freeze on all credit report checks at the three major credit bureaus. Whenever want to open a new line of credit or make a credit-backed purchase (for example, the iPhone Upgrade Program), you can create a "credit thaw" that will allow legitimate credit checks to be processed within a predetermined amount of time.
   
-  \n\n**Ensure that you enable a freeze at all three credit bureaus**`,
+  \n\n**Ensure that you enable a freeze at all three credit bureaus.**`,
   resources: [
     {
       name: 'FTC Credit Freeze FAQs',

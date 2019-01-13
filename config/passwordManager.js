@@ -1,10 +1,10 @@
 export default {
   id: 'passwordManager',
-  title: 'Password Manager',
-  description: `A password manager helps you set unique passwords for each service you use. Having a unique password ensures that if one service you use is hacked, the leaked password won’t allow access to all of your accounts.
+  title: 'Use a password manager',
+  description: `A password manager helps you create a unique password for each online service you use. Having a unique password ensures that if one service you use is hacked, the compromised password won’t allow access to all of your other accounts.
     
-    \n\nAt the very minimum you should have a unique password for high-value accounts like a Google account, email applications, an Apple ID, and financial accounts.
-    `,
+    \n\nAt the very minimum you should have a unique password for high-value accounts like Google, Apple, email, and banking accounts.
+  `,
   apps: [
     {
       name: '1Password',
@@ -42,6 +42,15 @@ export default {
       name: 'How password managers work and why you should use one',
       url:
         'https://motherboard.vice.com/en_us/article/59yv5x/how-password-managers-work-and-why-you-should-use-one',
+    },
+    {
+      name: 'Password managers compared',
+      url:
+        'https://www.howtogeek.com/240255/password-managers-compared-lastpass-vs-keepass-vs-dashlane-vs-1password/',
+    },
+    {
+      name: 'Find out if your passwords have been hacked',
+      url: 'https://haveibeenpwned.com/',
     },
   ],
 };
