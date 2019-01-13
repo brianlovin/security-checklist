@@ -7,7 +7,6 @@
     "pages",
     "static",
     "types",
-    ".babelrc",
-    "server.js"
+    ".babelrc"
   ]
 }
