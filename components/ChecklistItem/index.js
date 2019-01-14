@@ -40,7 +40,7 @@ class ChecklistItem extends React.Component<Props, State> {
   }
 
   handleSetChecked = () => {
-    const { isChecked, isCollapsed } = this.state;
+    const { isChecked } = this.state;
     const { resource } = this.props;
     setCheckedStatusById(resource.id, !isChecked);
     return this.setState({ isChecked: !isChecked, isCollapsed: !isChecked });
