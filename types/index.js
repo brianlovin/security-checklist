@@ -25,11 +25,17 @@ export type AppSource = {
   website?: string,
 };
 
+export type Offer = {
+  label: string,
+  url: string,
+};
+
 export type App = {
   name: string,
   image: string,
   sources: AppSource,
   url: string,
+  offer: Offer,
 };
 
 export type ChecklistResource = {
