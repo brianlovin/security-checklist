@@ -4,7 +4,7 @@ import { ShimmerInboxThread, ShimmerBase, ShimmerLine, Cover } from './style';
 import Card from '../Card';
 
 const LoadingChecklistItem = () => (
-  <div style={{ marginTop: '24px' }}>
+  <div style={{ marginBottom: '24px' }}>
     <Card>
       <ShimmerInboxThread>
         <ShimmerBase>
