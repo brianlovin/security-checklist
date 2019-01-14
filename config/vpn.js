@@ -40,6 +40,17 @@ export default {
         android: 'https://www.expressvpn.com/vpn-software/vpn-android',
       },
     },
+    {
+      name: 'ProtonVPN',
+      image: '/static/img/protonvpn.png',
+      url: 'https://www.protonvpn.com/',
+      sources: {
+        windows: 'https://www.expressvpn.com/vpn-software/vpn-windows',
+        macos: 'https://www.expressvpn.com/vpn-software/vpn-mac',
+        ios: 'https://www.expressvpn.com/vpn-software/vpn-ios',
+        android: 'https://play.google.com/store/apps/details?id=com.protonvpn.android',
+      },
+    },
   ],
   resources: [
     {
