@@ -272,6 +272,19 @@ export const ResourceRowContainer = styled.a`
   width: calc(100% + 8px);
   line-height: 1.3;
 
+  &:first-of-type {
+    margin-top: 8px;
+  }
+
+  .icon {
+    margin-right: 8px;
+  }
+
+  &:hover {
+    background: ${theme.bg.wash};
+    color: ${theme.text.default};
+  }
+
   @media (max-width: 768px) {
     width: calc(100% + 40px);
     border-radius: 0;
@@ -284,21 +297,10 @@ export const ResourceRowContainer = styled.a`
     }
 
     .icon {
-      margin-top: 2px;
+      margin-top: 1px;
+      margin-left: 6px;
+      margin-right: 18px !important;
     }
-  }
-
-  &:first-of-type {
-    margin-top: 8px;
-  }
-
-  .icon {
-    margin-right: 8px;
-  }
-
-  &:hover {
-    background: ${theme.bg.wash};
-    color: ${theme.text.default};
   }
 `;
 

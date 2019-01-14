@@ -6,7 +6,7 @@ import { CardContent, TopBorder } from './style';
 import { SmallHeading, SmallSubheading } from '../Page/style';
 
 const BottomShare = () => (
-  <Card style={{ width: '100%' }}>
+  <Card style={{ width: '100%', marginTop: '48px' }}>
     <TopBorder />
     <CardContent>
       <SmallHeading>Feeling more secure?</SmallHeading>
