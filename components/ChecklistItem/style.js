@@ -353,7 +353,7 @@ export const OfferContainer = styled.a`
   background: ${theme.bg.default};
   padding: 8px 16px;
   position: relative;
-  margin-top: 8px;
+  margin-top: 4px;
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 500;
