@@ -343,3 +343,47 @@ export const Uncollapse = styled.span`
     background: ${tint(theme.bg.wash, -4)};
   }
 `;
+
+export const OfferContainer = styled.a`
+  display: flex;
+  align-items: center;
+  width: calc(100% - 8px);
+  box-shadow: inset 0 0 1px ${theme.border.active};
+  border-radius: 4px;
+  background: ${theme.bg.default};
+  padding: 8px 16px;
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: ${theme.text.tertiary};
+  overflow: hidden;
+
+  .icon {
+    margin-right: 4px;
+  }
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+
+    .icon {
+      top: 2px;
+    }
+  }
+
+  &:hover {
+    color: ${theme.text.secondary};
+  }
+`;
+
+export const LeftBorder = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100px;
+  width: 4px;
+  background-image: linear-gradient(to bottom, #a913de, #6ac9ff);
+  border-radius: 6px 0 0 6px;
+`;

@@ -10,6 +10,10 @@ export default {
       name: '1Password',
       image: '/static/img/1password.jpg',
       url: 'https://1password.com/',
+      offer: {
+        label: 'Sign up with Security Checklist to get 3 months free',
+        url: 'https://start.1password.com/sign-up/family?c=SECURELIST-FJN7FIKQ',
+      },
       sources: {
         windows: 'https://1password.com/downloads/windows/',
         macos: 'https://1password.com/downloads/mac/',

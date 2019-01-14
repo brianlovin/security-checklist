@@ -10,6 +10,7 @@ import {
   AppSourcesListItem,
   AppSourcesLabel,
 } from './style';
+import Offer from './Offer';
 import Icon from '../Icon';
 
 type Props = {
@@ -78,6 +79,7 @@ export const AppRow = ({ app }: Props) => {
       {sourcesKeys && (
         <AppSourcesList>{sourcesKeys.map(renderSourceIcon)}</AppSourcesList>
       )}
+      {app.offer && <Offer offer={app.offer} />}
     </AppRowContainer>
   );
 };
