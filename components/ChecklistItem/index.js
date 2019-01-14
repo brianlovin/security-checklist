@@ -43,8 +43,11 @@ class ChecklistItem extends React.Component<Props, State> {
     const { isChecked, isCollapsed } = this.state;
     const { resource } = this.props;
     setCheckedStatusById(resource.id, !isChecked);
-    return this.setState({ isChecked: !isChecked, isCollapsed: !isCollapsed });
+    return this.setState({ isChecked: !isChecked, isCollapsed: !isChecked });
   };
+
+  uncollapse = () =>
+    this.setState(state => ({ isCollapsed: !state.isCollapsed }));
 
   render() {
     const { isChecked, isLoading, isCollapsed } = this.state;
@@ -61,7 +64,11 @@ class ChecklistItem extends React.Component<Props, State> {
             </CheckboxContainer>
 
             <ResourceContent isChecked={isChecked} isCollapsed={isCollapsed}>
-              <Heading resource={resource} isCollapsed={isCollapsed} />
+              <Heading
+                resource={resource}
+                isCollapsed={isCollapsed}
+                handleCollapse={this.uncollapse}
+              />
 
               {!isCollapsed && resource.apps && (
                 <React.Fragment>

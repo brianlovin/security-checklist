@@ -22,6 +22,8 @@ export const Title = styled.h3`
   font-size: 18px;
   font-weight: 500;
   color: ${theme.text.default};
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Description = styled(Markdown)`
@@ -103,7 +105,7 @@ export const Checkbox = styled.span`
 export const ResourceContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: ${props => (props.isCollapsed ? 'center' : 'flex-start')};
+  margin-top: 2px;
   padding-left: 16px;
   width: 100%;
 
@@ -302,5 +304,23 @@ export const Divider = styled.div`
 
   @media (max-width: 768px) {
     display: none;
+  }
+`;
+
+export const Uncollapse = styled.span`
+  background: ${theme.bg.wash};
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 15px;
+  color: ${theme.text.tertiary};
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+
+  &:hover {
+    color: ${theme.text.default};
+    background: ${tint(theme.bg.wash, -4)};
   }
 `;
