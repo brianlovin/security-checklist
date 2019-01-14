@@ -367,6 +367,7 @@ export const OfferContainer = styled.a`
   @media (max-width: 768px) {
     align-items: flex-start;
     margin-top: 8px;
+    width: 100%;
 
     .icon {
       display: none;
