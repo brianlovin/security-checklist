@@ -76,17 +76,25 @@ export const Checkbox = styled.span`
   height: 32px;
   border-radius: 4px;
   border: 1px solid
-    ${props => (props.isChecked ? theme.success.default : theme.border.default)};
+    ${props => (props.isChecked ? theme.bg.default : theme.border.default)};
   background: ${props =>
     props.isChecked ? theme.success.default : theme.bg.wash};
   cursor: pointer;
   position: relative;
+  background-image: ${props =>
+    props.isChecked
+      ? 'radial-gradient(circle at top right, #a913de, #6ac9ff)'
+      : 'none'};
+  box-shadow: ${props =>
+    props.isChecked ? 'inset 0 0 1px rgba(0,0,0,0.4)' : 'none'};
 
   &:hover {
-    ${Shadows.default};
-    border: 1px solid
-      ${props =>
-        props.isChecked ? theme.success.default : theme.border.active};
+    ${props => !props.isChecked && Shadows.default};
+    background: ${theme.bg.default};
+    background-image: ${props =>
+      props.isChecked
+        ? 'radial-gradient(circle at top right, #a913de, #6ac9ff)'
+        : 'none'};
   }
 
   &:after {

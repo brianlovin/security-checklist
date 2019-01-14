@@ -75,12 +75,16 @@ export const Subheading = styled.h4`
   }
 `;
 
-export const LargeHeading = styled(Heading)`
-  font-size: 32px;
+export const SmallHeading = styled(Heading)`
+  font-size: 30px;
+  margin-bottom: 4px;
+  margin-top: 8px;
 `;
 
-export const LargeSubheading = styled(Subheading)`
+export const SmallSubheading = styled(Subheading)`
   font-size: 20px;
+  margin-top: 4px;
+  margin-bottom: 32px;
 `;
 
 export const ScrollToTop = styled.button`
