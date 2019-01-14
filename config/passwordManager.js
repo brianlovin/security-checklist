@@ -49,7 +49,7 @@ export default {
         'https://www.howtogeek.com/240255/password-managers-compared-lastpass-vs-keepass-vs-dashlane-vs-1password/',
     },
     {
-      name: 'Find out if your passwords have been hacked',
+      name: 'Have I Been Pwned: Find out if your passwords have been hacked',
       url: 'https://haveibeenpwned.com/',
     },
   ],

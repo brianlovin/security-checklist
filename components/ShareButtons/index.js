@@ -15,7 +15,7 @@ export default function ShareButtons() {
       </a>
 
       <a
-        href="https://twitter.com/share?text=Security Checklist: A checklist for staying safe on the internet"
+        href="http://twitter.com/share?text=Check out Security Checklist, a checklist to help people stay safe online&url=https://securitycheckli.st"
         target="_blank"
         rel="noopener noreferrer"
       >
