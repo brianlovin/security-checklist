@@ -14,7 +14,7 @@ export const CardContent = styled.div`
   width: 100%;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: ${props => (props.isCollapsed ? 'row' : 'column')};
   }
 `;
 
@@ -22,6 +22,10 @@ export const Title = styled.h3`
   font-size: 18px;
   font-weight: 500;
   color: ${theme.text.default};
+  display: flex;
+  line-height: 1.2;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const Description = styled(Markdown)`
@@ -72,16 +76,25 @@ export const Checkbox = styled.span`
   height: 32px;
   border-radius: 4px;
   border: 1px solid
-    ${props => (props.isChecked ? theme.brand.default : theme.border.default)};
+    ${props => (props.isChecked ? theme.bg.default : theme.border.default)};
   background: ${props =>
-    props.isChecked ? theme.brand.default : theme.bg.wash};
+    props.isChecked ? theme.success.default : theme.bg.wash};
   cursor: pointer;
   position: relative;
+  background-image: ${props =>
+    props.isChecked
+      ? 'radial-gradient(circle at top right, #a913de, #6ac9ff)'
+      : 'none'};
+  box-shadow: ${props =>
+    props.isChecked ? 'inset 0 0 1px rgba(0,0,0,0.4)' : 'none'};
 
   &:hover {
-    ${Shadows.default};
-    border: 1px solid
-      ${props => (props.isChecked ? theme.brand.default : theme.border.active)};
+    ${props => !props.isChecked && Shadows.default};
+    background: ${theme.bg.default};
+    background-image: ${props =>
+      props.isChecked
+        ? 'radial-gradient(circle at top right, #a913de, #6ac9ff)'
+        : 'none'};
   }
 
   &:after {
@@ -102,12 +115,15 @@ export const Checkbox = styled.span`
 export const ResourceContent = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 2px;
   padding-left: 16px;
   width: 100%;
+  justify-content: ${props => (props.isCollapsed ? 'center' : 'flex-start')};
 
   @media (max-width: 768px) {
-    padding-left: 8px;
-    margin-top: 24px;
+    padding-left: ${props => (props.isCollapsed ? '16px' : '8px')};
+    margin-top: ${props => (props.isCollapsed ? '0px' : '24px')};
+    justify-content: ${props => (props.isCollapsed ? 'center' : 'flex-start')};
   }
 `;
 
@@ -300,5 +316,28 @@ export const Divider = styled.div`
 
   @media (max-width: 768px) {
     display: none;
+  }
+`;
+
+export const Uncollapse = styled.span`
+  background: ${theme.bg.wash};
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 15px;
+  color: ${theme.text.tertiary};
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  &:hover {
+    color: ${theme.text.default};
+    background: ${tint(theme.bg.wash, -4)};
   }
 `;

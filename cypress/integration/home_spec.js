@@ -1,3 +1,5 @@
+import data from '../../config/data';
+
 describe('Home', () => {
   before(() => {
     cy.visit('/');
@@ -22,5 +24,12 @@ describe('Home', () => {
     cy.get(`[href="https://github.com/brianlovin/security-checklist"]`).should(
       'be.visible'
     );
+  });
+
+  it('should render content', () => {
+    const dataKeys = Object.keys(data);
+    dataKeys.map(key => {
+      cy.contains(data[key].title);
+    });
   });
 });

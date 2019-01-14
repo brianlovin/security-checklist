@@ -4,6 +4,7 @@ import Page, { SectionHeading, Heading, Subheading } from '../components/Page';
 import type { GetInitialProps } from '../types';
 import Checklist from '../components/Checklist';
 import ShareButtons from '../components/ShareButtons';
+import BottomShare from '../components/BottomShare';
 
 class Index extends React.Component<{}> {
   static async getInitialProps({ res }: GetInitialProps) {
@@ -22,14 +23,19 @@ class Index extends React.Component<{}> {
         <SectionHeading>
           <Heading>Be safe on the internet.</Heading>
           <Subheading>
-            An open source collection of resources designed to improve your
-            online privacy and security.
+            An open source checklist of resources designed to improve your
+            online privacy and security. Check things off to keep track as you
+            go.
           </Subheading>
         </SectionHeading>
+
+        <div style={{ marginTop: '40px' }} />
 
         <ShareButtons />
 
         <Checklist />
+
+        <BottomShare />
       </Page>
     );
   }

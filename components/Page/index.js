@@ -13,14 +13,12 @@ import {
   SectionHeading,
   Heading,
   Subheading,
-  LargeHeading,
-  LargeSubheading,
   InnerContainer,
   ScrollToTop,
 } from './style';
 import * as gtag from '../../lib/gtag';
 
-export { SectionHeading, Heading, Subheading, LargeHeading, LargeSubheading };
+export { SectionHeading, Heading, Subheading };
 
 type Props = {
   children: Node,

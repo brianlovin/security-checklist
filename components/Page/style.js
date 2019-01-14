@@ -75,12 +75,16 @@ export const Subheading = styled.h4`
   }
 `;
 
-export const LargeHeading = styled(Heading)`
-  font-size: 32px;
+export const SmallHeading = styled(Heading)`
+  font-size: 30px;
+  margin-bottom: 4px;
+  margin-top: 8px;
 `;
 
-export const LargeSubheading = styled(Subheading)`
+export const SmallSubheading = styled(Subheading)`
   font-size: 20px;
+  margin-top: 4px;
+  margin-bottom: 32px;
 `;
 
 export const ScrollToTop = styled.button`
@@ -97,6 +101,7 @@ export const ScrollToTop = styled.button`
   transition: all 0.2s ease-in-out;
   opacity: ${props => (props.isVisible ? '1' : '0')};
   background: ${theme.text.default};
+  background-image: radial-gradient(circle at top right, #a913de, #6ac9ff);
   color: ${theme.bg.default};
   transform: translateY(${props => (props.isVisible ? '0' : '80px')});
   cursor: pointer;
