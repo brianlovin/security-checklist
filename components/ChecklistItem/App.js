@@ -72,7 +72,7 @@ export const AppRow = ({ app }: Props) => {
   return (
     <AppRowContainer href={app.url} target="_blank" rel="noopener noreferrer">
       <AppMeta>
-        {app.image && <AppIcon src={app.image} />}
+        {app.image && <AppIcon alt={app.name} src={app.image} />}
         <AppName>{app.name}</AppName>
       </AppMeta>
       {sourcesKeys && (

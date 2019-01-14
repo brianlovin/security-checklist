@@ -42,3 +42,9 @@ export const ButtonRowContainer = styled.div`
   grid-area: actions;
   align-items: center;
 `;
+
+export const Label = styled.h1`
+  position: absolute;
+  left: -9999px;
+  visibility: none;
+`;
