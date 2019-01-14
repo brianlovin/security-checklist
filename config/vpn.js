@@ -40,6 +40,17 @@ export default {
         android: 'https://www.expressvpn.com/vpn-software/vpn-android',
       },
     },
+    {
+      name: 'NordVPN',
+      image: '/static/img/nordvpn.jpg',
+      url: 'https://nordvpn.com/',
+      sources: {
+        windows: 'https://nordvpn.com/download/windows/',
+        macos: 'https://nordvpn.com/download/mac/',
+        ios: 'https://nordvpn.com/download/ios/',
+        android: 'https://nordvpn.com/download/android/',
+      },
+    },
   ],
   resources: [
     {
