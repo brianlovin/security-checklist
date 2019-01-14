@@ -58,7 +58,7 @@ class ChecklistItem extends React.Component<Props, State> {
     return (
       <Container>
         <Card isChecked={isChecked}>
-          <CardContent>
+          <CardContent isCollapsed={isCollapsed}>
             <CheckboxContainer onClick={this.handleSetChecked}>
               <Checkbox isChecked={isChecked} />
             </CheckboxContainer>

@@ -14,7 +14,7 @@ export const CardContent = styled.div`
   width: 100%;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: ${props => (props.isCollapsed ? 'row' : 'column')};
   }
 `;
 
@@ -23,7 +23,9 @@ export const Title = styled.h3`
   font-weight: 500;
   color: ${theme.text.default};
   display: flex;
+  line-height: 1.2;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const Description = styled(Markdown)`
@@ -108,10 +110,12 @@ export const ResourceContent = styled.div`
   margin-top: 2px;
   padding-left: 16px;
   width: 100%;
+  justify-content: ${props => (props.isCollapsed ? 'center' : 'flex-start')};
 
   @media (max-width: 768px) {
-    padding-left: 8px;
-    margin-top: 24px;
+    padding-left: ${props => (props.isCollapsed ? '16px' : '8px')};
+    margin-top: ${props => (props.isCollapsed ? '0px' : '24px')};
+    justify-content: ${props => (props.isCollapsed ? 'center' : 'flex-start')};
   }
 `;
 
@@ -317,7 +321,12 @@ export const Uncollapse = styled.span`
   line-height: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-right: 8px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   &:hover {
     color: ${theme.text.default};
