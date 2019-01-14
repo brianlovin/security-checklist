@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 import Link from 'next/link';
-import { Container, ButtonRowContainer } from './style';
+import { Container, ButtonRowContainer, Label } from './style';
 import { PrimaryButton, GhostButton } from '../Button';
 import Logo from './Logo';
 
@@ -16,6 +16,7 @@ export default function Header(props: Props) {
     <Container showHeaderShadow={showHeaderShadow} data-cy="header">
       <Link href="/">
         <a style={{ display: 'flex', alignItems: 'center' }}>
+          <Label>Security Checklist</Label>
           <Logo />
         </a>
       </Link>
