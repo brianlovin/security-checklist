@@ -101,6 +101,7 @@ export const ScrollToTop = styled.button`
   transition: all 0.2s ease-in-out;
   opacity: ${props => (props.isVisible ? '1' : '0')};
   background: ${theme.text.default};
+  background-image: radial-gradient(circle at top right, #a913de, #6ac9ff);
   color: ${theme.bg.default};
   transform: translateY(${props => (props.isVisible ? '0' : '80px')});
   cursor: pointer;
