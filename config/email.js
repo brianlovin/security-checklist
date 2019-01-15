@@ -5,6 +5,18 @@ export default {
     `,
   apps: [
     {
+      name: 'Tutanota',
+      image: '/static/img/tutanota.jpg',
+      url: 'https://tutanota.com/',
+      sources: {
+        windows: 'https://tutanota.com/',
+        macos: 'https://tutanota.com/',
+        ios: 'https://itunes.apple.com/app/tutanota/id922429609',
+        android:
+          'https://play.google.com/store/apps/details?id=de.tutao.tutanota',
+      },
+    },
+    {
       name: 'FastMail',
       image: '/static/img/fastmail.jpg',
       url: 'https://www.fastmail.com/',
