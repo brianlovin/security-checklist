@@ -13,6 +13,7 @@ import appPermissions from './appPermissions';
 import socialMedia from './socialMedia';
 import phishing from './phishing';
 import webcam from './webcam';
+import privacyScreen from './privacyScreen';
 
 export default {
   passwordManager,
@@ -23,6 +24,7 @@ export default {
   creditFreeze,
   dns,
   vpn,
+  privacyScreen,
   webcam,
   browsers,
   searchEngine,
