@@ -35,8 +35,8 @@ export default {
       image: '/static/img/safari.jpg',
       url: 'https://www.apple.com/safari/',
       sources: {
-        windows: 'https://www.apple.com/safari/',
         macos: 'https://www.apple.com/safari/',
+        ios: 'https://www.apple.com/safari/',
       },
     },
     {
