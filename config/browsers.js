@@ -48,9 +48,10 @@ export default {
       url: 'https://www.torproject.org/',
       sources: {
         windows:
-          'https://www.torproject.org/projects/torbrowser.html.en#windows',
-        macos: 'https://www.torproject.org/projects/torbrowser.html.en#macosx',
-        linux: 'https://www.torproject.org/docs/tor-doc-unix.html.en',
+          'https://www.torproject.org/download/download-easy.html#windows',
+        macos: 'https://www.torproject.org/download/download-easy.html#mac',
+        linux: 'https://www.torproject.org/download/download-easy.html#linux',
+        android: 'https://play.google.com/store/apps/details?id=org.torproject.torbrowser_alpha',
       },
     },
     {
