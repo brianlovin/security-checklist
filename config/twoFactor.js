@@ -13,7 +13,6 @@ export default {
     `,
   apps: [
     {
-      {
       name: 'Authy',
       image: '/static/img/authy.jpg',
       url: 'https://authy.com/',
