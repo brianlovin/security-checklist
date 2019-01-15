@@ -49,6 +49,15 @@ export default {
         macos: 'https://www.torproject.org/projects/torbrowser.html.en#macosx',
       },
     },
+    {
+      name: 'Vivaldi',
+      image: '/static/img/vivaldi.png',
+      url: 'https://www.vivaldi.com/',
+      sources: {
+        windows: 'https://vivaldi.com/download/',
+        macos: 'https://vivaldi.com/download/',
+      },
+    },
   ],
   resources: [
     {
