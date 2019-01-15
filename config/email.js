@@ -32,6 +32,19 @@ export default {
         linux: 'https://protonmail.com/',
       },
     },
+    {
+      name: 'Tutanota',
+      image: '/static/img/tutanota.jpg',
+      url: 'https://tutanota.com/',
+      sources: {
+        windows: 'https://mail.tutanota.com/desktop/tutanota-desktop-win.exe',
+        macos: 'https://mail.tutanota.com/desktop/tutanota-desktop-mac.zip',
+        ios: 'https://itunes.apple.com/app/tutanota/id922429609',
+        android:
+          'https://play.google.com/store/apps/details?id=de.tutao.tutanota',
+        linux: 'https://mail.tutanota.com/desktop/tutanota-desktop-linux.AppImage'
+      },
+    },
   ],
   resources: [
     {
