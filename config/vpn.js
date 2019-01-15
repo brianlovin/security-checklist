@@ -57,14 +57,16 @@ export default {
     },
     {
       name: 'ProtonVPN',
-      image: '/static/img/protonvpn.png',
+      image: '/static/img/protonvpn.jpg',
       url: 'https://www.protonvpn.com/',
       sources: {
         windows: 'https://protonvpn.com/download/',
         macos: 'https://protonvpn.com/download/',
-        ios: 'https://itunes.apple.com/us/app/protonvpn-fast-secure-vpn/id1437005085',
-        android: 'https://play.google.com/store/apps/details?id=com.protonvpn.android',
-        linux: 'https://protonvpn.com/download/#dl-clients'
+        ios:
+          'https://itunes.apple.com/us/app/protonvpn-fast-secure-vpn/id1437005085',
+        android:
+          'https://play.google.com/store/apps/details?id=com.protonvpn.android',
+        linux: 'https://protonvpn.com/download/#dl-clients',
       },
     },
   ],
