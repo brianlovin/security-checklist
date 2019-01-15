@@ -11,8 +11,8 @@ export default {
       image: '/static/img/1111.jpg',
       url: 'https://www.cloudflare.com/learning/dns/what-is-1.1.1.1/',
       sources: {
-        windows: 'https://1.1.1.1/',
-        macos: 'https://1.1.1.1/',
+        windows: 'https://one.one.one.one/',
+        macos: 'https://one.one.one.one/',
         ios:
           'https://itunes.apple.com/app/1-1-1-1-faster-internet/id1423538627?mt=8',
         android:
