@@ -49,6 +49,7 @@ export default {
         macos: 'https://protonvpn.com/download/',
         ios: 'https://itunes.apple.com/us/app/protonvpn-fast-secure-vpn/id1437005085',
         android: 'https://play.google.com/store/apps/details?id=com.protonvpn.android',
+        linux: 'https://protonvpn.com/download/#dl-clients'
       },
     },
   ],
