@@ -35,6 +35,18 @@ export default {
         android: 'https://lastpass.com/android_market.php',
       },
     },
+    {
+      name: 'Dashlane',
+      image: '/static/img/dashlane.jpg',
+      url: 'https://www.dashlane.com/',
+      sources: {
+        windows: 'https://www.dashlane.com/directdownload?target=archive_win',
+        macos: 'https://www.dashlane.com/directdownload?target=launcher_macosx',
+        ios:
+          'https://itunes.apple.com/us/app/dashlane-password-manager/id517914548',
+        android: 'https://play.google.com/store/apps/details?id=com.dashlane',
+      },
+    },
   ],
   resources: [
     {
