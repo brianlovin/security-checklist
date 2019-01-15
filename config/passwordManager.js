@@ -47,6 +47,18 @@ export default {
         android: 'https://play.google.com/store/apps/details?id=com.dashlane',
       },
     },
+    {
+      name: 'Bitwarden',
+      image: '/static/img/bitwarden.png',
+      url: 'https://www.bitwarden.com/',
+      sources: {
+        windows: 'https://vault.bitwarden.com/download/?app=desktop&platform=windows',
+        macos: 'https://vault.bitwarden.com/download/?app=desktop&platform=macos',
+        ios:
+          'https://itunes.apple.com/app/bitwarden-free-password-manager/id1137397744?mt=8',
+        android: 'https://play.google.com/store/apps/details?id=com.x8bit.bitwarden',
+      },
+    },
   ],
   resources: [
     {
