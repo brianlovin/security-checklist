@@ -6,10 +6,6 @@ export default {
   \n\nIf you‘re not ready to give up social media quite yet, you should take the time to review your security and privacy settings. Visualizing the amount of information that social media companies know about you may be enough to curb that unhealthy newsfeed obsession.`,
   resources: [
     {
-      name: 're:consent - re:consent gives you more privacy control on the web',
-      url: 'https://cliqz.com/en/magazine/re-consent',
-    },
-    {
       name: 'Facebook privacy settings',
       url: 'https://www.facebook.com/settings?tab=privacy',
     },
@@ -68,6 +64,10 @@ export default {
       name: 'Google reservation history',
       url:
         'https://myaccount.google.com/reservations?utm_source=google-account&utm_medium=web&continue=https%3A%2F%2Fmyaccount.google.com%2Fpayments-and-subscriptions',
+    },
+    {
+      name: 're:consent browser extension gives you more privacy control on the web',
+      url: 'https://cliqz.com/en/magazine/re-consent',
     },
   ],
 };
