@@ -15,6 +15,7 @@ export default {
           'https://itunes.apple.com/us/app/fastmail-email-calendar/id931370077',
         android:
           'https://play.google.com/store/apps/details?id=com.fastmail.app',
+        linux: 'https://www.fastmail.com/',
       },
     },
     {
@@ -22,12 +23,13 @@ export default {
       image: '/static/img/protonmail.jpg',
       url: 'https://protonmail.com//',
       sources: {
-        windows: 'https://protonmail.com//',
-        macos: 'https://protonmail.com//',
+        windows: 'https://protonmail.com/',
+        macos: 'https://protonmail.com/',
         ios:
           'https://itunes.apple.com/app/protonmail-encrypted-email/id979659905',
         android:
           'https://play.google.com/store/apps/details?id=ch.protonmail.android',
+        linux: 'https://protonmail.com/',
       },
     },
   ],

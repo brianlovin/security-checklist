@@ -19,6 +19,7 @@ export default {
         macos: 'https://1password.com/downloads/mac/',
         ios: 'https://1password.com/downloads/ios/',
         android: 'https://1password.com/downloads/android/',
+        linux: 'https://1password.com/downloads/linux/',
       },
     },
     {
@@ -33,6 +34,7 @@ export default {
         ios:
           'https://itunes.apple.com/us/app/lastpass-password-manager/id324613447',
         android: 'https://lastpass.com/android_market.php',
+        linux: 'https://lastpass.com/misc_download2.php',
       },
     },
     {
@@ -45,6 +47,8 @@ export default {
         ios:
           'https://itunes.apple.com/us/app/dashlane-password-manager/id517914548',
         android: 'https://play.google.com/store/apps/details?id=com.dashlane',
+        linux:
+          'https://support.dashlane.com/hc/en-us/articles/115005432325-Getting-started-with-Dashlane-for-Linux-and-Chromebook',
       },
     },
     {
@@ -52,11 +56,16 @@ export default {
       image: '/static/img/bitwarden.jpg',
       url: 'https://www.bitwarden.com/',
       sources: {
-        windows: 'https://vault.bitwarden.com/download/?app=desktop&platform=windows',
-        macos: 'https://vault.bitwarden.com/download/?app=desktop&platform=macos',
+        windows:
+          'https://vault.bitwarden.com/download/?app=desktop&platform=windows',
+        macos:
+          'https://vault.bitwarden.com/download/?app=desktop&platform=macos',
         ios:
           'https://itunes.apple.com/app/bitwarden-free-password-manager/id1137397744?mt=8',
-        android: 'https://play.google.com/store/apps/details?id=com.x8bit.bitwarden',
+        android:
+          'https://play.google.com/store/apps/details?id=com.x8bit.bitwarden',
+        linux:
+          'https://vault.bitwarden.com/download/?app=desktop&platform=linux',
       },
     },
   ],

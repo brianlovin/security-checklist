@@ -17,6 +17,8 @@ export default {
           'https://geo.itunes.apple.com/us/app/brave-web-browser/id1052879175?mt=8',
         android:
           'https://play.google.com/store/apps/details?id=com.brave.browser&hl=en',
+        linux:
+          'https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux',
       },
     },
     {
@@ -28,6 +30,7 @@ export default {
         macos: 'https://www.mozilla.org/en-US/firefox/',
         ios: 'https://www.mozilla.org/en-US/firefox/mobile/',
         android: 'https://www.mozilla.org/en-US/firefox/mobile/',
+        linux: 'https://support.mozilla.org/en-US/kb/install-firefox-linux',
       },
     },
     {
@@ -47,6 +50,7 @@ export default {
         windows:
           'https://www.torproject.org/projects/torbrowser.html.en#windows',
         macos: 'https://www.torproject.org/projects/torbrowser.html.en#macosx',
+        linux: 'https://www.torproject.org/docs/tor-doc-unix.html.en',
       },
     },
     {
@@ -56,6 +60,7 @@ export default {
       sources: {
         windows: 'https://vivaldi.com/download/',
         macos: 'https://vivaldi.com/download/',
+        linux: 'https://vivaldi.com/download/',
       },
     },
   ],

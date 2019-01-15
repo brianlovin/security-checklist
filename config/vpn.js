@@ -15,6 +15,7 @@ export default {
         macos: 'https://www.ivpn.net/apps-macos',
         ios: 'https://www.ivpn.net/apps-ios',
         android: 'https://www.ivpn.net/apps-android',
+        linux: 'https://www.ivpn.net/setup/gnu-linux-terminal.html',
       },
     },
     {
@@ -38,6 +39,8 @@ export default {
         macos: 'https://www.expressvpn.com/vpn-software/vpn-mac',
         ios: 'https://www.expressvpn.com/vpn-software/vpn-ios',
         android: 'https://www.expressvpn.com/vpn-software/vpn-android',
+        linux:
+          'https://www.expressvpn.com/support/vpn-setup/manual-config-for-linux-with-openvpn/',
       },
     },
     {
@@ -49,6 +52,7 @@ export default {
         macos: 'https://nordvpn.com/download/mac/',
         ios: 'https://nordvpn.com/download/ios/',
         android: 'https://nordvpn.com/download/android/',
+        linux: 'https://nordvpn.com/tutorials/linux/',
       },
     },
   ],

@@ -222,7 +222,7 @@ export const AppSourcesListItem = styled.li`
   .icon {
     position: relative;
     top: 5px;
-    left: 7px;
+    left: 4px;
   }
 
   &:hover {

@@ -15,6 +15,7 @@ export default {
           'https://itunes.apple.com/us/app/duckduckgo-search-stories/id663592361?mt=8',
         android:
           'https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android',
+        linux: 'https://duckduckgo.com',
       },
     },
   ],
