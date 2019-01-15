@@ -34,6 +34,7 @@ export default {
           'https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en_us',
       },
     },
+    {
       name: '1Password',
       image: '/static/img/1password.jpg',
       url: 'https://1password.com/',

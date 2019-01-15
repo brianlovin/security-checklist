@@ -49,7 +49,7 @@ export default {
     },
     {
       name: 'Bitwarden',
-      image: '/static/img/bitwarden.png',
+      image: '/static/img/bitwarden.jpg',
       url: 'https://www.bitwarden.com/',
       sources: {
         windows: 'https://vault.bitwarden.com/download/?app=desktop&platform=windows',
