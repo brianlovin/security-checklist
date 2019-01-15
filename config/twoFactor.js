@@ -62,6 +62,14 @@ export default {
       },
     },
     {
+      name: 'Avain',
+      image: '/static/img/avain.svg',
+      url: 'https://avain.app',
+      sources: {
+        macos: 'https://avain.app/desktop/'
+      },
+    },
+    {
       name: 'YubiKey',
       image: '/static/img/yubico.jpg',
       url: 'https://www.yubico.com/',
