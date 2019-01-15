@@ -22,52 +22,19 @@ export const AppRow = ({ app }: Props) => {
 
   const renderSourceIcon = (key: string) => {
     const sourceUrl = app.sources[key];
-
-    if (key === 'windows') {
-      return (
-        <AppSourcesListItem hideOnMobile key={key}>
-          <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
-            <Icon size={32} glyph="windows" />
-            <AppSourcesLabel>Windows</AppSourcesLabel>
-          </a>
-        </AppSourcesListItem>
-      );
-    }
-
-    if (key === 'ios') {
-      return (
-        <AppSourcesListItem key={key}>
-          <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
-            <Icon size={32} glyph="apple" />
-            <AppSourcesLabel>iOS</AppSourcesLabel>
-          </a>
-        </AppSourcesListItem>
-      );
-    }
-
-    if (key === 'macos') {
-      return (
-        <AppSourcesListItem hideOnMobile key={key}>
-          <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
-            <Icon size={32} glyph="app-store" />
-            <AppSourcesLabel>macOS</AppSourcesLabel>
-          </a>
-        </AppSourcesListItem>
-      );
-    }
-
-    if (key === 'android') {
-      return (
-        <AppSourcesListItem key={key}>
-          <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
-            <Icon size={32} glyph="android" />
-            <AppSourcesLabel>Android</AppSourcesLabel>
-          </a>
-        </AppSourcesListItem>
-      );
-    }
-
-    return null;
+    const renderMatch = key.toLowerCase();
+    const hideOnMobile =
+      renderMatch === 'linux' ||
+      renderMatch === 'macos' ||
+      renderMatch === 'windows';
+    return (
+      <AppSourcesListItem hideOnMobile={hideOnMobile} key={key}>
+        <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
+          <Icon size={32} glyph={renderMatch} />
+          <AppSourcesLabel>{renderMatch}</AppSourcesLabel>
+        </a>
+      </AppSourcesListItem>
+    );
   };
 
   return (

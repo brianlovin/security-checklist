@@ -47,6 +47,7 @@ export default {
         macos: 'https://1password.com/downloads/mac/',
         ios: 'https://1password.com/downloads/ios/',
         android: 'https://1password.com/downloads/android/',
+        linux: 'https://1password.com/downloads/linux/',
       },
     },
     {
@@ -61,6 +62,7 @@ export default {
         ios:
           'https://itunes.apple.com/us/app/lastpass-password-manager/id324613447',
         android: 'https://lastpass.com/android_market.php',
+        linux: 'https://lastpass.com/misc_download2.php',
       },
     },
     {
