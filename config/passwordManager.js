@@ -68,6 +68,17 @@ export default {
           'https://vault.bitwarden.com/download/?app=desktop&platform=linux',
       },
     },
+    {
+      name: 'Avast Passwords',
+      image: '/static/img/avast-passwords.png',
+      url: 'https://www.avast.com/passwords',
+      sources: {
+        windows: 'https://www.avast.com/passwords#pc',
+        macos: 'https://www.avast.com/passwords#mac',
+        ios: 'https://www.avast.com/passwords#ios',
+        android: 'https://www.avast.com/passwords#android',
+      },
+    },
   ],
   resources: [
     {
