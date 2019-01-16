@@ -86,5 +86,10 @@ export default {
       url:
         'https://www.macworld.com/article/3322951/security/why-you-should-use-a-vpn-on-a-public-wi-fi-network.html',
     },
+    {
+      name: 'A detailed VPN provider comparison chart',
+      url:
+        'https://thatoneprivacysite.net/vpn-comparison-chart/',
+    },
   ],
 };
