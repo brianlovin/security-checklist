@@ -63,7 +63,7 @@ export default {
     },
     {
       name: 'Avain',
-      image: '/static/img/avain.svg',
+      image: '/static/img/avain.png',
       url: 'https://avain.app',
       sources: {
         macos: 'https://avain.app/desktop/'
