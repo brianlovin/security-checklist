@@ -1,7 +1,9 @@
 export default {
   id: 'strongDevicePasscode',
   title: 'Create a strong device passcode',
-  description: `A four-digit passcode for your phone or other devices is no longer considered secure. You should use a 6+ digit passcode at the very minimum, and for extra security use a 6+ character passcode containing both numbers and letters. TouchID and FaceID should be turned off when traveling internationally.`,
+  description: `A four-digit passcode for your phone or other devices is no longer considered secure. You should use a 6+ digit passcode at the very minimum, and for extra security use a 6+ character passcode containing both numbers and letters. TouchID and FaceID should be turned off when traveling internationally.
+  
+  \n\nYou should enforce a strict lock policy on your devices. Always require a passcode and ensure that a device cannot be left unintended for more than a minute or two.`,
   resources: [
     {
       name: 'How long it takes to break a passcode',
@@ -9,7 +11,8 @@ export default {
     },
     {
       name: 'How to temporarily disable TouchID or FaceID',
-      url: 'https://www.iphonelife.com/content/how-to-temporarily-disable-touch-id-or-face-id-your-iphone',
+      url:
+        'https://www.iphonelife.com/content/how-to-temporarily-disable-touch-id-or-face-id-your-iphone',
     },
     {
       name: 'Changing your iOS passcode',
