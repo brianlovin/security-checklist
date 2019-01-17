@@ -13,6 +13,22 @@ export default {
     `,
   apps: [
     {
+      name: '1Password',
+      image: '/static/img/1password.jpg',
+      url: 'https://1password.com/',
+      offer: {
+        label: 'Sign up with Security Checklist to get 3 months free',
+        url: 'https://start.1password.com/sign-up/family?c=SECURELIST-FJN7FIKQ',
+      },
+      sources: {
+        windows: 'https://1password.com/downloads/windows/',
+        macos: 'https://1password.com/downloads/mac/',
+        ios: 'https://1password.com/downloads/ios/',
+        android: 'https://1password.com/downloads/android/',
+        linux: 'https://1password.com/downloads/linux/',
+      },
+    },
+    {
       name: 'Authy',
       image: '/static/img/authy.jpg',
       url: 'https://authy.com/',
@@ -35,22 +51,6 @@ export default {
       },
     },
     {
-      name: '1Password',
-      image: '/static/img/1password.jpg',
-      url: 'https://1password.com/',
-      offer: {
-        label: 'Sign up with Security Checklist to get 3 months free',
-        url: 'https://start.1password.com/sign-up/family?c=SECURELIST-FJN7FIKQ',
-      },
-      sources: {
-        windows: 'https://1password.com/downloads/windows/',
-        macos: 'https://1password.com/downloads/mac/',
-        ios: 'https://1password.com/downloads/ios/',
-        android: 'https://1password.com/downloads/android/',
-        linux: 'https://1password.com/downloads/linux/',
-      },
-    },
-    {
       name: 'LastPass',
       image: '/static/img/lastpass.jpg',
       url: 'https://www.lastpass.com/',
@@ -63,6 +63,16 @@ export default {
           'https://itunes.apple.com/us/app/lastpass-password-manager/id324613447',
         android: 'https://lastpass.com/android_market.php',
         linux: 'https://lastpass.com/misc_download2.php',
+      },
+    },
+    {
+      name: 'Microsoft Authenticator',
+      image: '/static/img/static/img/microsoft_authenticator_80.png',
+      url: 'https://www.microsoft.com/en-us/account/authenticator',
+      sources: {
+        ios:
+          'https://itunes.apple.com/app/microsoft-authenticator/id983156458',
+        android: 'https://play.google.com/store/apps/details?id=com.azure.authenticator',
       },
     },
     {
