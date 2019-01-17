@@ -1,6 +1,6 @@
 export default {
   id: 'appPermissions',
-  title: 'Review app permissions on your devices',
+  title: 'Review location, camera, and other sensitive device permissions',
   description: `You should review all applications that have access to your photos, camera, location, and microphone. Ensure that you trust apps with sensitive permissions.
   `,
   resources: [
@@ -8,6 +8,11 @@ export default {
       name:
         'iOS camera permissions allow rogue apps to surreptitiously photograph & video users',
       url: 'https://9to5mac.com/2017/10/26/ios-camera-permissions-abuse/',
+    },
+    {
+      name: 'How to stop your iPhone from tracking locations you frequently visit',
+      url:
+        'https://www.imore.com/stop-iphone-tracking-frequent-locations',
     },
     {
       name: 'How to manage app permissions on iOS',

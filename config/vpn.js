@@ -55,6 +55,20 @@ export default {
         linux: 'https://nordvpn.com/tutorials/linux/',
       },
     },
+    {
+      name: 'ProtonVPN',
+      image: '/static/img/protonvpn.jpg',
+      url: 'https://www.protonvpn.com/',
+      sources: {
+        windows: 'https://protonvpn.com/download/',
+        macos: 'https://protonvpn.com/download/',
+        ios:
+          'https://itunes.apple.com/us/app/protonvpn-fast-secure-vpn/id1437005085',
+        android:
+          'https://play.google.com/store/apps/details?id=com.protonvpn.android',
+        linux: 'https://protonvpn.com/download/#dl-clients',
+      },
+    },
   ],
   resources: [
     {
@@ -71,6 +85,11 @@ export default {
       name: 'Why you should use a VPN on a public Wi-Fi network',
       url:
         'https://www.macworld.com/article/3322951/security/why-you-should-use-a-vpn-on-a-public-wi-fi-network.html',
+    },
+    {
+      name: 'A detailed VPN provider comparison chart',
+      url:
+        'https://thatoneprivacysite.net/vpn-comparison-chart/',
     },
   ],
 };
