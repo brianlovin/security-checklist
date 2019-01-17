@@ -22,6 +22,15 @@ export default {
       },
     },
     {
+      name: 'Bromite',
+      image: '/static/img/bromite.png',
+      url: 'https://www.bromite.org/',
+      sources: {
+        android:
+          'https://www.bromite.org/#download-bromite',
+      },
+    },
+    {
       name: 'Firefox',
       image: '/static/img/firefox.jpg',
       url: 'https://www.mozilla.org/en-US/firefox/',
