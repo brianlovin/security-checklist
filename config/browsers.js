@@ -64,6 +64,17 @@ export default {
         linux: 'https://vivaldi.com/download/',
       },
     },
+    {
+      name: 'Cliqz',
+      image: '/static/img/cliqz.png',
+      url: 'https://cliqz.com/',
+      sources: {
+        windows: 'https://cliqz.com/download',
+        macos: 'https://cliqz.com/download',
+        ios: 'https://itunes.apple.com/de/app/cliqz-browser-suchmaschine/id1065837334?mt=8',
+        android: 'https://play.google.com/store/apps/details?hl=de&id=com.cliqz.browser',
+      },
+    },
   ],
   resources: [
     {
@@ -95,6 +106,10 @@ export default {
       name: 'Browser fingerprinting, and why they are so hard to erase',
       url:
         'https://www.networkworld.com/article/2884026/security0/browser-fingerprints-and-why-they-are-so-hard-to-erase.html',
+    },
+    {
+      name: 'Who Tracks Me - Learn about tracking technologies, market structure and data-sharing on the web.',
+      url: 'https://whotracks.me/',
     },
   ],
 };
