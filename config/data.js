@@ -12,7 +12,7 @@ import email from './email';
 import appPermissions from './appPermissions';
 import socialMedia from './socialMedia';
 import phishing from './phishing';
-import webcam from './webcam';
+import physicalPrivacy from './physicalPrivacy';
 import geotagging from './geotagging';
 
 export default {
@@ -24,7 +24,7 @@ export default {
   creditFreeze,
   dns,
   vpn,
-  webcam,
+  physicalPrivacy,
   browsers,
   searchEngine,
   email,
