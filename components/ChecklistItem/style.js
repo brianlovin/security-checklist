@@ -23,9 +23,9 @@ export const Title = styled.h3`
   font-weight: 500;
   color: ${theme.text.default};
   display: flex;
-  line-height: 1.2;
+  line-height: 1.4;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 export const Description = styled(Markdown)`
@@ -333,6 +333,8 @@ export const Uncollapse = styled.span`
   align-items: center;
   justify-content: center;
   margin-right: 8px;
+  margin-left: 16px;
+  flex: 0 1 140px;
 
   @media (max-width: 768px) {
     display: none;
@@ -394,7 +396,7 @@ export const ExpandContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: calc(100% + 12px);
   position: relative;
   background: ${theme.bg.wash};
   border: 1px solid ${tint(theme.bg.wash, -4)};
@@ -402,6 +404,7 @@ export const ExpandContainer = styled.div`
   padding: 8px 16px;
   margin-bottom: -28px;
   margin-top: 16px;
+  margin-left: -16px;
 
   @media (max-width: 768px) {
     margin-bottom: 0;
