@@ -18,6 +18,19 @@ export default {
         linux: 'https://duckduckgo.com',
       },
     },
+    {
+      name: 'Qwant',
+      image: '/static/img/qwant.jpg',
+      url: 'https://www.qwant.com/',
+      sources: {
+        windows: 'https://www.qwant.com/',
+        macos: 'https://www.qwant.com/',
+        ios: 'https://itunes.apple.com/us/app/qwant/id924470452',
+        android:
+          'https://play.google.com/store/apps/details?id=com.qwant.liberty&hl=en_US',
+        linux: 'https://www.qwant.com/',
+      },
+    },
   ],
   resources: [
     {
