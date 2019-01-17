@@ -7,17 +7,6 @@ export default {
     `,
   apps: [
     {
-      name: 'Cliqz',
-      image: '/static/img/cliqz.png',
-      url: 'https://cliqz.com/',
-      sources: {
-        windows: 'https://cliqz.com/download',
-        macos: 'https://cliqz.com/download',
-        ios: 'https://itunes.apple.com/de/app/cliqz-browser-suchmaschine/id1065837334?mt=8',
-        android: 'https://play.google.com/store/apps/details?hl=de&id=com.cliqz.browser',
-      },
-    },
-    {
       name: 'Brave',
       image: '/static/img/brave.jpg',
       url: 'https://brave.com/',
@@ -58,6 +47,17 @@ export default {
         windows:
           'https://www.torproject.org/projects/torbrowser.html.en#windows',
         macos: 'https://www.torproject.org/projects/torbrowser.html.en#macosx',
+      },
+    },
+    {
+      name: 'Cliqz',
+      image: '/static/img/cliqz.png',
+      url: 'https://cliqz.com/',
+      sources: {
+        windows: 'https://cliqz.com/download',
+        macos: 'https://cliqz.com/download',
+        ios: 'https://itunes.apple.com/de/app/cliqz-browser-suchmaschine/id1065837334?mt=8',
+        android: 'https://play.google.com/store/apps/details?hl=de&id=com.cliqz.browser',
       },
     },
   ],
