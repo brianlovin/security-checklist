@@ -88,8 +88,7 @@ export default {
     },
     {
       name: 'A detailed VPN provider comparison chart',
-      url:
-        'https://thatoneprivacysite.net/vpn-comparison-chart/',
+      url: 'https://thatoneprivacysite.net/vpn-comparison-chart/',
     },
   ],
 };
