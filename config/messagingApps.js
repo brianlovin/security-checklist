@@ -1,7 +1,7 @@
 export default {
   id: 'messagingApps',
   title: 'Use encrypted messaging apps when sharing sensitive information',
-  description: `When sharing senstive information over chat, you should be using a secure, end-to-end encrypted messaging service. End-to-end encryption ensures that only you and your intended recipient are able to view messages. Your messages will appear scrambled and will be nearly-impossible to unscramble to anyone else, including app developers and ISPs.
+  description: `When sharing sensitive information over chat, you should be using a secure, end-to-end encrypted messaging service. End-to-end encryption ensures that only you and your intended recipient are able to view messages. Your messages will appear scrambled (and will be nearly-impossible to unscramble) to anyone else, including app developers and ISPs.
   `,
   apps: [
     {
