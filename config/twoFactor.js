@@ -67,12 +67,12 @@ export default {
     },
     {
       name: 'Microsoft Authenticator',
-      image: '/static/img/static/img/microsoft_authenticator_80.png',
+      image: '/static/img/microsoft_authenticator_80.png',
       url: 'https://www.microsoft.com/en-us/account/authenticator',
       sources: {
-        ios:
-          'https://itunes.apple.com/app/microsoft-authenticator/id983156458',
-        android: 'https://play.google.com/store/apps/details?id=com.azure.authenticator',
+        ios: 'https://itunes.apple.com/app/microsoft-authenticator/id983156458',
+        android:
+          'https://play.google.com/store/apps/details?id=com.azure.authenticator',
       },
     },
     {
