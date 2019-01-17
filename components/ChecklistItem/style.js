@@ -389,3 +389,28 @@ export const LeftBorder = styled.div`
   background-image: linear-gradient(to bottom, #a913de, #6ac9ff);
   border-radius: 6px 0 0 6px;
 `;
+
+export const ExpandContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  background: ${theme.bg.wash};
+  border: 1px solid ${tint(theme.bg.wash, -4)};
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin-bottom: -28px;
+  margin-top: 16px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+    border-left: none;
+    border-right: none;
+    margin-top: -1px;
+    border-radius: 0;
+    margin-left: -24px;
+    margin-right: -16px;
+    width: calc(100% + 40px);
+  }
+`;
