@@ -14,6 +14,7 @@ import socialMedia from './socialMedia';
 import phishing from './phishing';
 import physicalPrivacy from './physicalPrivacy';
 import geotagging from './geotagging';
+import messagingApps from './messagingApps';
 
 export default {
   passwordManager,
@@ -31,5 +32,6 @@ export default {
   appPermissions,
   geotagging,
   socialMedia,
+  messagingApps,
   phishing,
 };
