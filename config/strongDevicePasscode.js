@@ -3,7 +3,7 @@ export default {
   title: 'Create a strong device passcode',
   description: `A four-digit passcode for your phone or other devices is no longer considered secure. You should use a 6+ digit passcode at the very minimum, and for extra security use a 6+ character passcode containing both numbers and letters. TouchID and FaceID should be turned off when traveling internationally.
   
-  \n\nYou should enforce a strict lock policy on your devices. Always require a passcode and ensure that a device cannot be left unattended for more than a minute or two.`,
+  \n\nYou should enforce a strict lock policy on your devices. Always require a passcode and ensure that a device is not left unattended for more than a minute or two.`,
   resources: [
     {
       name: 'How long it takes to break a passcode',
