@@ -33,15 +33,6 @@ export default {
       },
     },
     {
-      name: 'Burner Mail',
-      image: '/static/img/burnermail.jpg',
-      url: 'https://burnermail.io/',
-      sources: {
-        windows: 'https://burnermail.io/',
-        macos: 'https://burnermail.io/'
-      },
-    },
-    {
       name: 'Tutanota',
       image: '/static/img/tutanota.jpg',
       url: 'https://tutanota.com/',
@@ -52,6 +43,15 @@ export default {
         android:
           'https://play.google.com/store/apps/details?id=de.tutao.tutanota',
         linux: 'https://mail.tutanota.com/desktop/tutanota-desktop-linux.AppImage'
+      },
+    },
+    {
+      name: 'Burner Mail',
+      image: '/static/img/burnermail.jpg',
+      url: 'https://burnermail.io/',
+      sources: {
+        windows: 'https://burnermail.io/',
+        macos: 'https://burnermail.io/'
       },
     },
   ],
