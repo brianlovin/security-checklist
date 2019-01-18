@@ -11,6 +11,7 @@ import searchEngine from './searchEngine';
 import email from './email';
 import appPermissions from './appPermissions';
 import socialMedia from './socialMedia';
+import patching from './patching';
 import phishing from './phishing';
 import physicalPrivacy from './physicalPrivacy';
 import geotagging from './geotagging';
@@ -34,4 +35,5 @@ export default {
   socialMedia,
   messagingApps,
   phishing,
+  patching
 };
