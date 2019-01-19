@@ -39,6 +39,21 @@ export default {
         linux: 'https://www.signal.org/download/',
       },
     },
+    {
+      name: 'Telegram',
+      image: '/static/img/telergam.jpg',
+      url: 'https://telegram.org/',
+      sources: {
+        windows: 'https://desktop.telegram.org/',
+        macos: 'https://desktop.telegram.org/',
+        ios:
+          'https://itunes.apple.com/app/telegram-messenger/id686449807',
+        android:
+          'https://play.google.com/store/apps/details?id=org.telegram.messenger',
+        linux: 'https://desktop.telegram.org/',
+        web: 'https://web.telegram.org'
+      },
+    },
   ],
   resources: [
     {
