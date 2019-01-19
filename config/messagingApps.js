@@ -41,7 +41,7 @@ export default {
     },
     {
       name: 'Telegram',
-      image: '/static/img/telergam.jpg',
+      image: '/static/img/telegram.png',
       url: 'https://telegram.org/',
       sources: {
         windows: 'https://desktop.telegram.org/',
