@@ -6,6 +6,7 @@ import * as Sentry from '@sentry/browser';
 import NextSeo from 'next-seo';
 import { GlobalStyles } from '../static/normalize';
 import defaultSEO from '../config/next-seo.js';
+import NextI18Next from '../lib/i18n';
 
 const SENTRY_PUBLIC_DSN =
   'https://42334f0365364b63bc57f4245d111b87@sentry.io/1370339';
@@ -140,4 +141,4 @@ class SecurityChecklistApp extends App {
   }
 }
 
-export default SecurityChecklistApp;
+export default NextI18Next.appWithTranslation(SecurityChecklistApp);

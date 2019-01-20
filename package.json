@@ -19,7 +19,9 @@
   },
   "dependencies": {
     "@sentry/browser": "^4.5.0",
+    "express": "^4.16.4",
     "next": "^7.0.2",
+    "next-i18next": "^0.18.2",
     "next-seo": "^1.8.0",
     "react": "^16.8.0-alpha.0",
     "react-clipboard.js": "^2.0.2",
