@@ -69,6 +69,23 @@ export default {
       },
     },
     {
+      name: 'Buttercup',
+      image: '/static/img/buttercup.png',
+      url: 'https://buttercup.pw/',
+      sources: {
+        windows:
+          'https://github.com/buttercup/buttercup-desktop/releases/download/v1.14.0/buttercup-desktop-setup-1.14.0.exe',
+        macos:
+          'https://github.com/buttercup/buttercup-desktop/releases/download/v1.14.0/Buttercup-1.14.0.dmg',
+        ios:
+          'https://itunes.apple.com/us/app/buttercup-password-manager/id1294001514?ls=1&mt=8',
+        android:
+          'https://play.google.com/store/apps/details?id=com.buttercup&hl=en',
+        linux:
+          'https://github.com/buttercup/buttercup-desktop/releases/download/v1.14.0/buttercup-desktop-1.14.0.x86_64.rpm',
+      },
+    },
+    {
       name: 'Avast Passwords',
       image: '/static/img/avast-passwords.png',
       url: 'https://www.avast.com/passwords',
