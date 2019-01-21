@@ -38,6 +38,15 @@ export default {
       },
     },
     {
+      name: 'iCloud Keychain',
+      image: '/static/img/icloud.png',
+      url: 'https://www.icloud.com/',
+      sources: {
+        macos: 'https://support.apple.com/en-us/HT204085',
+        ios: 'https://support.apple.com/en-us/HT204085'
+      },
+    },
+    {
       name: 'Dashlane',
       image: '/static/img/dashlane.jpg',
       url: 'https://www.dashlane.com/',
