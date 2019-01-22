@@ -5,6 +5,7 @@ import type { GetInitialProps } from '../types';
 import Checklist from '../components/Checklist';
 import ShareButtons from '../components/ShareButtons';
 import BottomShare from '../components/BottomShare';
+import { i18n, Link, withNamespaces } from '../lib/i18n';
 
 class Index extends React.Component<{}> {
   static async getInitialProps({ res }: GetInitialProps) {
@@ -14,14 +15,17 @@ class Index extends React.Component<{}> {
       res.setHeader('Cache-Control', `public,s-maxage=${cacheAge}`);
     }
 
-    return {};
+    return {
+      namespacesRequired: ['common'],
+    };
   }
 
   render() {
+    const { t } = this.props;
     return (
       <Page>
         <SectionHeading>
-          <Heading>Be safe on the internet.</Heading>
+          <Heading>{t('be-safe-on-the-internet')}</Heading>
           <Subheading>
             An open source checklist of resources designed to improve your
             online privacy and security. Check things off to keep track as you
@@ -41,4 +45,4 @@ class Index extends React.Component<{}> {
   }
 }
 
-export default Index;
+export default withNamespaces('common')(Index);
