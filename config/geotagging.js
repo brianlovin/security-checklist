@@ -7,6 +7,10 @@ export default {
   `,
   resources: [
     {
+      name: 'Are Location-Tagged Photos Really a Privacy Concern?',
+      url: 'https://www.howtogeek.com/340566/are-location-tagged-photos-really-a-privacy-concern/',
+    },
+    {
       name: 'Software Roundup: 5 of The Best Apps to Remove EXIF Data from Images',
       url: 'https://www.maketecheasier.com/best-apps-remove-exif-data-from-images/',
     },
