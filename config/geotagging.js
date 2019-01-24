@@ -1,11 +1,15 @@
 export default {
   id: 'geotagging',
   title: 'Review and remove metadata attached to photos you share',
-  description: `Geotagging is the process of adding geographical identification to media files (photos and videos, for example). Anyone who has access to these tagged media files (for example, on Instagram or Twitter) can read this data and learn where the photo was taken.
+  description: `Geotagging is the process of adding geographical identification to media files (photos and videos, for example). Anyone who has access to these tagged media files can read this data and learn where the photo was taken. Most social media sites strip the EXIF data from photos, but if you're hosting your own photos, be aware that the geolocation can give away your exact location.
 
   \n\nYou should understand how location metadata is attached to your media and take steps to ensure you are not uploading sensitive information with your files.
   `,
   resources: [
+    {
+      name: 'Software Roundup: 5 of The Best Apps to Remove EXIF Data from Images',
+      url: 'https://www.maketecheasier.com/best-apps-remove-exif-data-from-images/',
+    },
     {
       name: 'Geotagging',
       url: 'https://en.wikipedia.org/wiki/Geotagging',
