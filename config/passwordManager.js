@@ -96,6 +96,15 @@ export default {
         android: 'https://www.avast.com/passwords#android',
       },
     },
+    {
+      name: 'iCloud Keychain',
+      image: '/static/img/icloud.png',
+      url: 'https://www.icloud.com/',
+      sources: {
+        macos: 'https://support.apple.com/en-us/HT204085',
+        ios: 'https://support.apple.com/en-us/HT204085'
+      },
+    },
   ],
   resources: [
     {
