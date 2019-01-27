@@ -39,7 +39,7 @@
     "cypress": "^3.1.4",
     "eslint": "^5.12.1",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.6.0",
+    "eslint-config-prettier": "^4.0.0",
     "eslint-config-react-app": "^3.0.6",
     "eslint-plugin-flowtype": "^3.2.1",
     "eslint-plugin-import": "^2.15.0",
