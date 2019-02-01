@@ -69,6 +69,23 @@ export default {
         linux: 'https://protonvpn.com/download/#dl-clients',
       },
     },
+    {
+      name: 'Private Internet Access',
+      image: '/static/img/privateinternetaccess.jpg',
+      url: 'https://www.privateinternetaccess.com/',
+      sources: {
+        windows:
+          'https://www.privateinternetaccess.com/installer/x/download_installer_win/64',
+        macos:
+          'https://www.privateinternetaccess.com/installer/x/download_installer_osx',
+        ios:
+          'https://itunes.apple.com/us/app/private-internet-access-anonymous/id955626407?mt=8&uo=6&at=1001l3Gx&ct=web',
+        android:
+          'https://play.google.com/store/apps/details?id=com.privateinternetaccess.android&hl=en',
+        linux:
+          'https://www.privateinternetaccess.com/installer/x/download_installer_linux',
+      },
+    },
   ],
   resources: [
     {
