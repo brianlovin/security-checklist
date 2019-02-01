@@ -66,8 +66,13 @@ export default {
         'https://myaccount.google.com/reservations?utm_source=google-account&utm_medium=web&continue=https%3A%2F%2Fmyaccount.google.com%2Fpayments-and-subscriptions',
     },
     {
-      name: 're:consent browser extension gives you more privacy control on the web',
+      name:
+        're:consent browser extension gives you more privacy control on the web',
       url: 'https://cliqz.com/en/magazine/re-consent',
+    },
+    {
+      name: 'Opt out of all the data sharing you wouldn’t opt in to',
+      url: 'http://simpleoptout.com/',
     },
   ],
 };

@@ -10,9 +10,9 @@ export default {
       url: 'https://9to5mac.com/2017/10/26/ios-camera-permissions-abuse/',
     },
     {
-      name: 'How to stop your iPhone from tracking locations you frequently visit',
-      url:
-        'https://www.imore.com/stop-iphone-tracking-frequent-locations',
+      name:
+        'How to stop your iPhone from tracking locations you frequently visit',
+      url: 'https://www.imore.com/stop-iphone-tracking-frequent-locations',
     },
     {
       name: 'How to manage app permissions on iOS',
@@ -45,6 +45,10 @@ export default {
     {
       name: 'Apps and services with access to your Twitter account',
       url: 'https://twitter.com/settings/applications',
+    },
+    {
+      name: 'Opt out of all the data sharing you wouldn’t opt in to',
+      url: 'http://simpleoptout.com/',
     },
   ],
 };
