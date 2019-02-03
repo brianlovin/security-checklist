@@ -64,13 +64,19 @@ class ChecklistItem extends React.Component<Props, State> {
                 checked={isChecked}
                 id={`checkbox_${resource.id}`}
                 onChange={this.handleSetChecked}
+                aria-controls={`content_${resource.id}`}
               />
               <label for={`checkbox_${resource.id}`}>
                 {resource.title}
               </label>
             </CheckboxContainer>
 
-            <ResourceContent isChecked={isChecked} isCollapsed={isCollapsed}>
+            <ResourceContent
+              isChecked={isChecked}
+              isCollapsed={isCollapsed}
+              id={`content_${resource.id}`}
+              aria-hidden={isCollapsed}
+            >
               <Heading
                 resource={resource}
                 isCollapsed={isCollapsed}
