@@ -4,8 +4,8 @@ import { theme } from '../theme';
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'logo actions';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 'logo progression actions';
   padding: 16px;
   position: fixed;
   top: 0;
@@ -25,7 +25,7 @@ export const Container = styled.div`
   @media (max-width: 968px) {
     padding: 8px 16px;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'logo actions';
+    grid-template-areas: "logo actions" "progression progression";
   }
 `;
 
@@ -34,6 +34,34 @@ export const Logo = styled.h1`
   font-size: 18px;
   font-weight: 700;
   color: ${theme.text.default};
+`;
+
+export const Progression = styled.div`
+  grid-area: progression;
+  text-align: center;
+
+  display: ${props =>
+    props.isHidden ? 'none' : 'block'};
+`;
+
+export const ProgressBar = styled.div`
+  height: 8px;
+  margin: 6px 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background-image: linear-gradient(to left, #a913de, #6ac9ff);
+
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    right: 0;
+    width: 100%;
+    background: ${theme.border.default};
+    max-width: var(--progress);
+    transition: max-width ${theme.animations.default};
+  }
 `;
 
 export const ButtonRowContainer = styled.div`

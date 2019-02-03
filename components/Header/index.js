@@ -1,16 +1,24 @@
 // @flow
 import * as React from 'react';
 import Link from 'next/link';
-import { Container, ButtonRowContainer, Label } from './style';
+import {
+  Container,
+  ButtonRowContainer,
+  Label,
+  Progression,
+  ProgressBar } from './style';
 import { PrimaryButton, GhostButton } from '../Button';
 import Logo from './Logo';
 
 type Props = {
   showHeaderShadow: boolean,
+  displayProgress: boolean,
+  totalItemsCount: number,
+  currentCount: number,
 };
 
 export default function Header(props: Props) {
-  const { showHeaderShadow } = props;
+  const { showHeaderShadow, totalItemsCount, currentCount, displayProgress } = props;
 
   return (
     <Container showHeaderShadow={showHeaderShadow} data-cy="header">
@@ -20,6 +28,11 @@ export default function Header(props: Props) {
           <Logo />
         </a>
       </Link>
+
+      <Progression isHidden={!displayProgress}>
+        {currentCount} of {totalItemsCount} completed
+        <ProgressBar />
+      </Progression>
 
       <ButtonRowContainer>
         <Link href="/about">
