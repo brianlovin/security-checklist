@@ -69,5 +69,17 @@ export default {
       url:
         'https://www.salon.com/2014/02/05/4_ways_google_is_destroying_privacy_and_collecting_your_data_partner/',
     },
+    {
+      name: 'Privacy-friendly alternatives to Google that don’t track you',
+      url: 'https://nomoregoogle.com/',
+    },
+    {
+      name: 'Opt out of global data surveillance programs like PRISM, XKeyscore and Tempora.',
+      url: 'https://prism-break.org/en/',
+    },
+    {
+      name: 'Knowledge and tools to protect your privacy against global mass surveillance',
+      url: 'https://www.privacytools.io/';,
+    },
   ],
 };
