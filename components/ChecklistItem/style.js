@@ -69,35 +69,29 @@ export const CheckboxContainer = styled.div`
     margin-top: 4px;
     width: 32px;
   }
-`;
 
-export const Checkbox = styled.span`
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  border: 1px solid
-    ${props => (props.isChecked ? theme.bg.default : theme.border.default)};
-  background: ${props =>
-    props.isChecked ? theme.success.default : theme.bg.wash};
-  cursor: pointer;
-  position: relative;
-  background-image: ${props =>
-    props.isChecked
-      ? 'radial-gradient(circle at top right, #a913de, #6ac9ff)'
-      : 'none'};
-  box-shadow: ${props =>
-    props.isChecked ? 'inset 0 0 1px rgba(0,0,0,0.4)' : 'none'};
-
-  &:hover {
-    ${props => !props.isChecked && Shadows.default};
-    background: ${theme.bg.default};
-    background-image: ${props =>
-      props.isChecked
-        ? 'radial-gradient(circle at top right, #a913de, #6ac9ff)'
-        : 'none'};
+  input[type="checkbox"] {
+    position: absolute;
   }
 
-  &:after {
+  input[type="checkbox"] + label {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid ${theme.border.default};
+    background: ${theme.bg.wash};
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-indent: -1000px;
+  }
+
+  input[type="checkbox"] + label:hover {
+    ${Shadows.default};
+    background: ${theme.bg.default};
+  }
+
+  input[type="checkbox"] + label::after {
     content: '';
     position: absolute;
     display: block;
@@ -105,10 +99,38 @@ export const Checkbox = styled.span`
     top: 6px;
     width: 6px;
     height: 12px;
-    border: solid
-      ${props => (props.isChecked ? theme.bg.default : theme.border.active)};
+    border: solid ${theme.border.active};
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
+  }
+
+  input[type="checkbox"]:checked + label {
+    border: 1px solid ${theme.bg.default};
+  }
+
+  input[type="checkbox"]:checked + label::after {
+    border: solid ${theme.bg.default};
+    border-width: 0 2px 2px 0;
+  }
+
+  /* This ::before pseudo-element is used to animate the gradient
+     which does not support transitions. */
+  input[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity ${theme.animations.default};
+    opacity: 0;
+    background-image: radial-gradient(circle at top right, #a913de, #6ac9ff);
+    box-shadow: inset 0 0 1px rgba(0,0,0,0.4);
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    opacity: 1;
+    background-color: ${theme.success.default};
   }
 `;
 

@@ -10,7 +10,6 @@ import { Resources } from './Resources';
 import {
   Container,
   CheckboxContainer,
-  Checkbox,
   CardContent,
   ResourceContent,
   Divider,
@@ -59,8 +58,16 @@ class ChecklistItem extends React.Component<Props, State> {
       <Container>
         <Card isChecked={isChecked}>
           <CardContent isCollapsed={isCollapsed}>
-            <CheckboxContainer onClick={this.handleSetChecked}>
-              <Checkbox isChecked={isChecked} />
+            <CheckboxContainer>
+              <input
+                type="checkbox"
+                checked={isChecked}
+                id={`checkbox_${resource.id}`}
+                onChange={this.handleSetChecked}
+              />
+              <label for={`checkbox_${resource.id}`}>
+                {resource.title}
+              </label>
             </CheckboxContainer>
 
             <ResourceContent isChecked={isChecked} isCollapsed={isCollapsed}>
