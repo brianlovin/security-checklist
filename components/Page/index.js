@@ -47,7 +47,6 @@ export default function Page(props: Props) {
   const throttledScroll = throttle(300, handleScroll);
 
   function updateProgress() {
-    console.log("called")
     const checkedItemsCount = getLocalStorageLength();
     const progressPercentage = checkedItemsCount * 100 / totalItemsCount;
     setProgress(progressPercentage);
