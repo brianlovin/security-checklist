@@ -331,7 +331,7 @@ export const ResourceName = styled.p`
   font-weight: 400;
 `;
 
-export const Divider = styled.div`
+export const Divider = styled.hr`
   border-bottom: 1px solid ${tint(theme.bg.wash, -4)};
   margin-top: 24px;
   margin-bottom: 24px;
