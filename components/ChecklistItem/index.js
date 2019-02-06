@@ -30,8 +30,9 @@ type State = {
 
 class ChecklistItem extends React.Component<Props, State> {
   state = { isChecked: false, isLoading: true, isCollapsed: true, contentHeight: 2000, };
+  contentContainer: { current: null | HTMLDivElement }
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
 
     this.contentContainer = React.createRef();
@@ -47,9 +48,8 @@ class ChecklistItem extends React.Component<Props, State> {
     });
   }
 
-  componentDidUpdate(prevProps, prevState) {
-
-    if (prevState.isLoading && !this.state.isLoading) {
+  componentDidUpdate(prevProps: Props, prevState: State) {
+    if (prevState.isLoading && !this.state.isLoading && this.contentContainer.current) {
       return this.setState({
         contentHeight: this.contentContainer.current.scrollHeight,
       })
@@ -65,11 +65,11 @@ class ChecklistItem extends React.Component<Props, State> {
 
   uncollapse = () => {
       this.setState(state => ({ isCollapsed: !state.isCollapsed }));
-      this.contentContainer.current.focus();
+      this.contentContainer.current && this.contentContainer.current.focus();
   };
 
-  handleAppsExpand = appsContainerHeight => {
-    return this.setState({
+  handleAppsExpand = (appsContainerHeight: number) => {
+    return this.contentContainer.current && this.setState({
         contentHeight: this.contentContainer.current.scrollHeight + appsContainerHeight,
     })
   }

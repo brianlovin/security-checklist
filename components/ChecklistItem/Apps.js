@@ -18,17 +18,20 @@ type State = {
 
 export class Apps extends React.Component<Props, State> {
   state = { overflowExpanded: false, contentHeight: 2000, };
+  expandContentContainer: { current: null | HTMLDivElement }
 
-  constructor(props) {
+  constructor(props: Props) {
     super(props)
     if (!this.props.resource.apps) return null;
     
     this.expandContentContainer = React.createRef();
-
   }
 
   handleExpand = () => {
-    let expandContentHeight = this.expandContentContainer.current.scrollHeight;
+    let expandContentHeight =
+      this.expandContentContainer.current
+        ? this.expandContentContainer.current.scrollHeight
+        : this.state.contentHeight;
 
     this.setState({
       contentHeight: expandContentHeight,
@@ -41,7 +44,7 @@ export class Apps extends React.Component<Props, State> {
   render() {
     let appList = this.props.resource.apps;
     let overflowAppList;
-    if (appList.length > 3) {
+    if (appList && appList.length > 3) {
       overflowAppList = appList.slice(3, appList.length);
       appList = appList.slice(0, 3);
     }
@@ -52,7 +55,7 @@ export class Apps extends React.Component<Props, State> {
     return (
       <AppsContainer overflowExpanded={overflowExpanded}>
         <SectionHeading>Apps</SectionHeading>
-        {appList.map(app => (
+        {appList && appList.map(app => (
           <AppRow key={app.name} app={app} />
         ))}
 
