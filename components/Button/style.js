@@ -225,7 +225,7 @@ export const ButtonSegmentRow = styled.div`
   }
 `;
 
-export const FacebookButton = styled.button`
+export const FacebookButton = styled.span`
   ${base}
   border: 1px solid ${theme.social.facebook};
   color: ${theme.bg.default};
@@ -266,7 +266,7 @@ export const FacebookButton = styled.button`
   }
 `;
 
-export const TwitterButton = styled.button`
+export const TwitterButton = styled.span`
   ${base}
   border: 1px solid ${theme.social.twitter};
   color: ${theme.bg.default};
