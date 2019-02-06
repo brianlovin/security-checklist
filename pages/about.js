@@ -5,7 +5,7 @@ import Page, { SectionHeading, Heading, Subheading } from '../components/Page';
 
 export default function About() {
   return (
-    <Page showEmailCapture={false}>
+    <Page showEmailCapture={false} displayProgress={false}>
       <NextSeo
         config={{
           title: 'Security Checklist · About',
