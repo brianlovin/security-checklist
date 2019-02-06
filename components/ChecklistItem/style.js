@@ -151,12 +151,12 @@ export const ResourceContent = styled.div`
 
 export const AppsContainer = styled.div``;
 
-export const AppMeta = styled.div`
+export const AppMeta = styled.a`
   display: flex;
   align-items: center;
 `;
 
-export const AppRowContainer = styled.a`
+export const AppRowContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
