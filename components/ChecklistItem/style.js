@@ -375,7 +375,27 @@ export const Divider = styled.hr`
   }
 `;
 
-export const Uncollapse = styled.span`
+export const Content = styled.div`
+  transition:
+    max-height ${theme.animations.default},
+    opacity ${theme.animations.default},
+    visibility ${theme.animations.default};
+
+  &[aria-hidden="true"] {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &[aria-hidden="false"] {
+    max-height: 2000px;
+    max-height: var(--maxHeight);
+    opacity: 1;
+    visibility: visible;
+  }
+`
+
+export const Uncollapse = styled.button`
   background: ${theme.bg.wash};
   border-radius: 20px;
   padding: 8px 16px;

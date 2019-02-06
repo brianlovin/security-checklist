@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { Title, Description, Uncollapse } from './style';
+import { Title, Uncollapse } from './style';
 import type { ChecklistResource } from '../../types';
 
 type Props = {
@@ -13,10 +13,13 @@ export const Heading = ({ resource, isCollapsed, handleCollapse }: Props) => (
   <React.Fragment>
     <Title>
       {resource.title}
-      <Uncollapse onClick={handleCollapse}>
+      <Uncollapse
+        onClick={handleCollapse}
+        aria-controls={`content_${resource.id}`}
+        aria-expanded={!isCollapsed}
+      >
         {isCollapsed ? 'Show details' : 'Hide details'}
       </Uncollapse>
     </Title>
-    {!isCollapsed && <Description source={resource.description} />}
   </React.Fragment>
 );

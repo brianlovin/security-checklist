@@ -13,6 +13,8 @@ import {
   CardContent,
   ResourceContent,
   Divider,
+  Description,
+  Content,
 } from './style';
 
 type Props = {
@@ -23,10 +25,17 @@ type State = {
   isChecked: boolean,
   isLoading: boolean,
   isCollapsed: boolean,
+  contentHeight: number,
 };
 
 class ChecklistItem extends React.Component<Props, State> {
-  state = { isChecked: false, isLoading: true, isCollapsed: true };
+  state = { isChecked: false, isLoading: true, isCollapsed: true, contentHeight: 2000, };
+
+  constructor(props) {
+    super(props);
+
+    this.contentContainer = React.createRef();
+  }
 
   componentDidMount() {
     const { resource } = this.props;
@@ -38,6 +47,15 @@ class ChecklistItem extends React.Component<Props, State> {
     });
   }
 
+  componentDidUpdate(prevProps, prevState) {
+
+    if (prevState.isLoading && !this.state.isLoading) {
+      return this.setState({
+        contentHeight: this.contentContainer.current.scrollHeight,
+      })
+    }
+  }
+
   handleSetChecked = () => {
     const { isChecked } = this.state;
     const { resource } = this.props;
@@ -45,11 +63,19 @@ class ChecklistItem extends React.Component<Props, State> {
     return this.setState({ isChecked: !isChecked, isCollapsed: !isChecked });
   };
 
-  uncollapse = () =>
-    this.setState(state => ({ isCollapsed: !state.isCollapsed }));
+  uncollapse = () => {
+      this.setState(state => ({ isCollapsed: !state.isCollapsed }));
+      this.contentContainer.current.focus();
+  };
+
+  handleAppsExpand = appsContainerHeight => {
+    return this.setState({
+        contentHeight: this.contentContainer.current.scrollHeight + appsContainerHeight,
+    })
+  }
 
   render() {
-    const { isChecked, isLoading, isCollapsed } = this.state;
+    const { isChecked, isLoading, isCollapsed, contentHeight } = this.state;
     const { resource } = this.props;
 
     if (isLoading) return <LoadingChecklistItem />;
@@ -60,13 +86,14 @@ class ChecklistItem extends React.Component<Props, State> {
           <CardContent isCollapsed={isCollapsed}>
             <CheckboxContainer>
               <input
+                aria-expanded={!isCollapsed}
                 type="checkbox"
                 checked={isChecked}
                 id={`checkbox_${resource.id}`}
                 onChange={this.handleSetChecked}
                 aria-controls={`content_${resource.id}`}
               />
-              <label for={`checkbox_${resource.id}`}>
+              <label htmlFor={`checkbox_${resource.id}`}>
                 {resource.title}
               </label>
             </CheckboxContainer>
@@ -74,8 +101,6 @@ class ChecklistItem extends React.Component<Props, State> {
             <ResourceContent
               isChecked={isChecked}
               isCollapsed={isCollapsed}
-              id={`content_${resource.id}`}
-              aria-hidden={isCollapsed}
             >
               <Heading
                 resource={resource}
