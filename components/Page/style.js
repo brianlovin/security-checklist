@@ -72,8 +72,6 @@ export const Subheading = styled.p`
   a:hover {
     text-decoration: underline;
     text-decoration-color: ${theme.text.tertiary};
-    text-decoration-skip: spaces;
-    text-decoration-skip-ink: auto;
   }
   a:active, a:focus {
     box-shadow: 0 0 0 1px ${theme.bg.default},
