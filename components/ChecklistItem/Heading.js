@@ -17,6 +17,7 @@ export const Heading = ({ resource, isCollapsed, handleCollapse }: Props) => (
         onClick={handleCollapse}
         aria-controls={`content_${resource.id}`}
         aria-expanded={!isCollapsed}
+        type="button"
       >
         {isCollapsed ? 'Show details' : 'Hide details'}
       </Uncollapse>
