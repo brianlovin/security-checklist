@@ -381,18 +381,18 @@ export const Content = styled.div`
     opacity ${theme.animations.default},
     visibility ${theme.animations.default};
 
+  max-height: 2000px;
+  max-height: var(--maxHeight);
+  opacity: 1;
+  visibility: visible;
+
+
   &[aria-hidden="true"] {
     max-height: 0;
     opacity: 0;
     visibility: hidden;
   }
 
-  &[aria-hidden="false"] {
-    max-height: 2000px;
-    max-height: var(--maxHeight);
-    opacity: 1;
-    visibility: visible;
-  }
 `
 
 export const Uncollapse = styled.button`
@@ -510,6 +510,10 @@ export const ExpandContent = styled.div`
     max-height ${theme.animations.default},
     opacity ${theme.animations.default},
     visibility ${theme.animations.default};
+  max-height: 2000px;
+  max-height: var(--maxHeight);
+  opacity: 1;
+  visibility: visible;
 
   &[aria-hidden="true"] {
     max-height: 0;
@@ -517,10 +521,4 @@ export const ExpandContent = styled.div`
     visibility: hidden;
   }
 
-  &[aria-hidden="false"] {
-    max-height: unset;
-    max-height: var(--maxHeight);
-    opacity: 1;
-    visibility: visible;
-  }
 `
