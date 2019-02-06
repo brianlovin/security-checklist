@@ -47,7 +47,7 @@ export const SectionHeading = styled.div`
   }
 `;
 
-export const Heading = styled.h3`
+export const Heading = styled.h2`
   font-size: 40px;
   font-weight: 700;
   color: ${theme.text.default};
@@ -58,7 +58,7 @@ export const Heading = styled.h3`
   }
 `;
 
-export const Subheading = styled.h4`
+export const Subheading = styled.p`
   font-size: 22px;
   font-weight: 400;
   color: ${theme.text.tertiary};
@@ -68,6 +68,16 @@ export const Subheading = styled.h4`
   a {
     color: ${theme.text.default};
     font-weight: 500;
+  }
+  a:hover {
+    text-decoration: underline;
+    text-decoration-color: ${theme.text.tertiary};
+    text-decoration-skip: spaces;
+    text-decoration-skip-ink: auto;
+  }
+  a:active, a:focus {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
   }
 
   @media (max-width: 968px) {
