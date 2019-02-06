@@ -3,6 +3,12 @@ import styled, { css } from 'styled-components';
 import { hexa, tint } from '../globals';
 import type { ButtonSize } from './types';
 import { theme } from '../theme';
+import dynamic from 'next/dynamic';
+
+const Clipboard = dynamic(() => import('react-clipboard.js'), {
+  ssr: false,
+  loading: () => null,
+});
 
 const getPadding = (size: ButtonSize) => {
   switch (size) {
@@ -32,7 +38,7 @@ const getFontSize = (size: ButtonSize) => {
   }
 };
 
-const base = css`
+export const base = css`
   -webkit-appearance: none;
   display: flex;
   flex: none;
@@ -311,8 +317,9 @@ export const TwitterButton = styled.a`
   }
 `;
 
-export const CopyLinkButton = styled.button`
+export const CopyLinkButton = styled(Clipboard)`
   ${base}
+  transition: all ${theme.animations.default};
   border: 1px solid ${props =>
     props.isClicked
       ? tint(props.theme.success.default, -10)
@@ -360,8 +367,9 @@ export const CopyLinkButton = styled.button`
   &:focus {
     box-shadow: 0 0 0 1px ${props =>
       props.theme.bg.default}, 0 0 0 3px ${props =>
-  props.isClicked
-    ? hexa(props.theme.success.default, 0.5)
-    : props.theme.border.default};
+        props.isClicked
+          ? hexa(props.theme.success.default, 0.5)
+          : props.theme.border.default};
   }
 `;
+
