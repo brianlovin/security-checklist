@@ -80,6 +80,10 @@ export const Subheading = styled.p`
       0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
   }
 
+  & + & {
+    margin-top: 16px;
+  }
+
   @media (max-width: 968px) {
     max-width: 100%;
   }
