@@ -503,3 +503,24 @@ export const ExpandContainer = styled.div`
     width: calc(100% + 40px);
   }
 `;
+
+
+export const ExpandContent = styled.div`
+  transition:
+    max-height ${theme.animations.default},
+    opacity ${theme.animations.default},
+    visibility ${theme.animations.default};
+
+  &[aria-hidden="true"] {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &[aria-hidden="false"] {
+    max-height: unset;
+    max-height: var(--maxHeight);
+    opacity: 1;
+    visibility: visible;
+  }
+`

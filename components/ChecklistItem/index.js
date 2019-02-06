@@ -108,19 +108,36 @@ class ChecklistItem extends React.Component<Props, State> {
                 handleCollapse={this.uncollapse}
               />
 
-              {!isCollapsed && resource.apps && (
-                <React.Fragment>
-                  <Divider />
-                  <Apps resource={resource} />
-                </React.Fragment>
-              )}
+              <Content
+                aria-hidden={isCollapsed}
+                id={`content_${resource.id}`}
+                role="region"
+                tabindex="-1"
+                ref={this.contentContainer}
+                style={{ '--maxHeight': `${contentHeight}px` }}
+              >
+                
+                <Description source={resource.description} />
 
-              {!isCollapsed && resource.resources && (
-                <React.Fragment>
-                  <Divider />
-                  <Resources resource={resource} />
-                </React.Fragment>
-              )}
+                {resource.apps && (
+                  <React.Fragment>
+                    <Divider />
+                    <Apps
+                      resource={resource}
+                      handleAppsExpand={this.handleAppsExpand}
+                    />
+                  </React.Fragment>
+                )}
+
+                {resource.resources && (
+                  <React.Fragment>
+                    <Divider />
+                    <Resources resource={resource} />
+                  </React.Fragment>
+                )}
+
+              </Content>
+
             </ResourceContent>
           </CardContent>
         </Card>
