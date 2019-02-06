@@ -27,6 +27,7 @@ export default function CopyLinkButton(props: CopyLinkProps) {
       data-cy="copy-link-button"
       isClicked={isClicked}
       aria-label="Copy the website’s address to your clipboard."
+      type="button"
       {...props}
     >
       <Icon glyph="link" size={24} />

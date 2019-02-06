@@ -75,7 +75,7 @@ export class Apps extends React.Component<Props, State> {
               aria-expanded={overflowExpanded}
               aria-controls={`apps_${resource.id}`}
             >
-              <Button>Show {overflowExpanded ? "less" : "more"} choices</Button>
+              <Button type="button">Show {overflowExpanded ? "less" : "more"} choices</Button>
             </ExpandContainer>
           </React.Fragment>
         )}
