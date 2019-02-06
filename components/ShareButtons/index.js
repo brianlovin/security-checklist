@@ -6,21 +6,21 @@ import { Container } from './style';
 export default function ShareButtons() {
   return (
     <Container>
-      <a
+      <FacebookButton
         href="https://www.facebook.com/sharer/sharer.php?u=https://securitycheckli.st"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FacebookButton>Share</FacebookButton>
-      </a>
+        Share
+      </FacebookButton>
 
-      <a
+      <TwitterButton
         href="http://twitter.com/share?text=Check out Security Checklist, a checklist to help people stay safe online&url=https://securitycheckli.st"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <TwitterButton>Tweet</TwitterButton>
-      </a>
+        Tweet
+      </TwitterButton>
 
       <CopyLinkButton text="https://securitycheckli.st">
         Share Link

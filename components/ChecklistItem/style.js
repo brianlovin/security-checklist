@@ -2,7 +2,7 @@
 import styled, { css } from 'styled-components';
 import Markdown from 'react-markdown';
 import { theme } from '../theme';
-import { Shadows, tint } from '../globals';
+import { Shadows, tint, hexa } from '../globals';
 
 export const Container = styled.div`
   margin-bottom: 24px;
@@ -132,6 +132,16 @@ export const CheckboxContainer = styled.div`
     opacity: 1;
     background-color: ${theme.success.default};
   }
+
+  input[type="checkbox"]:active + label, input[type="checkbox"]:focus + label {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.brand.default, 0.5)};    
+  }
+  input[type="checkbox"]:active:checked + label, input[type="checkbox"]:focus:checked + label {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.spectrum.default, 0.5)};    
+  }
+
 `;
 
 export const ResourceContent = styled.div`
@@ -150,11 +160,6 @@ export const ResourceContent = styled.div`
 `;
 
 export const AppsContainer = styled.div``;
-
-export const AppMeta = styled.a`
-  display: flex;
-  align-items: center;
-`;
 
 export const AppRowContainer = styled.div`
   display: flex;
@@ -188,6 +193,19 @@ export const AppRowContainer = styled.div`
   }
 
   &:hover {
+    background: ${theme.bg.wash};
+  }
+`;
+
+export const AppMeta = styled.a`
+  display: flex;
+  align-items: center;
+  padding-right: 6px;
+  border-radius: 8px;
+
+  &:active, &:focus {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
     background: ${theme.bg.wash};
   }
 `;
@@ -229,8 +247,7 @@ export const AppSourcesListItem = styled.li`
   align-items: center;
   justify-content: center;
   color: ${theme.text.tertiary};
-  padding: 4px 10px;
-  border-radius: 4px;
+  padding: 2px 8px;
   min-width: 56px;
   transition: all 0.1s ease-in-out;
 
@@ -239,6 +256,19 @@ export const AppSourcesListItem = styled.li`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2px;
+    border-radius: 8px;
+
+    &:hover {
+      color: ${theme.text.default};
+    }
+
+    &:active, &:focus {
+      color: ${theme.text.default};
+      box-shadow: 0 0 0 1px ${theme.bg.default},
+        0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
+      background: ${theme.bg.wash};
+    }
   }
 
   .icon {
@@ -247,9 +277,6 @@ export const AppSourcesListItem = styled.li`
     left: 4px;
   }
 
-  &:hover {
-    color: ${theme.text.default};
-  }
 
   @media (max-width: 768px) {
     padding: 4px;
@@ -302,9 +329,14 @@ export const ResourceRowContainer = styled.a`
     margin-right: 8px;
   }
 
-  &:hover {
+  &:hover, &:active, &:focus {
     background: ${theme.bg.wash};
     color: ${theme.text.default};
+  }
+
+  &:active, &:focus {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
   }
 
   @media (max-width: 768px) {
@@ -314,7 +346,7 @@ export const ResourceRowContainer = styled.a`
     margin-left: -24px;
     padding-left: 24px;
 
-    &:hover {
+    &:hover, &:active, &:focus {
       background: ${theme.bg.default}!important;
     }
 
@@ -366,6 +398,12 @@ export const Uncollapse = styled.span`
     color: ${theme.text.default};
     background: ${tint(theme.bg.wash, -4)};
   }
+  &:active, &:focus {
+    transition: all 0.2s ease-in-out;
+
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
+  }
 `;
 
 export const OfferContainer = styled.a`
@@ -400,6 +438,12 @@ export const OfferContainer = styled.a`
 
   &:hover {
     color: ${theme.text.secondary};
+  }
+  &:active, &:focus {
+    box-shadow: inset 0 0 1px ${theme.border.active},
+      0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
+    background: ${theme.bg.wash};
   }
 `;
 

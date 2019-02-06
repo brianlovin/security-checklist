@@ -58,10 +58,14 @@ const base = css`
     cursor: not-allowed;
   }
 
-  &:hover {
+  &:hover, &:active, &:focus {
     transition: all 0.2s ease-in-out;
     box-shadow: ${props =>
       props.disabled ? 'none' : `${theme.shadows.button}`};
+  }
+  &:active, &:focus {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.5)};
   }
 `;
 
@@ -126,7 +130,7 @@ export const PrimaryButton = styled.button`
   &:focus {
     box-shadow: 0 0 0 1px ${props =>
       props.theme.bg.default}, 0 0 0 3px ${props =>
-  hexa(props.theme.brand.alt, 0.16)};
+  hexa(props.theme.brand.alt, 0.5)};
   }
 `;
 
@@ -137,15 +141,15 @@ export const GhostButton = styled.button`
   background-color: transparent;
   background-image: none;
 
-  &:hover {
-    background: ${props => tint(props.theme.bg.wash, -3)};
+  &:hover, &:active, &:focus {
+    background: ${props => tint(props.theme.bg.wash, -8)};
     color: ${theme.text.default};
     box-shadow: none;
   }
 
-  &:focus {
+  &:active, &:focus {
     box-shadow: 0 0 0 1px ${theme.bg.default},
-      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.08)};
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
   }
 `;
 
@@ -220,12 +224,12 @@ export const ButtonSegmentRow = styled.div`
   ${PrimaryButton} {
     &:focus {
       box-shadow: 0 0 0 1px ${theme.bg.default},
-        0 0 0 3px ${props => hexa(props.theme.brand.alt, 0.16)};
+        0 0 0 3px ${props => hexa(props.theme.brand.alt, 0.5)};
     }
   }
 `;
 
-export const FacebookButton = styled.span`
+export const FacebookButton = styled.a`
   ${base}
   border: 1px solid ${theme.social.facebook};
   color: ${theme.bg.default};
@@ -262,11 +266,11 @@ export const FacebookButton = styled.span`
   &:focus {
     box-shadow: 0 0 0 1px ${props =>
       props.theme.bg.default}, 0 0 0 3px ${props =>
-  hexa(props.theme.social.facebook, 0.16)};
+        hexa(props.theme.social.facebook, 0.5)};
   }
 `;
 
-export const TwitterButton = styled.span`
+export const TwitterButton = styled.a`
   ${base}
   border: 1px solid ${theme.social.twitter};
   color: ${theme.bg.default};
@@ -303,7 +307,7 @@ export const TwitterButton = styled.span`
   &:focus {
     box-shadow: 0 0 0 1px ${props =>
       props.theme.bg.default}, 0 0 0 3px ${props =>
-  hexa(props.theme.social.twitter, 0.16)};
+  hexa(props.theme.social.twitter, 0.5)};
   }
 `;
 
@@ -357,7 +361,7 @@ export const CopyLinkButton = styled.button`
     box-shadow: 0 0 0 1px ${props =>
       props.theme.bg.default}, 0 0 0 3px ${props =>
   props.isClicked
-    ? hexa(props.theme.success.default, 0.16)
+    ? hexa(props.theme.success.default, 0.5)
     : props.theme.border.default};
   }
 `;

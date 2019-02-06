@@ -1,6 +1,7 @@
 // @flow
 import styled from 'styled-components';
 import { theme } from '../theme';
+import { hexa } from '../globals';
 
 export const Container = styled.div`
   margin-top: 128px;
@@ -34,8 +35,13 @@ export const Icons = styled.div`
     color: ${theme.text.tertiary};
   }
 
-  a:hover {
+  a:hover, a:active, a:focus {
     color: ${theme.text.default};
+  }
+
+  a:active, a:focus {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
   }
 
   .icon {

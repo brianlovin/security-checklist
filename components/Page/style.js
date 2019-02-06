@@ -1,6 +1,6 @@
 // @flow
 import styled from 'styled-components';
-import { tint } from '../globals';
+import { hexa, tint } from '../globals';
 import { theme } from '../theme';
 
 export const Container = styled.div`
@@ -113,8 +113,11 @@ export const ScrollToTop = styled.button`
     transition: all 0.2s ease-in-out;
   }
 
-  &:active {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09);
+  &:active, &:focus {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09),
+      0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.brand.default, 0.5)};
+    outline: none;
     transform: translateY(-2px);
     transition: all 0.2s ease-in-out;
   }
