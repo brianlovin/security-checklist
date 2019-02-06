@@ -31,7 +31,7 @@ export default function CopyLinkButton(props: CopyLinkProps) {
       {...props}
     >
       <Icon glyph="link" size={24} />
-      {isClicked ? 'Copied!' : children}
+      <span>{isClicked ? 'Copied!' : children}</span>
     </StyledCopyLinkButton>
   );
 }
