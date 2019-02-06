@@ -22,17 +22,24 @@ export const Description = styled.p`
     color: ${theme.text.default};
     margin-left: 4px;
   }
+  a:active, a:focus {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
+  }
 `;
 
 export const Icons = styled.div`
   display: flex;
   flex: 1 0 auto;
   align-items: flex-start;
-  margin-left: -16px;
   padding-bottom: 8px;
 
   a {
     color: ${theme.text.tertiary};
+    margin-right: 16px;
+    line-height: 1;
+    border-radius: 10px;
+    height: 32px;
   }
 
   a:hover, a:active, a:focus {
@@ -42,9 +49,5 @@ export const Icons = styled.div`
   a:active, a:focus {
     box-shadow: 0 0 0 1px ${theme.bg.default},
       0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
-  }
-
-  .icon {
-    margin-left: 16px;
   }
 `;
