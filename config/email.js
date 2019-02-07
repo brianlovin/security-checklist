@@ -79,7 +79,7 @@ export default {
     },
     {
       name: 'Knowledge and tools to protect your privacy against global mass surveillance',
-      url: 'https://www.privacytools.io/';,
+      url: 'https://www.privacytools.io/',
     },
   ],
 };
