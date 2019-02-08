@@ -112,7 +112,11 @@ export default function Page(props: Props) {
         />
         <InnerContainer>{children}</InnerContainer>
         <Footer />
-        <ScrollToTop isVisible={scrollToTopVisible} onClick={scrollToTop}>
+        <ScrollToTop
+          isVisible={scrollToTopVisible}
+          onClick={scrollToTop}
+          type="button"
+        >
           <Icon glyph="view-forward" size={32} />
         </ScrollToTop>
       </Container>

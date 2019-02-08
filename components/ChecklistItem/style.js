@@ -2,7 +2,7 @@
 import styled, { css } from 'styled-components';
 import Markdown from 'react-markdown';
 import { theme } from '../theme';
-import { Shadows, tint } from '../globals';
+import { Shadows, tint, hexa } from '../globals';
 
 export const Container = styled.div`
   margin-bottom: 24px;
@@ -69,35 +69,29 @@ export const CheckboxContainer = styled.div`
     margin-top: 4px;
     width: 32px;
   }
-`;
 
-export const Checkbox = styled.span`
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  border: 1px solid
-    ${props => (props.isChecked ? theme.bg.default : theme.border.default)};
-  background: ${props =>
-    props.isChecked ? theme.success.default : theme.bg.wash};
-  cursor: pointer;
-  position: relative;
-  background-image: ${props =>
-    props.isChecked
-      ? 'radial-gradient(circle at top right, #a913de, #6ac9ff)'
-      : 'none'};
-  box-shadow: ${props =>
-    props.isChecked ? 'inset 0 0 1px rgba(0,0,0,0.4)' : 'none'};
-
-  &:hover {
-    ${props => !props.isChecked && Shadows.default};
-    background: ${theme.bg.default};
-    background-image: ${props =>
-      props.isChecked
-        ? 'radial-gradient(circle at top right, #a913de, #6ac9ff)'
-        : 'none'};
+  input[type="checkbox"] {
+    position: absolute;
   }
 
-  &:after {
+  input[type="checkbox"] + label {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid ${theme.border.default};
+    background: ${theme.bg.wash};
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-indent: -1000px;
+  }
+
+  input[type="checkbox"] + label:hover {
+    ${Shadows.default};
+    background: ${theme.bg.default};
+  }
+
+  input[type="checkbox"] + label::after {
     content: '';
     position: absolute;
     display: block;
@@ -105,11 +99,49 @@ export const Checkbox = styled.span`
     top: 6px;
     width: 6px;
     height: 12px;
-    border: solid
-      ${props => (props.isChecked ? theme.bg.default : theme.border.active)};
+    border: solid ${theme.border.active};
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }
+
+  input[type="checkbox"]:checked + label {
+    border: 1px solid ${theme.bg.default};
+  }
+
+  input[type="checkbox"]:checked + label::after {
+    border: solid ${theme.bg.default};
+    border-width: 0 2px 2px 0;
+  }
+
+  /* This ::before pseudo-element is used to animate the gradient
+     which does not support transitions. */
+  input[type="checkbox"] + label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity ${theme.animations.default};
+    opacity: 0;
+    background-image: radial-gradient(circle at top right, #a913de, #6ac9ff);
+    box-shadow: inset 0 0 1px rgba(0,0,0,0.4);
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    opacity: 1;
+    background-color: ${theme.success.default};
+  }
+
+  input[type="checkbox"]:active + label, input[type="checkbox"]:focus + label {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.brand.default, 0.5)};    
+  }
+  input[type="checkbox"]:active:checked + label, input[type="checkbox"]:focus:checked + label {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.spectrum.default, 0.5)};    
+  }
+
 `;
 
 export const ResourceContent = styled.div`
@@ -129,12 +161,7 @@ export const ResourceContent = styled.div`
 
 export const AppsContainer = styled.div``;
 
-export const AppMeta = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-export const AppRowContainer = styled.a`
+export const AppRowContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -166,6 +193,19 @@ export const AppRowContainer = styled.a`
   }
 
   &:hover {
+    background: ${theme.bg.wash};
+  }
+`;
+
+export const AppMeta = styled.a`
+  display: flex;
+  align-items: center;
+  padding-right: 6px;
+  border-radius: 8px;
+
+  &:active, &:focus {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
     background: ${theme.bg.wash};
   }
 `;
@@ -207,8 +247,7 @@ export const AppSourcesListItem = styled.li`
   align-items: center;
   justify-content: center;
   color: ${theme.text.tertiary};
-  padding: 4px 10px;
-  border-radius: 4px;
+  padding: 2px 8px;
   min-width: 56px;
   transition: all 0.1s ease-in-out;
 
@@ -217,6 +256,19 @@ export const AppSourcesListItem = styled.li`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2px;
+    border-radius: 8px;
+
+    &:hover {
+      color: ${theme.text.default};
+    }
+
+    &:active, &:focus {
+      color: ${theme.text.default};
+      box-shadow: 0 0 0 1px ${theme.bg.default},
+        0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
+      background: ${theme.bg.wash};
+    }
   }
 
   .icon {
@@ -225,9 +277,6 @@ export const AppSourcesListItem = styled.li`
     left: 4px;
   }
 
-  &:hover {
-    color: ${theme.text.default};
-  }
 
   @media (max-width: 768px) {
     padding: 4px;
@@ -280,9 +329,14 @@ export const ResourceRowContainer = styled.a`
     margin-right: 8px;
   }
 
-  &:hover {
+  &:hover, &:active, &:focus {
     background: ${theme.bg.wash};
     color: ${theme.text.default};
+  }
+
+  &:active, &:focus {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
   }
 
   @media (max-width: 768px) {
@@ -292,7 +346,7 @@ export const ResourceRowContainer = styled.a`
     margin-left: -24px;
     padding-left: 24px;
 
-    &:hover {
+    &:hover, &:active, &:focus {
       background: ${theme.bg.default}!important;
     }
 
@@ -309,7 +363,7 @@ export const ResourceName = styled.p`
   font-weight: 400;
 `;
 
-export const Divider = styled.div`
+export const Divider = styled.hr`
   border-bottom: 1px solid ${tint(theme.bg.wash, -4)};
   margin-top: 24px;
   margin-bottom: 24px;
@@ -321,7 +375,27 @@ export const Divider = styled.div`
   }
 `;
 
-export const Uncollapse = styled.span`
+export const Content = styled.div`
+  transition:
+    max-height ${theme.animations.default},
+    opacity ${theme.animations.default},
+    visibility ${theme.animations.default};
+
+  max-height: 2000px;
+  max-height: var(--maxHeight);
+  opacity: 1;
+  visibility: visible;
+
+
+  &[aria-hidden="true"] {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+`
+
+export const Uncollapse = styled.button`
   background: ${theme.bg.wash};
   border-radius: 20px;
   padding: 8px 16px;
@@ -343,6 +417,12 @@ export const Uncollapse = styled.span`
   &:hover {
     color: ${theme.text.default};
     background: ${tint(theme.bg.wash, -4)};
+  }
+  &:active, &:focus {
+    transition: all 0.2s ease-in-out;
+
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
   }
 `;
 
@@ -378,6 +458,12 @@ export const OfferContainer = styled.a`
 
   &:hover {
     color: ${theme.text.secondary};
+  }
+  &:active, &:focus {
+    box-shadow: inset 0 0 1px ${theme.border.active},
+      0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
+    background: ${theme.bg.wash};
   }
 `;
 
@@ -417,3 +503,22 @@ export const ExpandContainer = styled.div`
     width: calc(100% + 40px);
   }
 `;
+
+
+export const ExpandContent = styled.div`
+  transition:
+    max-height ${theme.animations.default},
+    opacity ${theme.animations.default},
+    visibility ${theme.animations.default};
+  max-height: 2000px;
+  max-height: var(--maxHeight);
+  opacity: 1;
+  visibility: visible;
+
+  &[aria-hidden="true"] {
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+`

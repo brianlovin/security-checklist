@@ -51,8 +51,6 @@ export default function About() {
           .
         </Subheading>
 
-        <div style={{ padding: '8px' }} />
-
         <Subheading>
           The code that powers this website is{' '}
           <a

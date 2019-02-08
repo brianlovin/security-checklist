@@ -1,6 +1,6 @@
 // @flow
 import styled from 'styled-components';
-import { tint } from '../globals';
+import { hexa, tint } from '../globals';
 import { theme } from '../theme';
 
 export const Container = styled.div`
@@ -47,7 +47,7 @@ export const SectionHeading = styled.div`
   }
 `;
 
-export const Heading = styled.h3`
+export const Heading = styled.h2`
   font-size: 40px;
   font-weight: 700;
   color: ${theme.text.default};
@@ -58,7 +58,7 @@ export const Heading = styled.h3`
   }
 `;
 
-export const Subheading = styled.h4`
+export const Subheading = styled.p`
   font-size: 22px;
   font-weight: 400;
   color: ${theme.text.tertiary};
@@ -68,6 +68,18 @@ export const Subheading = styled.h4`
   a {
     color: ${theme.text.default};
     font-weight: 500;
+  }
+  a:hover {
+    text-decoration: underline;
+    text-decoration-color: ${theme.text.tertiary};
+  }
+  a:active, a:focus {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
+  }
+
+  & + & {
+    margin-top: 16px;
   }
 
   @media (max-width: 968px) {
@@ -113,8 +125,11 @@ export const ScrollToTop = styled.button`
     transition: all 0.2s ease-in-out;
   }
 
-  &:active {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09);
+  &:active, &:focus {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09),
+      0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.brand.default, 0.5)};
+    outline: none;
     transform: translateY(-2px);
     transition: all 0.2s ease-in-out;
   }

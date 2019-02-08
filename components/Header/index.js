@@ -5,6 +5,7 @@ import {
   Container,
   ButtonRowContainer,
   Label,
+  LogoLink,
   Progression,
   ProgressBar } from './style';
 import { PrimaryButton, GhostButton } from '../Button';
@@ -22,12 +23,14 @@ export default function Header(props: Props) {
 
   return (
     <Container showHeaderShadow={showHeaderShadow} data-cy="header">
-      <Link href="/">
-        <a style={{ display: 'flex', alignItems: 'center' }}>
-          <Label>Security Checklist</Label>
-          <Logo />
-        </a>
-      </Link>
+      <div>
+        <Link href="/">
+          <LogoLink href="/">
+            <Label>Security Checklist</Label>
+            <Logo />
+          </LogoLink>
+        </Link>
+      </div>
 
       <Progression isHidden={!displayProgress}>
         {currentCount} of {totalItemsCount} completed
@@ -36,18 +39,19 @@ export default function Header(props: Props) {
 
       <ButtonRowContainer>
         <Link href="/about">
-          <a>
-            <GhostButton>About</GhostButton>
-          </a>
+          <GhostButton as="a" href="/about">
+            About
+          </GhostButton>
         </Link>
 
-        <a
+        <PrimaryButton
           href="https://github.com/brianlovin/security-checklist"
           target="_blank"
           rel="noopener noreferrer"
+          as="a"
         >
-          <PrimaryButton>Contribute</PrimaryButton>
-        </a>
+          Contribute
+        </PrimaryButton>
       </ButtonRowContainer>
     </Container>
   );
