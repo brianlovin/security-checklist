@@ -70,5 +70,5 @@ export const Apps = ({ resource, handleAppsExpand }: Props) => {
       )}
     </AppsContainer>
   );
-}
+};
 
