@@ -38,8 +38,8 @@ export const AppRow = ({ app }: Props) => {
   };
 
   return (
-    <AppRowContainer href={app.url} target="_blank" rel="noopener noreferrer">
-      <AppMeta>
+    <AppRowContainer>
+      <AppMeta href={app.url} target="_blank" rel="noopener noreferrer" title={`go to: ${app.name}`}>
         {app.image && <AppIcon alt={app.name} src={app.image} />}
         <AppName>{app.name}</AppName>
       </AppMeta>

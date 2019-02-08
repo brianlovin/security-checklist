@@ -10,10 +10,11 @@ import { Resources } from './Resources';
 import {
   Container,
   CheckboxContainer,
-  Checkbox,
   CardContent,
   ResourceContent,
   Divider,
+  Description,
+  Content,
 } from './style';
 
 type Props = {
@@ -24,10 +25,18 @@ type State = {
   isChecked: boolean,
   isLoading: boolean,
   isCollapsed: boolean,
+  contentHeight: number,
 };
 
 class ChecklistItem extends React.Component<Props, State> {
-  state = { isChecked: false, isLoading: true, isCollapsed: true };
+  state = { isChecked: false, isLoading: true, isCollapsed: true, contentHeight: 2000, };
+  contentContainer: { current: null | HTMLDivElement }
+
+  constructor(props: Props) {
+    super(props);
+
+    this.contentContainer = React.createRef();
+  }
 
   componentDidMount() {
     const { resource } = this.props;
@@ -39,6 +48,14 @@ class ChecklistItem extends React.Component<Props, State> {
     });
   }
 
+  componentDidUpdate(prevProps: Props, prevState: State) {
+    if (prevState.isLoading && !this.state.isLoading && this.contentContainer.current) {
+      return this.setState({
+        contentHeight: this.contentContainer.current.scrollHeight,
+      })
+    }
+  }
+
   handleSetChecked = () => {
     const { isChecked } = this.state;
     const { resource } = this.props;
@@ -46,11 +63,19 @@ class ChecklistItem extends React.Component<Props, State> {
     return this.setState({ isChecked: !isChecked, isCollapsed: !isChecked });
   };
 
-  uncollapse = () =>
-    this.setState(state => ({ isCollapsed: !state.isCollapsed }));
+  uncollapse = () => {
+      this.setState(state => ({ isCollapsed: !state.isCollapsed }));
+      this.contentContainer.current && this.contentContainer.current.focus();
+  };
+
+  handleAppsExpand = (appsContainerHeight: number) => {
+    return this.contentContainer.current && this.setState({
+        contentHeight: this.contentContainer.current.scrollHeight + appsContainerHeight,
+    })
+  }
 
   render() {
-    const { isChecked, isLoading, isCollapsed } = this.state;
+    const { isChecked, isLoading, isCollapsed, contentHeight } = this.state;
     const { resource } = this.props;
 
     if (isLoading) return <LoadingChecklistItem />;
@@ -59,30 +84,60 @@ class ChecklistItem extends React.Component<Props, State> {
       <Container>
         <Card isChecked={isChecked}>
           <CardContent isCollapsed={isCollapsed}>
-            <CheckboxContainer onClick={this.handleSetChecked}>
-              <Checkbox isChecked={isChecked} />
+            <CheckboxContainer>
+              <input
+                aria-expanded={!isCollapsed}
+                type="checkbox"
+                checked={isChecked}
+                id={`checkbox_${resource.id}`}
+                onChange={this.handleSetChecked}
+                aria-controls={`content_${resource.id}`}
+              />
+              <label htmlFor={`checkbox_${resource.id}`}>
+                {resource.title}
+              </label>
             </CheckboxContainer>
 
-            <ResourceContent isChecked={isChecked} isCollapsed={isCollapsed}>
+            <ResourceContent
+              isChecked={isChecked}
+              isCollapsed={isCollapsed}
+            >
               <Heading
                 resource={resource}
                 isCollapsed={isCollapsed}
                 handleCollapse={this.uncollapse}
               />
 
-              {!isCollapsed && resource.apps && (
-                <React.Fragment>
-                  <Divider />
-                  <Apps resource={resource} />
-                </React.Fragment>
-              )}
+              <Content
+                aria-hidden={isCollapsed}
+                id={`content_${resource.id}`}
+                role="region"
+                tabindex="-1"
+                ref={this.contentContainer}
+                style={{ '--maxHeight': `${contentHeight}px` }}
+              >
+                
+                <Description source={resource.description} />
 
-              {!isCollapsed && resource.resources && (
-                <React.Fragment>
-                  <Divider />
-                  <Resources resource={resource} />
-                </React.Fragment>
-              )}
+                {resource.apps && (
+                  <React.Fragment>
+                    <Divider />
+                    <Apps
+                      resource={resource}
+                      handleAppsExpand={this.handleAppsExpand}
+                    />
+                  </React.Fragment>
+                )}
+
+                {resource.resources && (
+                  <React.Fragment>
+                    <Divider />
+                    <Resources resource={resource} />
+                  </React.Fragment>
+                )}
+
+              </Content>
+
             </ResourceContent>
           </CardContent>
         </Card>

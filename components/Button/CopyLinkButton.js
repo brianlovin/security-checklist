@@ -1,15 +1,9 @@
 // @flow
 // $FlowIssue
 import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
-import * as Styled from './style';
+import { CopyLinkButton as StyledCopyLinkButton } from './style';
 import Icon from '../Icon';
 import type { ButtonProps } from './types';
-
-const Clipboard = dynamic(() => import('react-clipboard.js'), {
-  ssr: false,
-  loading: () => null,
-});
 
 type CopyLinkProps = {
   ...$Exact<ButtonProps>,
@@ -26,20 +20,18 @@ export default function CopyLinkButton(props: CopyLinkProps) {
   };
 
   return (
-    <Clipboard
-      style={{ background: 'none' }}
+    <StyledCopyLinkButton
       data-clipboard-text={text}
       onSuccess={onClick}
-      component="a"
+      component="button"
+      data-cy="copy-link-button"
+      isClicked={isClicked}
+      aria-label="Copy the website’s address to your clipboard."
+      type="button"
+      {...props}
     >
-      <Styled.CopyLinkButton
-        data-cy="copy-link-button"
-        isClicked={isClicked}
-        {...props}
-      >
-        <Icon glyph="link" size={24} />
-        {isClicked ? 'Copied!' : children}
-      </Styled.CopyLinkButton>
-    </Clipboard>
+      <Icon glyph="link" size={24} />
+      <span>{isClicked ? 'Copied!' : children}</span>
+    </StyledCopyLinkButton>
   );
 }

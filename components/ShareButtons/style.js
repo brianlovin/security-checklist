@@ -13,10 +13,8 @@ export const Container = styled.div`
 
   @media (max-width: 568px) {
     grid-template-columns: 1fr;
-    grid-gap: 0;
 
-    button {
-      margin-top: 16px;
+    a, button {
       width: 100%;
     }
   }
