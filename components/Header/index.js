@@ -7,7 +7,8 @@ import {
   Label,
   LogoLink,
   Progression,
-  ProgressBar } from './style';
+  ProgressBar,
+  ProgressLabel } from './style';
 import { PrimaryButton, GhostButton } from '../Button';
 import Logo from './Logo';
 
@@ -32,11 +33,6 @@ export default function Header(props: Props) {
         </Link>
       </div>
 
-      <Progression isHidden={!displayProgress}>
-        {currentCount} of {totalItemsCount} completed
-        <ProgressBar />
-      </Progression>
-
       <ButtonRowContainer>
         <Link href="/about">
           <GhostButton as="a" href="/about">
@@ -53,6 +49,21 @@ export default function Header(props: Props) {
           Contribute
         </PrimaryButton>
       </ButtonRowContainer>
+
+      { displayProgress && (
+      <Progression
+        id="progress"
+        aria-label={`${currentCount} of ${totalItemsCount} completed`}
+      >
+        <ProgressBar
+          id="progress_bar"
+          aria-describedby="progress_tooltip"
+        />
+        <ProgressLabel
+          id="progress_tooltip"
+          role="tooltip"
+        >{currentCount} of {totalItemsCount} completed</ProgressLabel>
+      </Progression>)}
     </Container>
   );
 }
