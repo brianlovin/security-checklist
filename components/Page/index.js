@@ -100,7 +100,7 @@ export default function Page(props: Props) {
       <Container>
         <style>{`
           :root {
-            --progress: ${100 - progress}%;
+            --progress: ${progress ? 100 - progress : 100}%;
           }
         `}</style>
 
