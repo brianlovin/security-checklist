@@ -101,6 +101,10 @@ export const ProgressLabel = styled.p`
     opacity: 1;
     bottom: calc((100% - 8px) * -1);
   }
+
+  @media (max-width: 968px) {
+    padding: 8px 12px;
+  }
 `
 
 export const ButtonRowContainer = styled.div`
