@@ -54,6 +54,7 @@ export default function Header(props: Props) {
       <Progression
         id="progress"
         aria-label={`${currentCount} of ${totalItemsCount} completed`}
+        tabIndex="0"
       >
         <ProgressBar
           id="progress_bar"

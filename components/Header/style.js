@@ -29,7 +29,7 @@ export const Logo = styled.h1`
   color: ${theme.text.default};
 `;
 
-export const Progression = styled.button`
+export const Progression = styled.div`
   text-align: center;
   position: absolute;
   left: 0;
@@ -120,7 +120,7 @@ export const LogoLink = styled.a`
   align-items: center;
   border-radius: 6px;
   height: 100%;
-  
+
   &:hover {
     transform: scale(1.2);
   }
