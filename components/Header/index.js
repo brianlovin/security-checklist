@@ -10,6 +10,7 @@ import {
   ProgressBar } from './style';
 import { PrimaryButton, GhostButton } from '../Button';
 import Logo from './Logo';
+import Confetti from './Confetti';
 
 type Props = {
   showHeaderShadow: boolean,
@@ -20,6 +21,12 @@ type Props = {
 
 export default function Header(props: Props) {
   const { showHeaderShadow, totalItemsCount, currentCount, displayProgress } = props;
+
+  const getConfetti = () => {
+    if (currentCount === totalItemsCount) {
+      return (<Confetti />);
+    }
+  };
 
   return (
     <Container showHeaderShadow={showHeaderShadow} data-cy="header">
@@ -33,7 +40,10 @@ export default function Header(props: Props) {
       </div>
 
       <Progression isHidden={!displayProgress}>
+        { currentCount === totalItemsCount && `🎉 `}
         {currentCount} of {totalItemsCount} completed
+        { currentCount === totalItemsCount && ` 🎉`}
+        { getConfetti() }
         <ProgressBar />
       </Progression>
 
