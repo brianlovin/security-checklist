@@ -49,7 +49,7 @@ export const ProgressBar = styled.div`
   display: block;
   height: 8px;
   width: 100%;
-  margin: 8px 0 0;
+  margin: 16px 0 0;
   position: relative;
   overflow: hidden;
   border-bottom-left-radius: 8px;
