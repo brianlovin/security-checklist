@@ -70,11 +70,11 @@ export const CheckboxContainer = styled.div`
     width: 32px;
   }
 
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     position: absolute;
   }
 
-  input[type="checkbox"] + label {
+  input[type='checkbox'] + label {
     width: 32px;
     height: 32px;
     border-radius: 4px;
@@ -86,12 +86,12 @@ export const CheckboxContainer = styled.div`
     text-indent: -1000px;
   }
 
-  input[type="checkbox"] + label:hover {
+  input[type='checkbox'] + label:hover {
     ${Shadows.default};
     background: ${theme.bg.default};
   }
 
-  input[type="checkbox"] + label::after {
+  input[type='checkbox'] + label::after {
     content: '';
     position: absolute;
     display: block;
@@ -104,18 +104,18 @@ export const CheckboxContainer = styled.div`
     transform: rotate(45deg);
   }
 
-  input[type="checkbox"]:checked + label {
+  input[type='checkbox']:checked + label {
     border: 1px solid ${theme.bg.default};
   }
 
-  input[type="checkbox"]:checked + label::after {
+  input[type='checkbox']:checked + label::after {
     border: solid ${theme.bg.default};
     border-width: 0 2px 2px 0;
   }
 
   /* This ::before pseudo-element is used to animate the gradient
      which does not support transitions. */
-  input[type="checkbox"] + label::before {
+  input[type='checkbox'] + label::before {
     content: '';
     position: absolute;
     top: 0;
@@ -125,23 +125,24 @@ export const CheckboxContainer = styled.div`
     transition: opacity ${theme.animations.default};
     opacity: 0;
     background-image: radial-gradient(circle at top right, #a913de, #6ac9ff);
-    box-shadow: inset 0 0 1px rgba(0,0,0,0.4);
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4);
   }
 
-  input[type="checkbox"]:checked + label::before {
+  input[type='checkbox']:checked + label::before {
     opacity: 1;
     background-color: ${theme.success.default};
   }
 
-  input[type="checkbox"]:active + label, input[type="checkbox"]:focus + label {
+  input[type='checkbox']:active + label,
+  input[type='checkbox']:focus + label {
     box-shadow: 0 0 0 1px ${theme.bg.default},
-      0 0 0 3px ${props => hexa(props.theme.brand.default, 0.5)};    
+      0 0 0 3px ${props => hexa(props.theme.brand.default, 0.5)};
   }
-  input[type="checkbox"]:active:checked + label, input[type="checkbox"]:focus:checked + label {
+  input[type='checkbox']:active:checked + label,
+  input[type='checkbox']:focus:checked + label {
     box-shadow: 0 0 0 1px ${theme.bg.default},
-      0 0 0 3px ${props => hexa(props.theme.spectrum.default, 0.5)};    
+      0 0 0 3px ${props => hexa(props.theme.spectrum.default, 0.5)};
   }
-
 `;
 
 export const ResourceContent = styled.div`
@@ -201,12 +202,12 @@ export const AppMeta = styled.a`
   display: flex;
   align-items: center;
   padding-right: 6px;
-  border-radius: 8px;
+  border-radius: 4px;
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     box-shadow: 0 0 0 1px ${theme.bg.default},
       0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
-    background: ${theme.bg.wash};
   }
 `;
 
@@ -257,17 +258,17 @@ export const AppSourcesListItem = styled.li`
     align-items: center;
     justify-content: center;
     padding: 2px;
-    border-radius: 8px;
+    border-radius: 4px;
 
     &:hover {
       color: ${theme.text.default};
     }
 
-    &:active, &:focus {
+    &:active,
+    &:focus {
       color: ${theme.text.default};
       box-shadow: 0 0 0 1px ${theme.bg.default},
         0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
-      background: ${theme.bg.wash};
     }
   }
 
@@ -277,15 +278,14 @@ export const AppSourcesListItem = styled.li`
     left: 4px;
   }
 
-
   @media (max-width: 768px) {
     padding: 4px;
     min-width: 40px;
 
     .icon {
       position: relative;
-      top: 5px;
-      left: 7px;
+      top: 3px;
+      left: 5px;
     }
 
     &:hover {
@@ -329,24 +329,28 @@ export const ResourceRowContainer = styled.a`
     margin-right: 8px;
   }
 
-  &:hover, &:active, &:focus {
-    background: ${theme.bg.wash};
+  &:hover,
+  &:active,
+  &:focus {
     color: ${theme.text.default};
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     box-shadow: 0 0 0 1px ${theme.bg.default},
       0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
   }
 
   @media (max-width: 768px) {
     width: calc(100% + 40px);
-    border-radius: 0;
+    border-radius: 4px;
     align-items: flex-start;
     margin-left: -24px;
     padding-left: 24px;
 
-    &:hover, &:active, &:focus {
+    &:hover,
+    &:active,
+    &:focus {
       background: ${theme.bg.default}!important;
     }
 
@@ -376,24 +380,20 @@ export const Divider = styled.hr`
 `;
 
 export const Content = styled.div`
-  transition:
-    max-height ${theme.animations.default},
-    opacity ${theme.animations.default},
-    visibility ${theme.animations.default};
+  transition: max-height ${theme.animations.default},
+    opacity ${theme.animations.default}, visibility ${theme.animations.default};
 
   max-height: 2000px;
   max-height: var(--maxHeight);
   opacity: 1;
   visibility: visible;
 
-
-  &[aria-hidden="true"] {
+  &[aria-hidden='true'] {
     max-height: 0;
     opacity: 0;
     visibility: hidden;
   }
-
-`
+`;
 
 export const Uncollapse = styled.button`
   background: ${theme.bg.wash};
@@ -418,7 +418,8 @@ export const Uncollapse = styled.button`
     color: ${theme.text.default};
     background: ${tint(theme.bg.wash, -4)};
   }
-  &:active, &:focus {
+  &:active,
+  &:focus {
     transition: all 0.2s ease-in-out;
 
     box-shadow: 0 0 0 1px ${theme.bg.default},
@@ -459,11 +460,11 @@ export const OfferContainer = styled.a`
   &:hover {
     color: ${theme.text.secondary};
   }
-  &:active, &:focus {
+  &:active,
+  &:focus {
     box-shadow: inset 0 0 1px ${theme.border.active},
       0 0 0 1px ${theme.bg.default},
       0 0 0 3px ${props => hexa(props.theme.text.tertiary, 0.25)};
-    background: ${theme.bg.wash};
   }
 `;
 
@@ -504,21 +505,17 @@ export const ExpandContainer = styled.div`
   }
 `;
 
-
 export const ExpandContent = styled.div`
-  transition:
-    max-height ${theme.animations.default},
-    opacity ${theme.animations.default},
-    visibility ${theme.animations.default};
+  transition: max-height ${theme.animations.default},
+    opacity ${theme.animations.default}, visibility ${theme.animations.default};
   max-height: 2000px;
   max-height: var(--maxHeight);
   opacity: 1;
   visibility: visible;
 
-  &[aria-hidden="true"] {
+  &[aria-hidden='true'] {
     max-height: 0;
     opacity: 0;
     visibility: hidden;
   }
-
-`
+`;
