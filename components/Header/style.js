@@ -92,6 +92,7 @@ export const ProgressLabel = styled.p`
 
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  white-space: nowrap;
 
   ${Progression}:hover &,
   ${Progression}:focus &,
@@ -99,7 +100,7 @@ export const ProgressLabel = styled.p`
    {
     visibility: visible;
     opacity: 1;
-    bottom: calc((100% - 8px) * -1);
+    bottom: -100%;
   }
 
   @media (max-width: 968px) {

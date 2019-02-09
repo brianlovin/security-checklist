@@ -63,7 +63,11 @@ export default function Header(props: Props) {
         <ProgressLabel
           id="progress_tooltip"
           role="tooltip"
-        >{currentCount} of {totalItemsCount} completed</ProgressLabel>
+        >
+          { currentCount === totalItemsCount && `🎉 `}
+          {currentCount} of {totalItemsCount} completed
+          { currentCount === totalItemsCount && ` 🎉`}
+        </ProgressLabel>
       </Progression>)}
     </Container>
   );
