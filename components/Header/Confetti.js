@@ -27,10 +27,18 @@ import React, { useState, useRef, useEffect, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { ParticleZone } from './style';
 
+type ConfettiProps = {
+  fireConfetti: boolean,
+};
+type ParticlesProps = {
+  count: number,
+};
+type Props = {};
+
 
 const COLORS = ['#2ecc71','#3498db','#e67e22','#e67e22','#e74c3c'];
-const TOP_OFFSET = typeof window !== 'undefined' && window.innerHeight;
-const INNER_WIDTH = typeof window !== 'undefined' && window.innerWidth;
+const TOP_OFFSET = typeof window != 'undefined' ? window.innerHeight : 0;
+const INNER_WIDTH = typeof window != 'undefined' ? window.innerWidth : 0;
 const LEFT_OFFSET = 250;
 
 const generateWholeNumber = (min, max) => min + Math.floor(Math.random()*(max - min));
@@ -38,7 +46,7 @@ const generateWholeNumber = (min, max) => min + Math.floor(Math.random()*(max - 
 const generateRandomColor = () => COLORS[generateWholeNumber(0,COLORS.length)];
 
 export function CircularParticle(props: Props) {
-  const currentConfetti = useRef(null);
+  const currentCircularConfetti = useRef(null);
 
   const SIZE_RANGE = [5, 10];
   const ROTATION_RANGE = [0, 45];
@@ -57,7 +65,7 @@ export function CircularParticle(props: Props) {
   useEffect(() => {
     const {left} = style;
     setTimeout(() => {
-      const node = currentConfetti.current;
+      const node = currentCircularConfetti.current;
       if (node) {
         node.style.top = window.innerHeight + generateWholeNumber(0, window.innerHeight) + 'px';
         node.style.left = left + generateWholeNumber(-LEFT_OFFSET, LEFT_OFFSET) + 'px';
@@ -66,12 +74,12 @@ export function CircularParticle(props: Props) {
    }); 
     
   return (
-    <div ref={currentConfetti} className='particle' style={style}/>
+    <div ref={currentCircularConfetti} className='particle' style={style}/>
   );
 }
 
 function SquiggleParticle(props: Props) {
-  const currentConfetti = useRef(null);  
+  const currentSquiggleConfetti = useRef(null);  
   const SIZE_RANGE = [15, 45];
   const ROTATION_RANGE = [-15, 15];
 
@@ -89,7 +97,7 @@ function SquiggleParticle(props: Props) {
   useEffect(() => {
     const {left} = style;
     setTimeout(() => {
-      const node = currentConfetti.current;
+      const node = currentSquiggleConfetti.current;
       if (node){    
         node.style.top = window.innerHeight + generateWholeNumber(0, window.innerHeight) + 'px';
         node.style.left = left + generateWholeNumber(-LEFT_OFFSET, LEFT_OFFSET) + 'px';
@@ -99,8 +107,8 @@ function SquiggleParticle(props: Props) {
   });
 
   return (
-    <svg 
-      ref={currentConfetti} 
+    <svg
+      ref={currentSquiggleConfetti} 
       className='particle'
       style={style}
       xmlns="http://www.w3.org/2000/svg" 
@@ -110,7 +118,7 @@ function SquiggleParticle(props: Props) {
   );
 }
 
-export function Particles(props: Props) {
+export function Particles(props: ParticlesProps) {
   let {count: n} = props;
   const particles = [];
   const types = [SquiggleParticle, CircularParticle, CircularParticle];
@@ -130,7 +138,7 @@ export function Particles(props: Props) {
 }
 
 
-export default function Confetti(props: Props) {
+export default function Confetti(props: ConfettiProps) {
   const [particles, setParticles] = useState([]);
 
   var id = 1;
