@@ -59,7 +59,7 @@ export function CircularParticle(props: Props) {
     setTimeout(() => {
       const node = currentConfetti.current;
       if (node) {
-        node.style.top = TOP_OFFSET + generateWholeNumber(0, TOP_OFFSET) + 'px';
+        node.style.top = window.innerHeight + generateWholeNumber(0, window.innerHeight) + 'px';
         node.style.left = left + generateWholeNumber(-LEFT_OFFSET, LEFT_OFFSET) + 'px';
       }
     },10);
@@ -91,7 +91,7 @@ function SquiggleParticle(props: Props) {
     setTimeout(() => {
       const node = currentConfetti.current;
       if (node){    
-        node.style.top = window.innerHeight + generateWholeNumber(0, TOP_OFFSET) + 'px';
+        node.style.top = window.innerHeight + generateWholeNumber(0, window.innerHeight) + 'px';
         node.style.left = left + generateWholeNumber(-LEFT_OFFSET, LEFT_OFFSET) + 'px';
         node.style.transform = `rotateZ(${generateWholeNumber(...ROTATION_RANGE)}deg)`;
       }
