@@ -7,7 +7,8 @@ import {
   Label,
   LogoLink,
   Progression,
-  ProgressBar } from './style';
+  ProgressBar,
+  ProgressLabel } from './style';
 import { PrimaryButton, GhostButton } from '../Button';
 import Logo from './Logo';
 import Confetti from './Confetti';
@@ -33,14 +34,6 @@ export default function Header(props: Props) {
         </Link>
       </div>
 
-      <Progression isHidden={!displayProgress}>
-        { currentCount === totalItemsCount && `🎉 `}
-        {currentCount} of {totalItemsCount} completed
-        { currentCount === totalItemsCount && ` 🎉`}
-        <Confetti fireConfetti={currentCount === totalItemsCount} />
-        <ProgressBar />
-      </Progression>
-
       <ButtonRowContainer>
         <Link href="/about">
           <GhostButton as="a" href="/about">
@@ -57,6 +50,28 @@ export default function Header(props: Props) {
           Contribute
         </PrimaryButton>
       </ButtonRowContainer>
+
+      { displayProgress && (
+      <Progression
+        id="progress"
+        aria-label={`${currentCount} of ${totalItemsCount} completed`}
+        tabIndex="0"
+      >
+        <ProgressBar
+          id="progress_bar"
+          aria-describedby="progress_tooltip"
+          disabled={currentCount > 0 ? false : true}
+        />
+        <ProgressLabel
+          id="progress_tooltip"
+          role="tooltip"
+        >
+          { currentCount === totalItemsCount && `🎉 `}
+          {currentCount} of {totalItemsCount} completed
+          { currentCount === totalItemsCount && ` 🎉`}
+        </ProgressLabel>
+        <Confetti fireConfetti={currentCount === totalItemsCount} />
+      </Progression>)}
     </Container>
   );
 }

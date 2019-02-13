@@ -96,5 +96,17 @@ export default {
       url:
         'https://www.wired.com/2016/06/hey-stop-using-texts-two-factor-authentication/',
     },
+    {
+      name: 'List of websites and whether or not they support 2FA.',
+      url: 'https://twofactorauth.org/',
+    },
+    {
+      name: 'Step-by-step instructions on enabling 2FA',
+      url: 'https://www.turnon2fa.com/',
+    },
+    {
+      name: 'List of websites and whether or not they support One Time Passwords (OTP) or Universal 2nd Factor (U2F)',
+      url: 'https://www.dongleauth.info/',
+    },
   ],
 };

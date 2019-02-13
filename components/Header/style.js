@@ -2,27 +2,24 @@
 import styled from 'styled-components';
 import { theme } from '../theme';
 import { hexa } from '../globals';
+import { Shadows } from '../globals';
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: 'logo progression actions';
-  padding: 16px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "logo actions";
+  padding: 16px 16px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: ${props =>
-    props.showHeaderShadow ? props.theme.bg.default : props.theme.bg.wash};
+  background: ${theme.bg.default};
   z-index: 3;
-  box-shadow: ${props =>
-    props.showHeaderShadow ? '0 4px 8px rgba(0,0,0,0.04)' : 'none'};
+  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
   transition: all 0.2s ease-in-out;
 
   @media (max-width: 968px) {
     padding: 8px 16px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "logo actions" "progression progression";
   }
 `;
 
@@ -34,32 +31,85 @@ export const Logo = styled.h1`
 `;
 
 export const Progression = styled.div`
-  grid-area: progression;
   text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 32px;
+  width: 100%;
+  bottom: -16px;
+  display: block;
+  background: transparent;
 
-  display: ${props =>
-    props.isHidden ? 'none' : 'block'};
+  &:active, &:focus {
+    outline: none;
+  }
 `;
 
 export const ProgressBar = styled.div`
-  height: 8px;
-  margin: 6px 0;
+  display: block;
+  height: 4px;
+  width: 100%;
+  margin: 16px 0 0;
   position: relative;
   overflow: hidden;
-  border-radius: 4px;
   background-image: linear-gradient(to left, #a913de, #6ac9ff);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+  z-index: 5;
 
-  &:after {
+  ${Progression}:focus &,
+  ${Progression}:active & {
+    box-shadow: 0 0 0 1px ${theme.bg.default},
+      0 0 0 3px ${props => hexa(props.theme.brand.default, 0.25)};
+  }
+
+  &::after {
     content: '';
     position: absolute;
     height: 100%;
+    top: 0;
     right: 0;
     width: 100%;
     background: ${theme.border.default};
     max-width: var(--progress);
-    transition: max-width ${theme.animations.default};
+    transition: max-width ${theme.animations.default}, background ${theme.animations.default};
+  }
+  &[disabled]::after {
+    background: ${theme.bg.default};
   }
 `;
+
+export const ProgressLabel = styled.p`
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 4;
+  bottom: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: ${theme.bg.default};
+  padding: 8px 16px;
+
+  transition: all ${theme.animations.default};
+
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  white-space: nowrap;
+  ${Shadows.default};
+
+  ${Progression}:hover &,
+  ${Progression}:focus &,
+  ${Progression}:active &
+   {
+    visibility: visible;
+    opacity: 1;
+    bottom: -87.5%;
+  }
+
+  @media (max-width: 968px) {
+    padding: 8px 12px;
+  }
+`
 
 export const ButtonRowContainer = styled.div`
   display: flex;
@@ -77,6 +127,7 @@ export const LogoLink = styled.a`
   display: inline-flex;
   align-items: center;
   border-radius: 6px;
+  height: 100%;
 
   &:hover {
     transform: scale(1.2);
