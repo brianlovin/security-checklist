@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 import { theme } from '../theme';
 import { hexa } from '../globals';
+import { Shadows } from '../globals';
 
 export const Container = styled.div`
   display: grid;
@@ -47,13 +48,11 @@ export const Progression = styled.div`
 
 export const ProgressBar = styled.div`
   display: block;
-  height: 8px;
+  height: 4px;
   width: 100%;
   margin: 16px 0 0;
   position: relative;
   overflow: hidden;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
   background-image: linear-gradient(to left, #a913de, #6ac9ff);
   box-shadow: 0 4px 8px rgba(0,0,0,0.04);
   z-index: 5;
@@ -64,7 +63,7 @@ export const ProgressBar = styled.div`
       0 0 0 3px ${props => hexa(props.theme.brand.default, 0.25)};
   }
 
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     height: 100%;
@@ -73,7 +72,10 @@ export const ProgressBar = styled.div`
     width: 100%;
     background: ${theme.border.default};
     max-width: var(--progress);
-    transition: max-width ${theme.animations.default};
+    transition: max-width ${theme.animations.default}, background ${theme.animations.default};
+  }
+  &[disabled]::after {
+    background: ${theme.bg.default};
   }
 `;
 
@@ -93,6 +95,7 @@ export const ProgressLabel = styled.p`
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   white-space: nowrap;
+  ${Shadows.default};
 
   ${Progression}:hover &,
   ${Progression}:focus &,
@@ -100,7 +103,7 @@ export const ProgressLabel = styled.p`
    {
     visibility: visible;
     opacity: 1;
-    bottom: -100%;
+    bottom: -87.5%;
   }
 
   @media (max-width: 968px) {

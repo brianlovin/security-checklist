@@ -59,6 +59,7 @@ export default function Header(props: Props) {
         <ProgressBar
           id="progress_bar"
           aria-describedby="progress_tooltip"
+          disabled={currentCount > 0 ? false : true}
         />
         <ProgressLabel
           id="progress_tooltip"
