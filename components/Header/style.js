@@ -89,11 +89,12 @@ export const ProgressLabel = styled.p`
   transform: translateX(-50%);
   background: ${theme.bg.default};
   padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
 
   transition: all ${theme.animations.default};
 
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 8px;
   white-space: nowrap;
   ${Shadows.default};
 
@@ -103,7 +104,7 @@ export const ProgressLabel = styled.p`
    {
     visibility: visible;
     opacity: 1;
-    bottom: -87.5%;
+    bottom: -100%;
   }
 
   @media (max-width: 968px) {
