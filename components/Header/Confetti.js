@@ -24,7 +24,6 @@
 // IN THE SOFTWARE.
 
 import React, { useState, useRef, useEffect, Fragment } from 'react';
-import ReactDOM from 'react-dom';
 import { ParticleZone } from './style';
 
 type ConfettiProps = {
