@@ -22,12 +22,6 @@ type Props = {
 export default function Header(props: Props) {
   const { showHeaderShadow, totalItemsCount, currentCount, displayProgress } = props;
 
-  const getConfetti = () => {
-    if (currentCount === totalItemsCount) {
-      return (<Confetti />);
-    }
-  };
-
   return (
     <Container showHeaderShadow={showHeaderShadow} data-cy="header">
       <div>
@@ -43,7 +37,7 @@ export default function Header(props: Props) {
         { currentCount === totalItemsCount && `🎉 `}
         {currentCount} of {totalItemsCount} completed
         { currentCount === totalItemsCount && ` 🎉`}
-        { getConfetti() }
+        <Confetti fireConfetti={currentCount === totalItemsCount} />
         <ProgressBar />
       </Progression>
 

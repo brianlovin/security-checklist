@@ -93,3 +93,17 @@ export const Label = styled.h1`
   left: -9999px;
   visibility: none;
 `;
+
+export const ParticleZone = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  & > div, & > svg {
+    position: absolute;
+    transition: all 5s ease-out;
+  }
+`
+
