@@ -19,7 +19,7 @@ class Index extends React.Component<{}> {
 
   render() {
     return (
-      <Page>
+      <Page displayProgress={true}>
         <SectionHeading>
           <Heading>Be safe on the internet.</Heading>
           <Subheading>
