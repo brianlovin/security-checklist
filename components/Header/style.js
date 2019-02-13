@@ -97,9 +97,9 @@ export const ProgressLabel = styled.p`
   white-space: nowrap;
   ${Shadows.default};
 
-  ${Progression}:hover &,
-  ${Progression}:focus &,
-  ${Progression}:active &
+  ${Progression}:hover ${ProgressBar}:not([disabled]) + &,
+  ${Progression}:focus ${ProgressBar}:not([disabled]) + &,
+  ${Progression}:active ${ProgressBar}:not([disabled]) + &
    {
     visibility: visible;
     opacity: 1;

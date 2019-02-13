@@ -66,9 +66,9 @@ export default function Header(props: Props) {
           id="progress_tooltip"
           role="tooltip"
         >
-          { currentCount === totalItemsCount && `🎉 `}
-          {currentCount} of {totalItemsCount} completed
-          { currentCount === totalItemsCount && ` 🎉`}
+          { currentCount === totalItemsCount
+            ? `🎉 Checklist Complete! 🎉`
+            : `${currentCount} of ${totalItemsCount} completed`}
         </ProgressLabel>
         <Confetti fireConfetti={currentCount === totalItemsCount} />
       </Progression>)}
