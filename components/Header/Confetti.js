@@ -69,11 +69,11 @@ export function CircularParticle(props: Props) {
         node.style.top = window.innerHeight + generateWholeNumber(0, window.innerHeight) + 'px';
         node.style.left = left + generateWholeNumber(-LEFT_OFFSET, LEFT_OFFSET) + 'px';
       }
-    },10);
+    },0);
    }); 
     
   return (
-    <div ref={currentCircularConfetti} className='particle' style={style}/>
+    <div ref={currentCircularConfetti} style={style}/>
   );
 }
 
@@ -102,7 +102,7 @@ function SquiggleParticle(props: Props) {
         node.style.left = left + generateWholeNumber(-LEFT_OFFSET, LEFT_OFFSET) + 'px';
         node.style.transform = `rotateZ(${generateWholeNumber(...ROTATION_RANGE)}deg)`;
       }
-    },10);
+    },0);
   });
 
   return (
@@ -131,7 +131,7 @@ export function Particles(props: ParticlesProps) {
   }
   
   return (
-    <ParticleZone className='particles'>
+    <ParticleZone>
       {particles}
     </ParticleZone>
   );
