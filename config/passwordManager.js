@@ -38,6 +38,18 @@ export default {
       },
     },
     {
+      name: 'SAASPASS',
+      image: '/static/img/saaspass.png',
+      url: 'https://saaspass.com/',
+      sources: {
+        windows:'https://saaspass.com/downloads/',
+        macos:'https://saaspass.com/downloads/',
+        ios:'https://itunes.apple.com/us/app/saaspass-two-factor-authentication/id849132027?mt=8',
+        android: 'https://play.google.com/store/apps/details?id=com.solidpass.saaspass',
+        linux: 'https://saaspass.com/downloads/',
+      },
+    },
+    {
       name: 'Dashlane',
       image: '/static/img/dashlane.jpg',
       url: 'https://www.dashlane.com/',
