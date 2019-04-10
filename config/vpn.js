@@ -96,7 +96,7 @@ export default {
     {
       name: 'What is a VPN and why you need one',
       url:
-        'https://www.theverge.com/2018/4/1/17185732/cloudflare-dns-service-1-1-1-1',
+        'https://www.pcmag.com/article/352757/you-need-a-vpn-and-heres-why',
     },
     {
       name: 'Why you should use a VPN on a public Wi-Fi network',
