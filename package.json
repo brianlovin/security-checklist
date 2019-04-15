@@ -18,7 +18,7 @@
     "lint:staged": "lint-staged"
   },
   "dependencies": {
-    "@sentry/browser": "^5.0.7",
+    "@sentry/browser": "^5.0.8",
     "next": "^7.0.3",
     "next-seo": "^1.11.2",
     "react": "^16.8.0-alpha.0",
