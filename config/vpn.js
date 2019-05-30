@@ -7,6 +7,18 @@ export default {
     `,
   apps: [
     {
+      name: 'PureVPN',
+      image: '/static/img/purevpn.jpg',
+      url: ' https://www.purevpn.com/' ,
+      sources: {
+      windows: 'https://www.purevpn.com/download/windows-vpn',
+      macos: 'https://www.purevpn.com/download/mac-vpn',
+      ios: ' https://www.purevpn.com/download/ios-vpn',
+      android: 'https://www.purevpn.com/download/android-vpn',
+      linux:'https://www.purevpn.com/download/linux-vpn',
+      },
+    },
+    {
       name: 'IVPN',
       image: '/static/img/ivpn.jpg',
       url: 'https://www.ivpn.net/',
