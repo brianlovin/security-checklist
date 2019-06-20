@@ -64,7 +64,7 @@ export const Apps = ({ resource, handleAppsExpand }: Props) => {
             aria-expanded={overflowExpanded}
             aria-controls={`apps_${resource.id}`}
           >
-            <Button type="button">Show {overflowExpanded ? "less" : "more"} choices</Button>
+            <Button type="button">Show {overflowExpanded ? "fewer" : "more"} choices</Button>
           </ExpandContainer>
         </React.Fragment>
       )}
