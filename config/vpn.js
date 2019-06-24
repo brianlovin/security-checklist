@@ -86,6 +86,15 @@ export default {
           'https://www.privateinternetaccess.com/installer/x/download_installer_linux',
       },
     },
+    {
+      name: 'Guardian Firewall',
+      image: '/static/img/guardian.png',
+      url: 'https://guardianapp.com',
+      sources: {
+        ios:
+          'https://itunes.apple.com/us/app/guardian-firewall/id1363796315'
+      }
+    }
   ],
   resources: [
     {
