@@ -86,6 +86,15 @@ export default {
           'https://www.privateinternetaccess.com/installer/x/download_installer_linux',
       },
     },
+    {
+      name: 'Guardian Firewall',
+      image: '/static/img/guardian.png',
+      url: 'https://guardianapp.com',
+      sources: {
+        ios:
+          'https://itunes.apple.com/us/app/guardian-firewall/id1363796315'
+      }
+    }
   ],
   resources: [
     {
@@ -96,7 +105,7 @@ export default {
     {
       name: 'What is a VPN and why you need one',
       url:
-        'https://www.theverge.com/2018/4/1/17185732/cloudflare-dns-service-1-1-1-1',
+        'https://www.pcmag.com/article/352757/you-need-a-vpn-and-heres-why',
     },
     {
       name: 'Why you should use a VPN on a public Wi-Fi network',
