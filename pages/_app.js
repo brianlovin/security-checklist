@@ -1,9 +1,9 @@
 // @flow
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import * as React from 'react';
 import Head from 'next/head';
 import * as Sentry from '@sentry/browser';
-import NextSeo from 'next-seo';
+import { NextSeo } from 'next-seo';
 import { GlobalStyles } from '../static/normalize';
 import defaultSEO from '../config/next-seo.js';
 
@@ -40,7 +40,7 @@ class SecurityChecklistApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <Container>
+      <>
         <GlobalStyles />
 
         <Head>
@@ -135,7 +135,7 @@ class SecurityChecklistApp extends App {
 
         <NextSeo config={defaultSEO} />
         <Component {...pageProps} />
-      </Container>
+      </>
     );
   }
 }
