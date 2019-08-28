@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import NextSeo from 'next-seo';
+import { NextSeo } from 'next-seo';
 import Page, { SectionHeading, Heading, Subheading } from '../components/Page';
 
 export default function About() {
