@@ -28,7 +28,7 @@
     "react-clipboard.js": "^2.0.16",
     "react-dom": "^16.9.0",
     "react-markdown": "^4.2.2",
-    "styled-components": "^4.3.2",
+    "styled-components": "^4.4.0",
     "throttle-debounce": "^2.1.0"
   },
   "devDependencies": {
