@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
-    "@babel/plugin-transform-flow-strip-types": "^7.4.4",
+    "@babel/plugin-transform-flow-strip-types": "^7.6.3",
     "@babel/preset-flow": "^7.0.0",
     "@cypress/browserify-preprocessor": "^2.1.1",
     "babel-eslint": "^10.0.3",
