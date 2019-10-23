@@ -26,7 +26,7 @@
     "next-seo": "^2.2.0",
     "react": "^16.10.2",
     "react-clipboard.js": "^2.0.16",
-    "react-dom": "^16.10.2",
+    "react-dom": "^16.11.0",
     "react-markdown": "^4.2.2",
     "styled-components": "^4.4.0",
     "throttle-debounce": "^2.1.0"
