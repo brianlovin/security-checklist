@@ -19,20 +19,6 @@ export default {
       },
     },
     {
-      name: 'Wire',
-      image: '/static/img/wire.jpg',
-      url: 'https://wire.com/en/',
-      sources: {
-        windows: 'https://wire.com/en/download/',
-        macos: 'https://wire.com/en/download/',
-        ios:
-          'https://itunes.apple.com/app/wire/id930944768?mt=8',
-        android:
-          'https://play.google.com/store/apps/details?id=com.wire',
-        linux: 'https://wire.com/en/download/',
-      },
-    },
-    {
       name: 'Threema',
       image: '/static/img/threema.jpg',
       url: 'https://threema.ch/en/',
