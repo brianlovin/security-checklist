@@ -16,7 +16,6 @@ import {
   InnerContainer,
   ScrollToTop,
 } from './style';
-import * as gtag from '../../lib/gtag';
 import { getLocalStorageLength } from '../../lib/localStorage';
 import data from '../../config/data';
 
@@ -31,7 +30,6 @@ const totalItemsCount = Object.keys(data).length;
 
 export default function Page(props: Props) {
   const { children, displayProgress } = props;
-  const [lastTrackedPageview, setLastTrackedPageview] = useState(null);
   const [showHeaderShadow, setHeaderShadow] = useState(false);
   const [scrollToTopVisible, setScrollToTopVisible] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -48,10 +46,10 @@ export default function Page(props: Props) {
 
   function updateProgress() {
     const checkedItemsCount = getLocalStorageLength();
-    const progressPercentage = checkedItemsCount * 100 / totalItemsCount;
+    const progressPercentage = (checkedItemsCount * 100) / totalItemsCount;
     setProgress(progressPercentage);
     setCurrentCount(checkedItemsCount);
-  };
+  }
 
   const scrollToTop = () => {
     if (window) {
@@ -69,30 +67,19 @@ export default function Page(props: Props) {
     return () => {
       if (window) {
         window.removeEventListener('scroll', throttledScroll);
-        setLastTrackedPageview(null);
       }
     };
   }, [progress]);
 
   useEffect(() => {
     if (window && displayProgress) {
-      window.addEventListener('storage:updated', updateProgress );
+      window.addEventListener('storage:updated', updateProgress);
     }
     return () => {
       if (window && displayProgress) {
-        window.removeEventListener('storage:updated', updateProgress );
+        window.removeEventListener('storage:updated', updateProgress);
       }
     };
-  });
-
-  useEffect(() => {
-    if (document) {
-      const newLocation = document.location.pathname;
-      if (newLocation !== lastTrackedPageview) {
-        gtag.pageview(document.location.pathname);
-        setLastTrackedPageview(newLocation);
-      }
-    }
   });
 
   return (
@@ -102,9 +89,10 @@ export default function Page(props: Props) {
           :root {
             --progress: ${progress ? 100 - progress : 100}%;
           }
-        `}</style>
+        `}
+        </style>
 
-        <Header 
+        <Header
           showHeaderShadow={showHeaderShadow}
           displayProgress={displayProgress}
           totalItemsCount={totalItemsCount}
