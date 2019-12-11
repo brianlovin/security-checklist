@@ -34,6 +34,10 @@ export default {
       name: 'ExpressVPN',
       image: '/static/img/expressvpn.jpg',
       url: 'https://www.expressvpn.com/',
+      offer: {
+        label: 'Get 30 days free',
+        url: 'https://www.expressrefer.com/refer-friend?referrer_id=44490458&utm_campaign=referrals&utm_medium=copy_link&utm_source=referral_dashboard',
+      },
       sources: {
         windows: 'https://www.expressvpn.com/vpn-software/vpn-windows',
         macos: 'https://www.expressvpn.com/vpn-software/vpn-mac',
