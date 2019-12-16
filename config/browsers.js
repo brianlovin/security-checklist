@@ -62,6 +62,7 @@ export default {
         windows: 'https://vivaldi.com/download/',
         macos: 'https://vivaldi.com/download/',
         linux: 'https://vivaldi.com/download/',
+        android: 'https://vivaldi.com/android/',
       },
     },
     {
