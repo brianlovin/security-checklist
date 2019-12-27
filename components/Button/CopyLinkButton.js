@@ -28,6 +28,7 @@ export default function CopyLinkButton(props: CopyLinkProps) {
       isClicked={isClicked}
       aria-label="Copy the website’s address to your clipboard."
       type="button"
+      // $FlowIssue
       {...props}
     >
       <Icon glyph="link" size={24} />
