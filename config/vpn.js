@@ -91,12 +91,23 @@ export default {
       },
     },
     {
+      name: 'PureVPN',
+      image: '/static/img/purevpn.jpg',
+      url: 'https://www.purevpn.com/' ,
+      sources: {
+        windows: 'https://www.purevpn.com/download/windows-vpn',
+        macos: 'https://www.purevpn.com/download/mac-vpn',
+        ios: ' https://www.purevpn.com/download/ios-vpn',
+        android: 'https://www.purevpn.com/download/android-vpn',
+        linux:'https://www.purevpn.com/download/linux-vpn',
+      }
+     },
+     {
       name: 'Guardian Firewall',
       image: '/static/img/guardian.png',
       url: 'https://guardianapp.com',
       sources: {
-        ios:
-          'https://itunes.apple.com/us/app/guardian-firewall/id1363796315'
+        ios: 'https://itunes.apple.com/us/app/guardian-firewall/id1363796315'
       }
     }
   ],
