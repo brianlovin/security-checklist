@@ -34,6 +34,10 @@ export default {
       name: 'ExpressVPN',
       image: '/static/img/expressvpn.jpg',
       url: 'https://www.expressvpn.com/',
+      offer: {
+        label: 'Get 30 days free',
+        url: 'https://www.expressrefer.com/refer-friend?referrer_id=44490458&utm_campaign=referrals&utm_medium=copy_link&utm_source=referral_dashboard',
+      },
       sources: {
         windows: 'https://www.expressvpn.com/vpn-software/vpn-windows',
         macos: 'https://www.expressvpn.com/vpn-software/vpn-mac',
@@ -96,7 +100,15 @@ export default {
         ios: ' https://www.purevpn.com/download/ios-vpn',
         android: 'https://www.purevpn.com/download/android-vpn',
         linux:'https://www.purevpn.com/download/linux-vpn',
-      },
+      }
+     },
+     {
+      name: 'Guardian Firewall',
+      image: '/static/img/guardian.png',
+      url: 'https://guardianapp.com',
+      sources: {
+        ios: 'https://itunes.apple.com/us/app/guardian-firewall/id1363796315'
+      }
     }
   ],
   resources: [

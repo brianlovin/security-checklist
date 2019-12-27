@@ -8,7 +8,7 @@ export default {
     {
       name: 'Why you should encrypt your computer',
       url:
-        'https://www.aheliotech.com/tutorials/why-you-should-encrypt-your-computer/',
+        'https://theintercept.com/2015/04/27/encrypting-laptop-like-mean/',
     },
     {
       name:
