@@ -2,9 +2,6 @@
   "name": "security-checklist",
   "version": "0.1.0",
   "description": "A checklist for staying safe on the internet",
-  "engines": {
-    "node": "8.x"
-  },
   "scripts": {
     "now-build": "next build",
     "dev": "next",
