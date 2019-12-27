@@ -9,7 +9,7 @@ export default {
     
     \n\nAt minimum 2FA should be installed on accounts that can lock you out of other accounts: e.g. a Google account, email applications, an Apple ID, and financial accounts. For stronger security, ensure that 2FA is enabled on every service you use that supports it.
 
-    \n\n**Note:** Using an all-in-one solution like 1Password for both password management *and* 2FA creates a single point of failure. Take this into account when picking your 2FA client. Be sure to back-up the recovery codes given to you during any 2FA setup processes, otherwise you risk locking yourself out of your accounts.
+    \n\n**Note:** Using an all-in-one solution like 1Password for both password management *and* 2FA creates a single point of failure. Take this into account when picking your 2FA client. Be sure to back-up any recovery codes given to you during the 2FA setup processes, otherwise you risk locking yourself out of your accounts.
     `,
   apps: [
     {
