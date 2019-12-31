@@ -1,19 +1,19 @@
 import * as React from 'react'
 import App from 'next/app';
-import Fathom from 'fathom-client'
+import { trackPageview, load, setSiteId } from 'fathom-client'
 import Router from 'next/router'
 import Providers from '../components/Providers';
 
 Router.events.on('routeChangeComplete', () => {
-  Fathom.trackPageview()
+  trackPageview()
 })
 
-function FathomWrapper(props) {
+function FathomProvider(props) {
   React.useEffect(() => {
     if (process.env.NODE_ENV === 'production') {
-      Fathom.load();
-      Fathom.setSiteId('ESMHTGZE');
-      Fathom.trackPageview();
+      load();
+      setSiteId('ESMHTGZE');
+      trackPageview();
     }
   }, [])
   return <div {...props} />
@@ -23,11 +23,11 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <FathomWrapper>
+      <FathomProvider>
         <Providers>
           <Component {...pageProps} />
         </Providers>
-      </FathomWrapper>
+      </FathomProvider>
     );
   }
 }
