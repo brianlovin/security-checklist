@@ -11,6 +11,7 @@ export default {
       url: 'https://www.jumboprivacy.com/',
       sources: {
         ios: 'https://apps.apple.com/us/app/jumbo-privacy/id1454039975'
+        android: 'https://play.google.com/store/apps/details?id=com.jumboprivacy'
       }
     }
   ],
