@@ -5,6 +5,20 @@ export default {
     `,
   apps: [
     {
+      name: 'Mailfence',
+      image: '/static/img/mailfence.jpg',
+      url: 'https://mailfence.com/',
+      sources: {
+        windows: 'https://mailfence.com',
+        macos: 'https://mailfence.com',
+        ios:
+          'https://mailfence.com/m/',
+        android:
+          'https://mailfence.com/m/',
+        linux: 'https://mailfence.com',
+      },
+    },
+    {
       name: 'FastMail',
       image: '/static/img/fastmail.jpg',
       url: 'https://www.fastmail.com/',
