@@ -33,6 +33,20 @@ export default {
       },
     },
     {
+      name: 'Mailfence',
+      image: '/static/img/mailfence.png',
+      url: 'https://mailfence.com/',
+      sources: {
+        windows: 'https://mailfence.com',
+        macos: 'https://mailfence.com',
+        ios:
+          'https://mailfence.com/m/',
+        android:
+          'https://mailfence.com/m/',
+        linux: 'https://mailfence.com',
+      },
+    },
+    {
       name: 'Tutanota',
       image: '/static/img/tutanota.jpg',
       url: 'https://tutanota.com/',
