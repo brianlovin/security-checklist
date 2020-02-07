@@ -5,20 +5,6 @@ export default {
     `,
   apps: [
     {
-      name: 'Mailfence',
-      image: '/static/img/mailfence.png',
-      url: 'https://mailfence.com/',
-      sources: {
-        windows: 'https://mailfence.com',
-        macos: 'https://mailfence.com',
-        ios:
-          'https://mailfence.com/m/',
-        android:
-          'https://mailfence.com/m/',
-        linux: 'https://mailfence.com',
-      },
-    },
-    {
       name: 'FastMail',
       image: '/static/img/fastmail.jpg',
       url: 'https://www.fastmail.com/',
@@ -44,6 +30,20 @@ export default {
         android:
           'https://play.google.com/store/apps/details?id=ch.protonmail.android',
         linux: 'https://protonmail.com/',
+      },
+    },
+    {
+      name: 'Mailfence',
+      image: '/static/img/mailfence.png',
+      url: 'https://mailfence.com/',
+      sources: {
+        windows: 'https://mailfence.com',
+        macos: 'https://mailfence.com',
+        ios:
+          'https://mailfence.com/m/',
+        android:
+          'https://mailfence.com/m/',
+        linux: 'https://mailfence.com',
       },
     },
     {
