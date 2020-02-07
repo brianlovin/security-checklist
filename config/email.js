@@ -6,7 +6,7 @@ export default {
   apps: [
     {
       name: 'Mailfence',
-      image: '/static/img/mailfence.jpg',
+      image: '/static/img/mailfence.png',
       url: 'https://mailfence.com/',
       sources: {
         windows: 'https://mailfence.com',
