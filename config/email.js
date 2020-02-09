@@ -33,6 +33,16 @@ export default {
       },
     },
     {
+      name: 'SimpleLogin',
+      image: '/static/img/simplelogin.png',
+      url: 'https://simplelogin.io/',
+      sources: {
+        windows: 'https://simplelogin.io/',
+        linux: 'https://simplelogin.io/',        
+        macos: 'https://apps.apple.com/us/app/simplelogin/id1494051017?mt=12&fbclid=IwAR0M0nnEKgoieMkmx91TSXrtcScj7GouqRxGgXeJz2un_5ydhIKlbAI79Io'
+      },
+    },
+    {
       name: 'Mailfence',
       image: '/static/img/mailfence.png',
       url: 'https://mailfence.com/',
@@ -94,6 +104,10 @@ export default {
     {
       name: 'Knowledge and tools to protect your privacy against global mass surveillance',
       url: 'https://www.privacytools.io/',
+    },
+    {
+      name: 'We should have a different email for each website',
+      url: 'https://simplelogin.io/blog/an-email-for-each-website/',
     },
   ],
 };
