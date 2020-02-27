@@ -29,7 +29,7 @@
     "throttle-debounce": "^2.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
+    "@babel/core": "^7.8.6",
     "@babel/plugin-transform-flow-strip-types": "^7.8.0",
     "@babel/preset-flow": "^7.8.3",
     "@cypress/browserify-preprocessor": "^2.1.4",
