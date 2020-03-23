@@ -48,7 +48,7 @@
     "eslint-plugin-react": "^7.19.0",
     "flow-bin": "^0.121.0",
     "lint-staged": "^10.0.8",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.1",
     "prettier-eslint": "^9.0.1"
   },
   "lint-staged": {
