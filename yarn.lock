@@ -4005,10 +4005,10 @@ fast-safe-stringify@^2.0.7:
   resolved "https://registry.yarnpkg.com/fast-safe-stringify/-/fast-safe-stringify-2.0.7.tgz#124aa885899261f68aedb42a7c080de9da608743"
   integrity sha512-Utm6CdzT+6xsDk2m8S6uL8VHxNwI6Jub+e9NYTcAms28T84pTa25GJQV9j0CY0N1rM8hK4x6grpF2BQf+2qwVA==
 
-fathom-client@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/fathom-client/-/fathom-client-2.0.2.tgz#83c66b9c0111478ff75004563ea58f8dcf692c2d"
-  integrity sha512-2OvYKIuuSKwx658rSPwTMDXmRLUdNh4N2KzQCUHJUTVaCdK1Tv49zeJd3ovgIeont/r+1wk/7Ri/sMzoHY5MXw==
+fathom-client@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/fathom-client/-/fathom-client-2.0.3.tgz#1a778aa11009f0f1ed99c04f5137c21e9e021658"
+  integrity sha512-qwTn8LLzuXzsoqXMZGj6YN/mWF/vCRIo+ibD34kweAkKmne8nCELXf3ORUwegmqdzvEVtEZpXH9P9OFunnO07Q==
 
 fd-slicer@~1.0.1:
   version "1.0.1"
