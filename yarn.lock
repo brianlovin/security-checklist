@@ -1171,10 +1171,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@cypress/browserify-preprocessor@^2.1.4":
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/@cypress/browserify-preprocessor/-/browserify-preprocessor-2.1.4.tgz#31f3e35969b591da0298eb801d6905c64c7151cf"
-  integrity sha512-149D1E2UzY7kCjnXDofx61MeJ6HQczj5XCAPjRUPpYr/A7T/O4C0IlTLZYV2xxnDD68d71NfT/cT8s0sfi27RQ==
+"@cypress/browserify-preprocessor@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@cypress/browserify-preprocessor/-/browserify-preprocessor-2.2.1.tgz#0980c667f774f826a79819f56d50f1b385324080"
+  integrity sha512-97vJ1ulp6sIBJ00FJHAP8JDrJmBXV1UudNNs5r2LmXl5ESiVrPc/5wv5zfJuW2toOSOHa9IbJpwJj/4RbvRYXg==
   dependencies:
     "@babel/core" "7.4.5"
     "@babel/plugin-proposal-class-properties" "7.3.0"
@@ -1192,6 +1192,7 @@
     debug "4.1.1"
     fs-extra "7.0.1"
     lodash.clonedeep "4.5.0"
+    through2 "^2.0.0"
     watchify "3.11.1"
 
 "@cypress/listr-verbose-renderer@0.4.1":
