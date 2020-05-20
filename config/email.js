@@ -78,6 +78,15 @@ export default {
         macos: 'https://burnermail.io/'
       },
     },
+    {
+      name: 'postale.io',
+      image: '/static/img/postale.jpg',
+      url: 'https://postale.io/',
+      sources: {
+        windows: 'https://postale.io/',
+        macos: 'https://postale.io/'
+      },
+    },      
   ],
   resources: [
     {
