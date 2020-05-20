@@ -84,7 +84,10 @@ export default {
       url: 'https://postale.io/',
       sources: {
         windows: 'https://postale.io/',
-        macos: 'https://postale.io/'
+        macos: 'https://postale.io/',
+        ios: 'https://postale.io/',
+        android: 'https://postale.io/',
+        linux: 'https://postale.io/',
       },
     },      
   ],
