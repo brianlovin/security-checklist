@@ -2,10 +2,10 @@ name: E2E on Chrome
 on:
   push:
     branches:
-    - master
+    - main
   pull_request:
     branches:
-    - master
+    - main
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
