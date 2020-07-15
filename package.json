@@ -32,7 +32,7 @@
     "@babel/core": "^7.10.4",
     "@babel/plugin-transform-flow-strip-types": "^7.9.0",
     "@babel/preset-flow": "^7.10.4",
-    "@cypress/browserify-preprocessor": "^3.0.0",
+    "@cypress/browserify-preprocessor": "^3.0.1",
     "babel-eslint": "^10.1.0",
     "babel-plugin-styled-components": "^1.10.7",
     "babel-plugin-transform-define": "^2.0.0",
