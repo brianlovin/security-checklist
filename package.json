@@ -21,7 +21,7 @@
     "fathom-client": "^2.0.3",
     "next": "^9.5.5",
     "next-seo": "^4.11.0",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-clipboard.js": "^2.0.16",
     "react-dom": "^16.13.1",
     "react-markdown": "^4.3.1",
