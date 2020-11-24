@@ -13,9 +13,9 @@ jobs:
     name: E2E on Chrome
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Cypress run
-        uses: cypress-io/github-action@v1
+        uses: cypress-io/github-action@v2
         with:
           build: yarn run build
           start: yarn run start
