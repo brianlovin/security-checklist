@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "fathom-client": "^2.0.3",
-    "next": "^10.0.1",
+    "next": "^10.0.2",
     "next-seo": "^4.17.0",
     "react": "^16.14.0",
     "react-clipboard.js": "^2.0.16",
