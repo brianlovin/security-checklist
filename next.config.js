@@ -8,4 +8,18 @@ module.exports = {
 
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: 'https://brianlovin.com/security',
+        permanent: true,
+      },
+      {
+        source: '/about',
+        destination: 'https://brianlovin.com/security',
+        permanent: true,
+      },
+    ]
+  },
 };
