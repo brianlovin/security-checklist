@@ -1,6 +1,9 @@
 # Security checklist
 A checklist for staying safe on the internet.
 
+### This project has moved
+In the interest of maintaining fewer services, codebases, and domains, I've integrated this project into my [personal website](https://github.com/brianlovin/brian-lovin-next). View the live project at [brianlovin.com/security](https://brianlovin.com/security).
+
 ### Motivation
 This project is the result of a conversation started during a [recent episode](https://spec.fm/podcasts/design-details/249464) of the [Design Details Podcast](https://spec.fm/podcasts/design-details/) and a subsequent tweet by [Michael Knepprath](https://twitter.com/mknepprath/status/1083966912420372481).
 
